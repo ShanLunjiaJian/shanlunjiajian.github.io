@@ -2,7 +2,7 @@
 layout: post
 title: Rank-Pairing Heap学习笔记
 subtitle: 一个玄学堆
-tags: 数据结构, 堆
+tags: 数据结构 堆
 ---
 
 
