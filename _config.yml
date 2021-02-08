@@ -91,3 +91,73 @@ page-mathjax: false
 
 
 # Friends
+
+friends: [
+    {
+        title: "fireinice",
+        href: "https://www.jianshu.com/u/91bc345f7c84"
+    },{
+        title: "Pbri",
+        href: "https://www.luogu.com.cn/blog/rubik-aoyi715103/"
+    },{
+        title: "SD!LTF",
+        href: "https://www.cnblogs.com/sdltf"
+    },{
+        title: "dbxxx",
+        href: "https://www.cnblogs.com/crab-in-the-northeast"
+    },{
+        title: "Return.",
+        href: "https://www.cnblogs.com/return-blog"
+    },{
+        title: "jzk",
+        href: "https://www.cnblogs.com/ZhengkunJia"
+    },{
+        title: "Coelacanthus",
+        href: "https://blog.lhwcrt.top/"
+    },{
+        title: "_zkw",
+        href: "https://www.luogu.com.cn/blog/lry/"
+    },{
+        title: "Refined_heart",
+        href: "https://www.cnblogs.com/h-lka/"
+    },{
+        title: "Sxy_Limit",
+        href: "https://www.cnblogs.com/Sxy_Limit/"
+    },{
+        title: "tommy0103",
+        href: "https://www.luogu.com.cn/blog/fzber0103/"
+    },{
+        title: "YoungTom",
+        href: "https://www.luogu.com.cn/user/192773"
+    },{
+        title: "fty",
+        href: "https://www.luogu.com.cn/blog/ljfty666666666666/"
+    },{
+        title: "Var1ous",
+        href: "https://www.luogu.com.cn/blog/Rout-Execut0r/"
+    },{
+        title: "Histone",
+        href: "http://47.102.209.15/"
+    },{
+        title: "sdsy2020147",
+        href: "https://www.luogu.com.cn/user/179182"
+    },{
+        title: "cunzai_zsy0531",
+        href: "https://www.luogu.com.cn/user/160484"
+    },{
+        title: "knifebrother",
+        href: "https://www.luogu.com.cn/user/150555"
+    },{
+        title: "Syx",
+        href: "http://49.232.134.133/"
+    },{
+        title: "do_while_true",
+        href: "https://cnblogs.com/do-while-true/"
+    },{
+        title: "Virtualman",
+        href: "http://virtualman.top"
+    },{
+        title: "q0000000",
+        href: "https://www.luogu.com.cn/user/356120"
+    }
+]
