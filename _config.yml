@@ -1,11 +1,11 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 黄玄的博客 | Hux Blog
+title: ShanLunjiaJian's blog
+SEOTitle: ShanLunjiaJian's blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
+email: 1391137786@qq.com
 description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
 keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+url: "https://shanlunjiajian.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,10 +13,7 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
+github_username:    ShanLunjiaJian
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
@@ -58,9 +55,6 @@ kramdown:
 
 
 
-# Disqus settings
-disqus_username: hux
-
 # Netease settings
 netease_comment: false
 
@@ -70,15 +64,11 @@ netease_comment: false
 # Baidu Analytics 
 # ba_track_id: [your track id]
 
-# Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
-
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "黄玄，前端娱乐圈 NPC，编程语言/编译器初心者 <br> An UI/Frontend dev & designer accidentally growing into a compiler/PL hacker."
+sidebar-about-description: "ShanLunjiaJian"
 sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -103,31 +93,70 @@ page-mathjax: false
 # Friends
 friends: [
     {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
-    # },{
-        title: "乱序（Midare）",
-        href: "http://mida.re/"
+        title: "fireinice",
+        href: "https://www.jianshu.com/u/91bc345f7c84"
     },{
-        title: "Sherry Woo",
-        href: "https://sherrywoo.me/"
+        title: "Pbri",
+        href: "https://www.luogu.com.cn/blog/rubik-aoyi715103/"
     },{
-        title: "Kun Qian",
-        href: "http://kunq.me"
+        title: "SD!LTF",
+        href: "https://www.cnblogs.com/sdltf"
     },{
-        title: "Ebn Zhang",
-        href: "http://ebnbin.com/"
+        title: "dbxxx",
+        href: "https://www.cnblogs.com/crab-in-the-northeast"
     },{
-        title: "SmdCn",
-        href: "http://blog.smdcn.net"
+        title: "Return.",
+        href: "https://www.cnblogs.com/return-blog"
     },{
-        title: "JiyinYiyong",
-        href: "http://tiye.me/"
+        title: "jzk",
+        href: "https://www.cnblogs.com/ZhengkunJia"
     },{
-        title: "DHong Say",
-        href: "http://dhong.co"
+        title: "Coelacanthus",
+        href: "https://blog.lhwcrt.top/"
     },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    }
+        title: "_zkw",
+        href: "https://www.luogu.com.cn/blog/lry/"
+    },{
+        title: "Refined_heart",
+        href: "https://www.cnblogs.com/h-lka/"
+    },{
+        title: "Sxy_Limit",
+        href: "https://www.cnblogs.com/Sxy_Limit/"
+    },{
+        title: "tommy0103",
+        href: "https://www.luogu.com.cn/blog/fzber0103/"
+    },{
+        title: "YoungTom",
+        href: "https://www.luogu.com.cn/user/192773"
+    },{
+        title: "fty",
+        href: "https://www.luogu.com.cn/blog/ljfty666666666666/"
+    },{
+        title: "Var1ous",
+        href: "https://www.luogu.com.cn/blog/Rout-Execut0r/"
+    },{
+        title: "Histone",
+        href: "http://47.102.209.15/"
+    },{
+        title: "sdsy2020147",
+        href: https://www.luogu.com.cn/user/179182"
+    },{
+        title: "cunzai_zsy0531",
+        href: "https://www.luogu.com.cn/user/160484"
+    },{
+        title: "knifebrother",
+        href: "https://www.luogu.com.cn/user/150555"
+    },{
+        title: "Syx",
+        href: "http://49.232.134.133/"
+    },{
+        title: "do_while_true",
+        href: "https://cnblogs.com/do-while-true/"
+    },{
+        title: "Virtualman",
+        href: "http://virtualman.top"
+    },{
+        title: "q0000000",
+        href: "https://www.luogu.com.cn/user/356120"
+    }]
 ]
