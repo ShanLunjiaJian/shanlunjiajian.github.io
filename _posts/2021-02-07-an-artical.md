@@ -2,7 +2,7 @@
 layout: post
 title: 一篇blog
 subtitle: 在机房写的奇怪文章
-tags: "随笔"
+tags: 随笔
 ---
 
 那天机房被征文了，我就写了3000多字的奇怪东西，结果学校也没摘我的，我就扔到blog上来了（
