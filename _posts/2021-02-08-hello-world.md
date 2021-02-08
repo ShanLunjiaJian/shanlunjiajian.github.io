@@ -2,7 +2,6 @@
 layout: post
 title: Hello World!
 subtitle: ShanLunjiaJian's new blog!
-categories: 
 ---
 
 ## Hello world!
