@@ -97,9 +97,9 @@ $$
 
 封闭性 : 对于任意两个置换$f,g\in G$，$f\circ g\in G$。比如旋转90度和旋转180度的复合是旋转270度。
 
-存在单位元 : 存在一个置换$\epslion\in G$，满足对于任意置换$f\in G$，有$f\circ\epslion=\epslion\circ\f=f$。恒等置换，在上面的例子中也就是旋转0度的置换或者说不翻转的置换，满足单位元的性质。
+存在单位元 : 存在一个置换$\epsilon\in G$，满足对于任意置换$f\in G$，有$f\circ\epsilon=\epsilon\circ\f=f$。恒等置换，在上面的例子中也就是旋转0度的置换或者说不翻转的置换，满足单位元的性质。
 
-存在逆元 : 对于任意置换$f\in G$，存在$g\in G$，使得$f\circ g=g\circ f=\epslion$。比如旋转90度和旋转270度互为逆元。
+存在逆元 : 对于任意置换$f\in G$，存在$g\in G$，使得$f\circ g=g\circ f=\epsilon$。比如旋转90度和旋转270度互为逆元。
 
 为了构造群从而得到优秀的对称性，我们就需要满足封闭性，也就是说若干次置换复合的结果也在我们的置换集合中，也就是说它们其实等价于一次置换。你会发现虽然置换变多了，但是只置换一次显然是减小了问题的难度。
 
@@ -111,7 +111,7 @@ $$
 
 首先我们定义一个染色集合$\mathcal{C}$，表示对$X$所有可能的染色方式。比如对于刚才的例子，$(B,B,W,B)$就是一个染色。
 
-置换$f$作用于染色$\mathrm{c}$，记为$f\ast\mathrm{c}$。比如染色$(B,B,W,B)$在置换$\left(	\begin{array}{}1,2,3,4\\4,3,2,1\end{array}\right)$作用下会变成$(B,W,B,B)$。
+置换$f$作用于染色$\mathrm{c}$，记为$f\ast\mathrm{c}$。比如染色$(B,B,W,B)$在置换$\left(	\begin{array}{}1,2,3,4\\ 4,3,2,1\end{array}\right)$作用下会变成$(B,W,B,B)$。
 
 容易证明置换对染色的作用和置换复合具有结合律，即$(f\circ g)\ast\mathrm{c}=f\ast(g\ast\mathrm{c})$。这两种运算的优先级并不重要。
 
@@ -140,14 +140,16 @@ $$
 **定理2** 对于染色$\mathrm{c}\in\mathcal{C}$，与$\mathrm{c}$本质相同的染色数量为
 
 $$
-\frac{\|G\|}{\|G(\mathrm{c})\|}
+\frac{|G|}{|G(\mathrm{c})|}
 $$
 
 **证明** 根据定理1，对于每个置换$f$，有$\|G(\mathrm{c})\|$个置换和它作用在$\mathrm{c}$上等价，那么这相当于把整个置换群划分成了$\frac{\|G\|}{\|G(\mathrm{c})\|}$个等价类。对于每一个等价类，它里面的置换会把$\mathrm{c}$置换成另一个染色(而恒等置换所在的等价类会置换成自己)，所以一共有多少个置换等价类，就有多少个跟$\mathrm{c}$等价的染色。
 
 ---
 
-**定理3** $\sum_{f\in G}\|\mathcal{C}(f)\|=\sum_{\mathrm{c}\in\mathcal{C}}\|G(\mathrm{c})\|$
+**定理3** 
+
+$$\sum_{f\in G}|\mathcal{C}(f)|=\sum_{\mathrm{c}\in\mathcal{C}}|G(\mathrm{c})|$$
 
 **证明**
 
@@ -155,9 +157,9 @@ $$
 
 $$
 \begin{aligned}
-\sum_{f\in G}\|\mathcal{C}(f)\|&=\sum_{f\in G}\sum_{\mathrm{c}\in\mathcal{C}}[f\ast\mathrm{c}=\mathrm{c}]\\
+\sum_{f\in G}|\mathcal{C}(f)|&=\sum_{f\in G}\sum_{\mathrm{c}\in\mathcal{C}}[f\ast\mathrm{c}=\mathrm{c}]\\
 &=\sum_{\mathrm{c}\in\mathcal{C}}\sum_{f\in G}[f\ast\mathrm{c}=\mathrm{c}]\\
-&=\sum_{\mathrm{c}\in\mathcal{C}}G(\mathrm{c})\
+&=\sum_{\mathrm{c}\in\mathcal{C}}|G(\mathrm{c})|\
 \end{aligned}
 $$
 
@@ -166,7 +168,7 @@ $$
 **Burnside定理** 在置换群$G$的作用下，染色集合$\mathcal{C}$中的本质不同染色数$N(G,\mathcal{C})$为
 
 $$
-N(G,\mathcal{C})=\frac{1}{\|G\|}\sum_{f\in G}\|\mathcal{C}(f)\|=\frac{1}{\|G\|}\sum_{\mathrm{c}\in\mathcal{C}}\|G(\mathrm{c})\|
+N(G,\mathcal{C})=\frac{1}{|G|}\sum_{f\in G}|\mathcal{C}(f)|=\frac{1}{|G|}\sum_{\mathrm{c}\in\mathcal{C}}|G(\mathrm{c})|
 $$
 
 **证明** 
