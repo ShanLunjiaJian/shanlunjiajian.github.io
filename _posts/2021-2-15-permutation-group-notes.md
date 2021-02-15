@@ -178,6 +178,6 @@ $$
 把第二个式子代入第一个式子，得到
 
 $$
-\sum_{f\in G}\|\mathcal{C}(f)\|=\sum_{\mathrm{c}\in\mathcal{C}}\frac{\|G\|}{\text{与}\mathrm{c}\text{等价的染色数}}
+\sum_{f\in G}|\mathcal{C}(f)|=\sum_{\mathrm{c}\in\mathcal{C}}\frac{|G|}{\text{与}\mathrm{c}\text{等价的染色数}}
 $$
 
