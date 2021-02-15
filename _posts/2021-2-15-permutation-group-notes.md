@@ -180,6 +180,8 @@ $$
 把第二个式子代入第一个式子，得到
 
 $$
-\sum_{f\in G}|\mathcal{C}(f)|=\sum_{\mathrm{c}\in\mathcal{C}}\frac{|G|}{\text{与}\mathrm{c}\text{等价的染色数}}
+\sum_{f\in G}|\mathcal{C}(f)|=|G|\sum_{\mathrm{c}\in\mathcal{C}}\frac{1}{\text{与}\mathrm{c}\text{本质相同的染色数}}
 $$
+
+考虑后面那个$\sum$，对于一个染色等价类，它里面的项加起来的结果应该是$1$，所以那个$\sum$计算的就是等价类个数，也就是本质不同的染色数。所以这个式子乘上$\frac{1}{\|G\|}$就得到本质不懂的染色数。
 
