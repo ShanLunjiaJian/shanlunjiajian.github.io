@@ -128,7 +128,7 @@ $$
 
 逆元 : 如果$$f\ast\mathrm{c}=\mathrm{c}$$，那么两边复合上$$f^{-1}$$，就得到$$\mathrm{c}=f^{-1}\ast\mathrm{c}$$。
 
-Burnside定理要求，对于任意染色$$c$$和置换$$f$$，$$f\ast\mathrm{c}\in\mathcal{C}$$。
+Burnside定理要求，对于任意染色$$c$$和置换$$f$$，$$f\ast\mathrm{c}\in\mathcal{C}$$，也就是说不管你怎么转那个正方形，转出来的染色还是合法的。
 
 ---
 
