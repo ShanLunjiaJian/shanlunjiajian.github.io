@@ -276,7 +276,7 @@ $$
 
 $$\left(\begin{array}{}1,2,3\\1,2,3\end{array}\right)$$是恒等置换，在它的作用下所有染色都不变，相当于不要求三个子树是否同构，所以它作用下不变染色数的生成函数是$A(z)^3$。
 
-$$\left(\begin{array}{}1,2,3\\1,3,2\end{array}\right), \left(\begin{array}{}1,2,3\\2,1,3\end{array}\right), \left(\begin{array}{}3,2,1\\1,2,3\end{array}\right)$$有一个大小为$2$的循环，相当于要求其中两个子树同构，对第三个不作要求，所以这三个中每一个作用下不变染色数的生成函数都是$A(z^2)A(z)$。($$A(z^2)$$是怎么来的?考虑两棵子树同构，它们的$\operatorname{size}$加起来变成两倍，但是方案数是一棵树的方案数)
+$$\left(\begin{array}{}1,2,3\\1,3,2\end{array}\right), \left(\begin{array}{}1,2,3\\2,1,3\end{array}\right), \left(\begin{array}{}1,2,3\\3,2,1\end{array}\right)$$有一个大小为$2$的循环，相当于要求其中两个子树同构，对第三个不作要求，所以这三个中每一个作用下不变染色数的生成函数都是$A(z^2)A(z)$。($$A(z^2)$$是怎么来的?考虑两棵子树同构，它们的$\operatorname{size}$加起来变成两倍，但是方案数是一棵树的方案数)
 
 $$\left(\begin{array}{}1,2,3\\2,3,1\end{array}\right), \left(\begin{array}{}1,2,3\\3,1,2\end{array}\right)$$是大小为$3$的循环，相当于要求所有子树同构，所以这三个中每一个作用下不变染色数的生成函数都是$A(z^3)$。
 
