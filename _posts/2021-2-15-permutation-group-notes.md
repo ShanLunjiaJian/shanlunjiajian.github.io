@@ -234,6 +234,17 @@ $$
 
 然后就经典trick了。
 
+$$
+\begin{aligned}
+&\sum_{i=0}^nn^{\gcd(n,i)}\\
+=&\sum_{d=1}^nn^d\sum_{i=0}^n[\gcd(n,i)=d]\\
+=&\sum_{d\vert n}^nn^d\sum_{i=0}^{n/d}[\gcd(n/d,i)=1]\\
+=&\sum_{d\vert n}^nn^d\varphi(n/d)
+\end{aligned}
+$$
+
+发现这个式子是$$O(\sqrt{d})$$求一个因数$$d$$的$$\varphi$$，同时可以$$O(m)-O(1)$$预处理前$$m$$个数的$$\varphi$$，类似于杜教筛预处理前$$m=O((Tn)^{\frac{2}{3}})$$个数，复杂度为$$O((Tn)^{\frac{2}{3}})$$。当然可以调整$$m$$获得更好的常数。
+
 -----
 
 [LOJ#6538. 烷基计数 加强版 加强版](https://loj.ac/p/6538)
@@ -296,7 +307,7 @@ $$\left(\begin{array}{}1,2,3\\2,3,1\end{array}\right), \left(\begin{array}{}1,2,
 
 [洛谷P6597 烯烃计数](https://www.luogu.com.cn/problem/P6597)
 
-你发现这个东西相当于四个烷基卷起来!所以我们再套两遍Pólya定理就做完了。这两道题放在这里纯粹是充字数（
+你发现这个东西相当于两个两个烷基卷起来的东西卷起来!所以我们再套两遍Pólya定理就做完了。这两道题放在这里纯粹是充字数（
 
 
 
