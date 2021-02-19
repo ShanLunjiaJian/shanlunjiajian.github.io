@@ -6,4 +6,4 @@ ShanLunjiaJian is a strange name produced by tommy0103's wrong spelling of HuaSh
 
 There are many strange things in my blog. I think many of them are useless. But I love writing notes in my blog!
 
-Welcome to exchange friends chain with me!
+Welcome to exchange friends links with me!
