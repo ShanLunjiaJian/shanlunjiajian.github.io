@@ -9,7 +9,7 @@ url: "https://shanlunjiajian.github.io"              # your host, for absolute U
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
-future: true
+future: false
 
 # SNS settings
 RSS: false
