@@ -53,7 +53,7 @@ $$
 g(n,i)=g(n,i-1)-t(p_i)(g(\lfloor\frac{n}{p_i}\rfloor,i-1)-h(i-1))
 $$
 
-但是这看起来需要递归求解，不过容易想起一个经典结论$$\lfloor\frac{\lfloor\frac{a}{b}\rfloor}{c}\rfloor=\lfloor\frac{a}{bc}\rfloor$$，所以实际上不管我们除了什么东西，最后递归到的一定是某个$$g(\lfloor\frac{n}{x}\rfloor,i)$$，而$$\floor\frac{n}{x}\rfloor$$的取值有$$O(\sqrt{n})$$种，我们只要先预处理出这些取值，然后一层一层递推就好了。
+但是这看起来需要递归求解，不过容易想起一个经典结论$$\lfloor\frac{\lfloor\frac{a}{b}\rfloor}{c}\rfloor=\lfloor\frac{a}{bc}\rfloor$$，所以实际上不管我们除了什么东西，最后递归到的一定是某个$$g(\lfloor\frac{n}{x}\rfloor,i)$$，而$$\lfloor\frac{n}{x}\rfloor$$的取值有$$O(\sqrt{n})$$种，我们只要先预处理出这些取值，然后一层一层递推就好了。
 
 具体实现上，我们用整除分块的方法搞出所有$$\lfloor\frac{n}{x}\rfloor$$，然后进行类似于杜教筛的编号 : 把数分成两类分开存储，对于$$x\geq\sqrt{n}$$的编号为$$\lfloor\frac{n}{x}\rfloor$$，对于$$x<\sqrt{n}$$的编号为$$\lfloor\frac{n}{\lfloor\frac{n}{x}\rfloor}\rfloor$$，可以写一个`define`获得更简洁的实现。在求$$g$$的过程中，我们可以进行滚动数组。
 
