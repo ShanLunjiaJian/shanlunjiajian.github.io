@@ -88,7 +88,9 @@ $$
 
 Min_25筛板子题怎么能用Min_25筛做!
 
-$$f(p)=p(p-1)$$，考虑构造$$g(n)=n\varphi(n)$$，积性函数的点积还是积性函数，并且这个东西可以杜教筛出来。复杂度$$O(n^{\frac{2}{3}})$$。
+$$f(p)=p(p-1)$$，考虑构造$$g(n)=n\varphi(n)$$或者说$$g=\mathrm{id}\cdot\varphi$$，积性函数的点积还是积性函数，并且这个东西可以杜教筛出来。复杂度$$O(n^{\frac{2}{3}})$$。
+
+具体怎么筛应该没有人不会吧/fad，那还是讲一讲，我们使用经典结论 : 如果$$t$$是完全积性函数，$$f,g$$是积性函数，那么$$(t\cdot f)\ast(t\cdot g)=t\cdot(f\ast g)$$。也就是说，我们考虑$$\varphi\ast 1=\mathrm{id}$$，两边点上一个$$\mathrm{id}$$，就得到$$(\mathrm{id}\cdot\varphi)\ast(\mathrm{id}\cdot 1)=\mathrm{id}\cdot\mathrm{id}$$，化简一下就得到$$(\mathrm{id}\cdot\varphi)\ast\mathrm{id}=\mathrm{id}_2$$。算就是了。
 
 -----
 
