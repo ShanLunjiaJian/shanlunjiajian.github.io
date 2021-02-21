@@ -52,7 +52,7 @@ $$
 
 具体怎么枚举Powerful Number，可以直接爆搜质因子。
 
-精细实现的话复杂度$$O(\sqrt{n})$$，胡乱实现比如使用hash table或者std::map什么的会多大常数或者多$$\log$$。
+精细实现的话复杂度$$O(\sqrt{n})$$，胡乱实现比如使用hash table或者`std::map`什么的会多大常数或者多$$\log$$。
 
 -----
 
