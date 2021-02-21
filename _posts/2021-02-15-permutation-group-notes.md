@@ -320,6 +320,7 @@ $$
 	\end{array}
 \right),
 \left(
+	\begin{array}{}
 	1,2,3\\
 	2,3,1
 	\end{array}
