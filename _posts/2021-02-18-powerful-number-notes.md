@@ -48,7 +48,7 @@ h(p^k)&=f(p^k)-\sum_{i=0}^{k-1}h(p^i)g(p^{k-i})
 \end{aligned}
 $$
 
-然后估计一下这部分的复杂度，对于质数$$p$$，需要计算$$h(p),h(p^2),...,h(p^{\lfloor\log_p n\rfloor})$$，复杂度是$$O(\log_{p}^2 n)$$。所以我们总复杂度就是$$O(\sum_{p\leq\sqrt{n}}\log_{p}^2 n)$$。对于$$\geq \sqrt[4]{n}$$的$$p$$，$$\log_{p}^2 n\leq 16=O(1)$$，这部分复杂度是$$O(\frac{\sqrt{n}}{\log n})$$；对于$$<\sqrt[4]{n}$$的$$p$$，这部分不超过$$\sqrt[4]{n}\log n=O(\frac{\sqrt{n}}{\log n})$$，于是总复杂度是$$O(\frac{\sqrt{n}}{\log n})$$。
+然后估计一下这部分的复杂度，对于质数$$p$$，需要计算$$h(p),h(p^2),...,h(p^{\lfloor\log_p n\rfloor})$$，复杂度是$$O(\log_{p}^2 n)$$。所以我们总复杂度就是$$O(\sum_{p\leq\sqrt{n}}\log_{p}^2 n)$$。对于$$\geq \sqrt[4]{n}$$的$$p$$，$$\log_{p}^2 n\leq 16=O(1)$$，这部分复杂度是$$O(\frac{\sqrt{n}}{\log n})$$；对于$$<\sqrt[4]{n}$$的$$p$$，这部分不超过$$\sqrt[4]{n}\log n=O(\frac{\sqrt{n}}{\log n})$$，于是总复杂度是$$O(\frac{\sqrt{n}}{\log n})$$。虽然常数较大，但是还除着一个$$\log$$呢。
 
 具体怎么枚举Powerful Number，可以直接爆搜质因子。
 
