@@ -306,19 +306,20 @@ $$
 	1,2,3\\
 	1,3,2
 	\end{array}
-\right),\left(
+\right),
+\left(
 	\begin{array}{}
 	1,2,3\\
 	2,1,3
 	\end{array}
 \right),
 \left(
-	\begin{array}{}\left(
 	\begin{array}{}
 	1,2,3\\
 	1,2,3
 	\end{array}
 \right),
+\left(
 	1,2,3\\
 	2,3,1
 	\end{array}
