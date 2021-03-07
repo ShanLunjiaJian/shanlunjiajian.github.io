@@ -5,7 +5,7 @@ subtitle: 神仙T3
 tags: 题解
 ---
 
-T1. two
+## T1. two
 
 题意 : 
 
@@ -25,7 +25,7 @@ $$n\leq 10^5$$，时限4s，空间512M。
 
 代码咕咕咕（
 
-T2. bracket
+## T2. bracket
 
 题意 : 
 
@@ -286,7 +286,7 @@ int main()
 }
 ```
 
-T3. sum
+## T3. sum
 
 题意 : 
 
