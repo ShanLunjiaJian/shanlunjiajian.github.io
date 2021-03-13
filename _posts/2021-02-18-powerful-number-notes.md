@@ -9,7 +9,7 @@ tags: 数学 数论
 
 要求数论函数的前缀和，大家都会杜教筛。
 
-Powerful Number跟杜教筛是类似的。杜教筛构造$$f\ast g=h$$，其中$$g,h$$可以快速求前缀和；而Powerful Number构造$$f=g\ast h$$，其中$$g$$可以快速求前缀和，而$$h$$只在Powerful Number处有值。
+Powerful Number跟杜教筛是类似的。杜教筛构造$$f\ast g=h$$，其中$$g,h$$可以快速求前缀和；而Powerful Number构造$$f=g\ast h$$，其中$$g$$可以快速求前缀和以及质数幂处的点值，而$$h$$只在Powerful Number处有值。
 
 首先我们来看一道例题。
 
@@ -23,7 +23,7 @@ Powerful Number跟杜教筛是类似的。杜教筛构造$$f\ast g=h$$，其中$
 
 同时，狄利克雷卷积的逆运算对积性函数也有封闭性，所以$$h$$必然是积性函数。那么对于所有质因子分解形式中，具有次数为$$1$$的质因子的数$$x$$，全都有$$h(x)=0$$。
 
-所以我们只要求出$$h$$不为$$0$$的所有点值，就已经求出$$h$$了。我们定义Powerful Number为每个质因子次数都$$\geq 2$$的数，也就是使$$h$$不为$$0$$的数。特别的，$$1$$也是Powerful Number。容易发现这样的数一定可以表示成$$a^2b^3$$，因为$$2x+3y(x,y\geq 0)$$可以表示出任何$$1$$以外的正整数。那么我们就可以计算$$n$$以内Powerful Number的数量了 : $$\int_{1}^{\sqrt{n}}\sqrt[3]{\frac{n}{x^2}}\,dx=O(\sqrt{n})$$。
+所以我们只要求出$$h$$不为$$0$$的所有点值，就已经求出$$h$$了。我们定义Powerful Number为每个质因子次数都$$\geq 2$$的数，也就是使$$h$$不为$$0$$的数。特别的，$$1$$也是Powerful Number。容易发现这样的数一定可以表示成$$a^2b^3$$，因为$$2x+3y(x,y\geq 0)$$可以表示出任何$$1$$以外的自然数。那么我们就可以计算$$n$$以内Powerful Number的数量了 : $$\int_{1}^{\sqrt{n}}\sqrt[3]{\frac{n}{x^2}}\,dx=O(\sqrt{n})$$。
 
 然后考虑
 
@@ -53,6 +53,73 @@ $$
 具体怎么枚举Powerful Number，可以直接爆搜质因子。
 
 精细实现的话复杂度$$O(\sqrt{n})$$，胡乱实现比如使用hash table或者`std::map`什么的会多大常数或者多$$\log$$。
+
+放一份板子，不过是某次模拟赛里面另一个题的，其中$$f(p^k)=p^{k-1},g=\mathbb{1}$$，使用了`std::vector`，可能不是很快 qwq
+
+```cpp
+#include<stdio.h>
+#include<vector>
+using std::vector;
+
+const long long L=1e13,N=1e7;
+
+long long prime[N/10],pcnt;
+bool b[N+2];
+
+vector<long long> h[N/10];
+
+inline void init()
+{
+	//sieve
+	for(int i=2;i<=N;i++)
+	{
+		if(!b[i]) prime[++pcnt]=i;
+		for(int j=1;j<=pcnt&&i*prime[j]<=N;j++)
+		{
+			b[i*prime[j]]=1;
+			if(!(i%prime[j])) break;
+		}
+	}
+	//calc h(p^k)
+	for(int i=1;i<=pcnt;i++)
+	{
+		h[i].push_back(1);
+		for(long long j=1,c=prime[i],f=1;;j++,c=c*prime[i],f=f*prime[i])
+		{
+			h[i].push_back(f);
+			for(int k=0;k<j;k++)
+				h[i][j]-=h[i][k];
+			if((long double)c*prime[i]>L) break;
+		}
+	}
+}
+
+#define S1(n) (n)
+#define sq(x) ((x)*(x))
+
+long long S(long long n,int cur,long long num,long long val)
+{
+	long long sum=val*S1(n/num);
+	for(;cur<=pcnt&&num<=n/prime[cur]/prime[cur];cur++)
+		for(long long i=2,c=sq(prime[cur]),f=prime[cur];;i++,c*=prime[cur],f*=prime[cur])
+		{
+			sum+=S(n,cur+1,c*num,val*h[cur][i]);
+			if(num*c>n/prime[cur]) break;
+		}
+	return sum;
+}
+
+int main()
+{
+	/*freopen("sum.in","r",stdin);
+	freopen("sum.out","w",stdout);*/
+	init();
+	long long n;
+	scanf("%lld",&n);
+	printf("%lld",S(n,1,1,1));
+	return 0;
+}
+```
 
 -----
 
