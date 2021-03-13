@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 超现实数 · 上 : 超现实数和博弈的直观解释
+title: 超现实数·上:超现实数和博弈的直观解释
 subtitle: 草
 tags: 博弈论 超现实数
 ---

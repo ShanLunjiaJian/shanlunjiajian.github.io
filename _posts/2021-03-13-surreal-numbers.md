@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 超现实数 · 下 : 超现实数理论和应用
+title: 超现实数·下:超现实数理论和应用
 subtitle: 草草草
 tags: 博弈论 超现实数
 ---
