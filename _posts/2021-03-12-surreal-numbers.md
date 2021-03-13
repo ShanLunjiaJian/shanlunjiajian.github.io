@@ -67,13 +67,25 @@ L棋盘有一种死法，而I没有，所以你可能会很自然地觉得I上�
 
 实际上我们可以发现这样一些事 : 
 
-$$A\leq 0$$说明Alice先手必败。
+$$A\leq 0$$说明Alice先手必败，Bob后手必胜。
 
-$$A\geq 0$$说明Bob先手必败。
+$$A\geq 0$$说明Bob先手必败，Alice后手必胜。
 
-$$A\nleq 0$$说明Alice先手必胜。
+$$A\nleq 0$$说明Alice先手必胜，Bob后手必败。
 
-$$A\ngeq 0$$说明Bob先手必胜。
+$$A\ngeq 0$$说明Bob先手必胜，Alice后手必败。
+
+再来一些定义 : 
+
+$$A=0\Leftrightarrow A\leq 0\text{且}A\geq 0$$，这说明后手必胜。
+
+$$A<0\Leftrightarrow A\leq 0\text{且}A\ngeq 0$$，这说明Alice必败，Bob必胜。
+
+$$A>0\Leftrightarrow A\leq 0\text{且}A\geq 0$$，这说明Alice必胜，Bob必败。
+
+少点什么!你发现我们没有先手必胜!
+
+我们定义$$A\Vert 0$$为上面所有情况之外的情况，此时只可能先手必胜了。这个情况我们不做过多讨论。
 
 ### 一点瞎扯
 
@@ -109,9 +121,9 @@ Alice第一步按照$$A$$的必胜策略走，接下来如果Bob在任何一个�
 
 第五个棋盘Alice走一步可以得到两种情况 : 
 
-	1. 两个 一个格子 的和，也就是$$0+0=0$$。
+两个 一个格子 的和，也就是$$0+0=0$$。
 
-	2. 一个$$-1$$。
+一个$$-1$$。
 
 Bob走一步只能得到一种情况 : $$1$$。所以这个是$$\{-1,0\vert 1\}$$。
 
@@ -134,18 +146,22 @@ $$
 然后是一些奇妙的东西，我们定义
 
 $$
+\{\mathrm{L}(A)\vert\mathrm{R}(A)\}\leq0\Longleftrightarrow\forall u\in\mathrm{L}(A), u\ngeq 0
+$$
+
+，这好像是说，对于一个棋局Alice先手必败，当且仅当她随便走一步都必败。这好像很对。
+
+你发现这样的定义下有
+
+$$
 \{\mathrm{L}(A)\vert\mathrm{R}(A)\}\leq\{\mathrm{L}(B)\vert\mathrm{R}(B)\}\Longleftrightarrow\forall u\in\mathrm{L}(A), u\ngeq B\text{ 且 }\forall v\in\mathrm{R}(B), v\nleq A
 $$
 
 ，$$\geq$$是类似的。
 
-然后可以定义$$A<B\Leftrightarrow A\leq B,A\ngeq B$$，$$>$$是类似的；定义$$A=B\Leftrightarrow A\leq B,A\geq B$$。
+所以我们之前定义的$$<,>,=$$都有了形式定义。
 
-你发现这样的定义下有
+### The End
 
-$$
-\{\mathrm{L}(A)\vert\mathrm{R}(A)\}\leq0\Longleftrightarrow\forall u\in\mathrm{L}(A), u\ngeq 0
-$$
-
-，这好像是说，对于一个棋局Alice先手必败，当且仅当她随便走一步都必败。这好像很对。
+为什么就结束了?因为上面所讲的东西就是超现实数，我们已经得到了一个比较直观的理解，所以可以结束了。剩下的东西，左集合不大于等于右集合，乘法和乘法逆元，$$\Uparrow\Downarrow$$这些东西，实在是没法直观地解释。如果您还想继续学习，建议去看集训队论文。
 
