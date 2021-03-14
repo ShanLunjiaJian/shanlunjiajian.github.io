@@ -169,7 +169,7 @@ $$
 
 超现实数的定义就有$$L\ngeq R$$，含义是Alice走一步一定不如Bob走一步对Alice更有利。如果一个棋盘不是这样的，有定理表明它一定模糊于$$0$$。
 
-我们常用的数有$$\Uparrow,Downarrow,\ast$$这些东西，实际上Domineering里面还有$$\pm1$$这种更奇怪的东西。SN水很深。
+我们常用的数有$$\Uparrow,\Downarrow,\ast$$这些东西，实际上Domineering里面还有$$\pm1$$这种更奇怪的东西。SN水很深。
 
 ### The End
 
