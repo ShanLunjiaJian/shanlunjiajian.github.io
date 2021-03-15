@@ -220,7 +220,7 @@ $$
 
 欣赏一下这题难度 : 
 
-![tourist卡G](/img/2021-03-21-cf-brain-power-problems/tourist.png)
+![tourist卡G](/img/2021-03-12-cf-brain-power-problems/tourist.png)
 
 考虑我们把限制转化一下
 
@@ -252,7 +252,7 @@ $$
 
 也欣赏一下这题难度 : 
 
-![Um_nik卡B](/img/2021-03-21-cf-brain-power-problems/um_nik.png)
+![Um_nik卡B](/img/2021-03-12-cf-brain-power-problems/um_nik.png)
 
 考虑如何求一个大小为$$k$$的团。容易发现这是不可能的，因为最大团是NPC的，而我们枚举最大团大小就可以把这个问题归约到最大团。但是既然题目说到团，那么大概率是有用的，但是它应该是判完第二类之后剩下的特殊情况。这是读完题的一点想法。
 
