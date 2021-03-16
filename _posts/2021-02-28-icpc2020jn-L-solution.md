@@ -1,3 +1,10 @@
+---
+layout: post
+title: ICPC2020济南站 L. Bit Sequence 题解
+subtitle: 好题
+tags: dp 数位dp icpc
+---
+
 我参加的第一场ICPC/kk，赛时跟zrz搞了两个小时这个L(，同时gkj搞了两个小时A)，还是没有搞出来，最后四题打铁了/kk
 
 然后模拟赛出了这题的加强版，我一看这不是原题吗?结果写不动爬了/kk
