@@ -15,11 +15,11 @@ CF脑力题选做!(你可以看到URL里面是cf-brain-power-problems)
 
 解决构造题的利器 : 
 
-抽屉原理，平均值定理，这两个也可以用来搞操作数限制。
+抽屉原理，平均值定理，这两个可以用来满足各种"至少/至多"限制。
 
-递归和归纳法，用归纳法证明方案存在性的时候常常可以得到递归构造的算法。
+归纳法和递归，用归纳法证明方案存在性的时候常常可以得到递归构造的算法。
 
-dfs树(图论问题)
+dfs树(图论问题)。
 
 -----
 
@@ -330,7 +330,7 @@ $$
 
 ![第一页惨状](/img/2021-03-12-cf-brain-power-problems/page1.png)
 
-Radewoosh, Um_nik没能pp，neal, scott\_wu, Benq, matthew99都fst了，切掉ABC就可以rk34。这真的只是个1C啊!这么毒瘤我还是直接看题解吧（
+Radewoosh, Um_nik没能pp，neal, scott\_wu, Benq, matthew99都fst了，切掉ABC就可以rk34。这真的只是个2E啊!这么毒瘤我还是直接看题解吧（
 
 好了下面说做法。
 
@@ -344,4 +344,9 @@ Radewoosh, Um_nik没能pp，neal, scott\_wu, Benq, matthew99都fst了，切掉AB
 
 -----
 
-1091F : 放学了，先咕咕咕。
+1091F : 你只要一看就知道，这题难度在于模拟。
+
+-----
+
+1148F : 奇妙题。
+
