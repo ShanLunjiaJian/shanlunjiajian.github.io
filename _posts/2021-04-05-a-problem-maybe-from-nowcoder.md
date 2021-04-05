@@ -37,9 +37,9 @@ $$
 
 枚举质数$$p$$和次数$$e$$，考虑$$p^e$$的贡献。
 
-直接统计$$p^e$$出现至少一次的方案数不是很简单，我们转而统计$$p^e$$不出现的方案数。呃这个非常简单，就是$$(e-1)^n$$嘛。那么出现的方案数就是$$m^n-(e-1)^n$$。所以$$p^e$$的贡献就是$$p^{m^n-(e-1)^n}$$。
+直接统计$$p^e$$出现至少一次的方案数不是很简单，我们转而统计$$p^e$$不出现的方案数。呃这个非常简单，就是$$\lfloor\frac{m}{p^{e-1}}\rfloor^n$$嘛。那么出现的方案数就是$$m^n-\lfloor\frac{m}{p^{e-1}}\rfloor^n$$。所以$$p^e$$的贡献就是$$(p^e)^{m^n-\lfloor\frac{m}{p^{e-1}}\rfloor^n}$$。
 
-吗?你发现我们算的不是次数恰好为$$e$$，而是至少为$$e$$，所以我们这里还需要对贡献进行差分(或者你对这个方案数进行差分也行，都是一样的)。这就做完了。复杂度是$$O(n\log n\log v)$$，可以预处理优化成$$O(n(\log n+\log v))$$，不过没啥必要。
+吗?你发现我们算的不是次数恰好为$$e$$，而是至少为$$e$$，所以我们这里还需要对贡献进行差分(或者你对这个方案数进行差分也行，都是一样的)，$$p^e$$的贡献实际上应该去掉那个$$e$$次方，变成$$p^{m^n-\lfloor\frac{m}{p^{e-1}}\rfloor^n}$$。这就做完了。复杂度是$$O(n\log n\log v)$$，可以预处理优化成$$O(n(\log n+\log v))$$，不过没啥必要。
 
 式子完整写出来大概是这样的 : 
 
@@ -49,7 +49,7 @@ $$
 =&\prod_{d}\prod_{d\vert a}\mathrm{lcm}(a_i)^{\varphi(d)}\\
 =&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n}\left(\prod_{a\in[1,\lfloor\frac{m}{d}\rfloor]}\mathrm{lcm}(a_i)\right)^d\\
 =&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n}\left(f(\lfloor\frac{m}{d}\rfloor)\right)^d\\
-f(m)=&\prod_{p^e}p^{m^n-(e-1)^n}
+f(m)=&\prod_{p^e}p^{m^n-\lfloor\frac{m}{p^{e-1}}\rfloor^n}
 \end{aligned}
 $$
 
