@@ -52,3 +52,57 @@ f(m)=&\prod_{p^e}p^{m^n-(e-1)^n}
 $$
 
 事实证明min-max容斥做这题比较困难，我试了半天也没有消掉那个枚举子集。
+
+upd : 我消掉了!但是不知道对不对。
+
+$$
+\begin{aligned}
+&\prod_{S}\mathrm{lcm}(S)^{\gcd(S)}\\
+=&\prod_{S}\prod_{T\neq\varnothing,T\sube S}\gcd(T)^{(-1)^{\vert T\vert+1}\gcd(S)}\\
+=&\prod_{S}\prod_{T\neq\varnothing,T\sube S}\gcd(T)^{(-1)^{\vert T\vert+1}\sum_{d\vert S}\varphi(d)}\\
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\sube S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\sube S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\sube S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}[\exist a\in S,k\vert a]}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}[\exist a\in S,k\vert a]}\right)^{\varphi(d)}
+\end{aligned}
+$$
+
+最后那个指数是说，这个集合要满足每个数都被$$d$$整除，且某个数能被$$k$$整除。
+
+进行容斥，我们分别计算 每个数都被$$d$$整除，没有数被$$k$$整除 和 每个数都被$$d$$整除。
+
+容易发现后面那个是$$\lfloor\frac{m}{d}\rfloor^n$$。
+
+前面那个呢，我们对每个数再容斥一次 : 用被$$d$$整除的减去同时被$$d,k$$整除的。应该是$$\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n$$。
+
+所以答案就是 : 
+
+$$
+\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
+$$
+
+这个还是不是很好算，怎么办呢?我们可以把好算的$$d$$扔进去，把$$k$$拿出来 : 
+
+$$
+\prod_{k}\varphi(k)^{\left(\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n\right)\sum_{d}\varphi(d)}
+$$
+
+使用$$\varphi$$代替$$\mu$$来处理$$\mathrm{id}$$真的很能简化式子。
+
+最后贴一遍完整过程以供欣赏 : 
+
+$$
+\begin{aligned}
+&\prod_{S}\mathrm{lcm}(S)^{\gcd(S)}\\
+=&\prod_{S}\prod_{T\neq\varnothing,T\sube S}\gcd(T)^{(-1)^{\vert T\vert+1}\gcd(S)}\\
+=&\prod_{S}\prod_{T\neq\varnothing,T\sube S}\gcd(T)^{(-1)^{\vert T\vert+1}\sum_{d\vert S}\varphi(d)}\\
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\sube S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\sube S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\sube S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exist a\in S,k\vert a]}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exist a\in S,k\vert a]}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}\\
+=&\prod_{k}\varphi(k)^{\left(\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n\right)\sum_{d}\varphi(d)}
+\end{aligned}
+$$
