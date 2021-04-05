@@ -32,7 +32,7 @@ $$
 对于$$\prod$$，莫反有另外一个形式是
 
 $$
-g(n)=\prod_{d\vert n}f(d)\Leftrightarrow f(n)=\prod_{d\vert n}g(d)^{\mu(n/d)}
+g(n)=\prod_{d\vert n}f(d)\Leftrightarrow f(n)=\prod_{d\vert n}g(d)^{\mu(\frac{n}{d})}
 $$
 
 可以使用莫反的基本形式直接证明。
