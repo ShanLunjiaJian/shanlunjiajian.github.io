@@ -65,7 +65,6 @@ $$
 =&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}
 \end{aligned}
 $$
@@ -106,7 +105,6 @@ $$
 =&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}\\
 =&\prod_{k}\varphi(k)^{\sum_{d}\varphi(d)\left(\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n\right)}
