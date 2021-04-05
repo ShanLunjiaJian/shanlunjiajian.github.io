@@ -83,17 +83,13 @@ $$
 \prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
 $$
 
-这个还是不是很好算，怎么办呢?我们可以把好算的$$d$$扔进去，把$$k$$拿出来 : 
-
-$$
-\prod_{k}\varphi(k)^{\sum_{d}\varphi(d)\left(\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n\right)}
-$$
+这个还是不是很好算，怎么办呢?
 
 发现满足$$\mathrm{lcm}(k,d)\leq m$$的$$k,d$$对数实际上很少，其它的都可以直接统计，不过这个东西打表并不能很快打出来（
 
-粗略分析一下，枚举一个$$k$$，枚举一个$$\gcd$$记为$$g$$(必须是$$k$$的因数)，那么上面的式子就是$$d\leq\frac{ng}{k}$$，然后你发现$$g$$是一个调和数，$$k$$这里又产生一个调和数，所以这个东西是$$O(n\log^2 n)$$的，你也可以用这样的方法来枚举$$k,d$$。当然我不会真的去写这个做法。
+粗略分析一下，枚举一个$$d$$，枚举一个$$\gcd$$记为$$g$$(必须是$$d$$的因数)，那么上面的式子就是$$k\leq\frac{ng}{d}$$，然后你发现$$g$$是一个调和数，$$d$$这里又产生一个调和数，所以这个东西是$$O(n\log^2 n)$$的，你也可以用这样的方法来枚举$$k,d$$。当然我不会真的去写这个做法。
 
-另外，使用$$\varphi$$代替$$\mu$$来处理$$\mathrm{id}$$真的很能简化式子。
+另外，当需要反演一堆$$\gcd$$的时候，使用$$\varphi$$代替$$\mu$$来处理$$\mathrm{id}$$真的很能简化推式子过程。
 
 最后贴一遍完整过程以供欣赏 : 
 
@@ -106,7 +102,6 @@ $$
 =&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
 =&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}\\
-=&\prod_{k}\varphi(k)^{\sum_{d}\varphi(d)\left(\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n\right)}
+=&\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
 \end{aligned}
 $$
