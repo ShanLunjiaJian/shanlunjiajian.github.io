@@ -22,7 +22,7 @@ tags: 数论
 式子大概长这样(空集$$\gcd$$为$$1$$) : 
 
 $$
-\mathrm{lcm}(S)=\prod_{T\sube S,T\neq\varnothing}gcd(T)^{(-1)^{\vert T\vert+1}}
+\mathrm{lcm}(S)=\prod_{T\subseteq S,T\neq\varnothing}gcd(T)^{(-1)^{\vert T\vert+1}}
 $$
 
 看到多元$$\mathrm{lcm}$$的时候可以考虑这个式子(或者直接考虑每个质因子的贡献)，毕竟硬拆$$\mathrm{lcm}$$真的不是人类应该承受的折磨。
@@ -47,8 +47,8 @@ $$
 
 $$
 \begin{aligned}
-\mathrm{lcm}(f(S))=&\prod_{T\sube S,T\neq\varnothing}\gcd(f(T))^{(-1)^{\vert T\vert+1}}\\
-=&\prod_{T\sube S,T\neq\varnothing}f(\gcd(T))^{(-1)^{\vert T\vert+1}}
+\mathrm{lcm}(f(S))=&\prod_{T\subseteq S,T\neq\varnothing}\gcd(f(T))^{(-1)^{\vert T\vert+1}}\\
+=&\prod_{T\subseteq S,T\neq\varnothing}f(\gcd(T))^{(-1)^{\vert T\vert+1}}
 \end{aligned}
 $$
 
@@ -56,24 +56,24 @@ $$
 
 $$
 \begin{aligned}
-&\prod_{T\sube S,T\neq\varnothing}f(\gcd(T))^{(-1)^{\vert T\vert+1}}\\
-=&\prod_{T\sube S,T\neq\varnothing}\prod_{d\vert T}g(d)^{(-1)^{\vert T\vert+1}}\\
-=&\prod_{d}g(d)^{\sum_{T\sube S,T\neq\varnothing,d\vert T}(-1)^{\vert T\vert+1}}
+&\prod_{T\subseteq S,T\neq\varnothing}f(\gcd(T))^{(-1)^{\vert T\vert+1}}\\
+=&\prod_{T\subseteq S,T\neq\varnothing}\prod_{d\vert T}g(d)^{(-1)^{\vert T\vert+1}}\\
+=&\prod_{d}g(d)^{\sum_{T\subseteq S,T\neq\varnothing,d\vert T}(-1)^{\vert T\vert+1}}
 \end{aligned}
 $$
 
 指数上那个东西好像在哪见过。还记得子集反演的经典推论吗?
 
 $$
-\sum_{T\sube S}(-1)^{\vert T\vert}=[S=\varnothing]
+\sum_{T\subseteq S}(-1)^{\vert T\vert}=[S=\varnothing]
 $$
 
 那么上面那个好像就是说，只留下$$S$$中$$d\vert a$$的元素$$a$$们，如果得到空集那么值是$$0$$，否则是$$1$$。为什么是反着的?注意符号是反的，并且去掉了空集。
 
 $$
 \begin{aligned}
-=&\prod_{d}g(d)^{\sum_{T\sube S,T\neq\varnothing,d\vert T}(-1)^{\vert T\vert+1}}
-=&\prod_{\exist a\in S,d\vert a}g(d)
+=&\prod_{d}g(d)^{\sum_{T\subseteq S,T\neq\varnothing,d\vert T}(-1)^{\vert T\vert+1}}
+=&\prod_{\exists a\in S,d\vert a}g(d)
 \end{aligned}
 $$
 
