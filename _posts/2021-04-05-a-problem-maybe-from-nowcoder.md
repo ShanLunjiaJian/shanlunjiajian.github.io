@@ -5,6 +5,8 @@ subtitle: 降智
 tags: 数论
 ---
 
+公式如果出现问题，可以右键任意一个公式，选择Math Settings->Math Renderer->Common HTML，可以解决一部分问题。
+
 题号忘了（
 
 题意 : 对于所有长$$n$$，值在$$[1,m]$$之间的序列$$a$$，求
