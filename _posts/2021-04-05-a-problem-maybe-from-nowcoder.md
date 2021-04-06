@@ -62,11 +62,28 @@ $$
 &\prod_{S}\mathrm{lcm}(S)^{\gcd(S)}\\
 =&\prod_{S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}\gcd(S)}\\
 =&\prod_{S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}\sum_{d\vert S}\varphi(d)}\\
-=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}
 \end{aligned}
+$$
+
+遇到了僵局。看到$$\gcd$$，我们有两种办法，要么进行$$\varphi$$反演，要么就构造辅助函数。先试试第一种 : 
+
+$$
+=\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\left(\sum_{k\vert T}\varphi(k)\right)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}
+$$
+
+发现换不动啊!这个$$\sum$$跟$$\prod$$们格格不入。
+
+那么就需要第二种了。我们构造
+
+$$
+f(n)=\prod_{d\vert n}\mathrm{id}(d)^{\mu(\frac{n}{d})}
+$$
+
+这个$$f$$可以$$O(n\log n)$$计算。然后化一下式子，就变成了
+
+$$
+=\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}f(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}
 $$
 
 最后那个指数是说，这个集合要满足每个数都被$$d$$整除，且某个数能被$$k$$整除。
@@ -80,7 +97,7 @@ $$
 所以答案就是 : 
 
 $$
-\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
+\prod_{d}\left(\prod_{k}f(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
 $$
 
 这个还是不是很好算，怎么办呢?
@@ -99,9 +116,9 @@ $$
 =&\prod_{S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}\gcd(S)}\\
 =&\prod_{S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}\sum_{d\vert S}\varphi(d)}\\
 =&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\gcd(T)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}\varphi(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k\vert T}\varphi(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}\\
-=&\prod_{d}\left(\prod_{k}\varphi(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}f(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}(\text{let }f(n)=\prod_{d\vert n}\mathrm{id}(d)^{\mu(\frac{n}{d})}\text{.})\\
+=&\prod_{d}\left(\prod_{k}f(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k}f(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k}f(k)^{\lfloor\frac{m}{d}\rfloor^n-\left(\lfloor\frac{m}{d}\rfloor-\lfloor\frac{m}{\mathrm{lcm}(k,d)}\rfloor\right)^n}\right)^{\varphi(d)}
 \end{aligned}
 $$
