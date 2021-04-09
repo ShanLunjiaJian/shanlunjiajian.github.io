@@ -404,7 +404,7 @@ R9 T3
 
 R10 T1
 
-给两个$$n,m$$次的首一多项式，假设它们的所有根分别是$$u_1,\dots,u_n,v_1,\dots,v_m$$，求多项式
+给两个$$n,m$$次的首一多项式$$F,G$$，假设它们的所有根分别是$$u_1,\dots,u_n,v_1,\dots,v_m$$，求多项式
 
 $$
 \prod_{i=1}^n\prod_{j=1}^m(z-u_i-v_j)
@@ -424,7 +424,15 @@ $$
 \begin{aligned}=&-\sum_{k=1}^\infty\frac{z^k}{k}\sum_{i=1}^n\sum_{j=1}^m(u_i+v_j)^k\\=&-\sum_{k=1}^\infty\frac{z^k}{k}\sum_{i=1}^n\sum_{j=1}^m\sum_{t=0}^k\binom{k}{t}u_i^tv_j^{k-t}\\=&-\sum_{k=1}^\infty\frac{z^k}{k}\sum_{t=0}^k\binom{k}{t}\left(\sum_{i=1}^nu_i^t\right)\left(\sum_{j=1}^mv_j^{k-t}\right)\\\end{aligned}
 $$
 
-先看最里面的东西，是一个幂和，经典问题。
+先看最里面的东西，好像还是遇到了僵局。
+
+但是别忘了$$u,v$$是根，这是一个经典问题，我们对$$F^R$$取个$$\ln$$就会出现奇妙的事情
+
+$$
+\ln F^R=\sum_{i=0}^n\ln(1-u_iz)=\sum_{j=1}^\infty\frac{z^j}{j}\sum_{i=0}^nu_i^j
+$$
+
+所以实际上这个东西可以$$\ln$$一次得到。
 
 考虑预处理第二个$$\sum$$里的内容，发现是一个二项卷积 : 
 
