@@ -326,13 +326,21 @@ qlr ak!
 
 R6.5 T2
 
-SAM题，不是很懂。
+给一个字符串，从左往右选出尽量多的长为$$k$$的子串使得它们不相交，并且字典序单调递增。
+
+考虑字典序，当然是用SA来判断。排序之后问题变得非常简单，直接搞一个贪心选过去就好了。
+
+-----
+
+R6.5 T2.5
+
+出现在题解里面的神秘题目，性质类似于NOIO tg T1
 
 -----
 
 R6.5 T3
 
-神仙结论，一会看。
+
 
 -----
 
@@ -411,6 +419,8 @@ $$
 $$
 \begin{aligned}=&-\sum_{k=1}^\infty\frac{z^k}{k}\sum_{i=1}^n\sum_{j=1}^m(u_i+v_j)^k\\=&-\sum_{k=1}^\infty\frac{z^k}{k}\sum_{i=1}^n\sum_{j=1}^m\sum_{t=0}^k\binom{k}{t}u_i^tv_j^{k-t}\\=&-\sum_{k=1}^\infty\frac{z^k}{k}\sum_{t=0}^k\binom{k}{t}\left(\sum_{i=1}^nu_i^t\right)\left(\sum_{j=1}^mv_j^{k-t}\right)\\\end{aligned}
 $$
+
+先看最里面的东西，是一个幂和，经典问题。
 
 考虑预处理第二个$$\sum$$里的内容，发现是一个二项卷积 : 
 
