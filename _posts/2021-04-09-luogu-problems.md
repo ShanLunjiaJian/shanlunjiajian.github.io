@@ -384,8 +384,6 @@ $$
 
 但是这还是太拖拉机了。完全跑不了$$10^{18}$$。
 
-考虑矩阵快速幂。刚才我们成功把转移所需信息搞成了$$O(1)$$。
-
 剩下的优化简直是神了。用Kewth说的差分的思想，我们考虑利用差分的性质。
 
 为了写起来方便，我们先搞三个函数$$f(n)=dp(n),g(n)=dp(n)+an,h(n)=dp(n)+bn$$，那么容易知道$$\Delta g(n)=\Delta f(n)+a,\Delta h(n)=\Delta f(n)+b$$。又因为$$\Delta f$$是由$$\Delta g,\Delta h$$归并起来的，所以对于任意一个$$\Delta f(k)=d$$，一定存在一个$$k^\prime$$使得$$\Delta g(k^\prime)=d$$或者$$\Delta h(k^\prime)=d$$，代入上面的式子就得到$$\Delta f(k^\prime)=d-a$$或$$d-b$$。
