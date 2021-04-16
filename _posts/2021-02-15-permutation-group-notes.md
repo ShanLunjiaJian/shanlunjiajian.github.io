@@ -180,17 +180,17 @@ $$
 
 根据定理3，我们知道$$\sum_{f\in G}\vert\mathcal{C}(f)\vert=\sum_{\mathrm{c}\in\mathcal{C}}\vert G(\mathrm{c})\vert$$。
 
-根据定理2，我们又知道$$\vert G(\mathrm{c})\vert=\frac{\vert G\vert}{\text{与}\mathrm{c}\text{本质不同的染色数}}$$。
+根据定理2，我们又知道$$\vert G(\mathrm{c})\vert=\frac{\vert G\vert}{\text{与}\mathrm{c}\text{本质相同的染色数}}$$。
 
 把第二个式子代入第一个式子，得到
 
 $$
-\sum_{f\in G}\vert\mathcal{C}(f)\vert=\vert G\vert\sum_{\mathrm{c}\in\mathcal{C}}\frac{1}{\text{与}\mathrm{c}\text{本质不同的染色数}}
+\sum_{f\in G}\vert\mathcal{C}(f)\vert=\vert G\vert\sum_{\mathrm{c}\in\mathcal{C}}\frac{1}{\text{与}\mathrm{c}\text{本质相同的染色数}}
 $$
 
 考虑后面那个$$\sum$$，对于一个染色等价类，它里面的项加起来的结果应该是$$1$$，所以那个$$\sum$$计算的就是等价类个数，也就是本质不同的染色数。所以这个式子乘上$$\frac{1}{\vert G\vert}$$就得到本质不同的染色数。
 
-由于一般情况下，置换群的大小不会很大，但是染色集合是巨大的，我们会使用$$\mathcal{C}(f)$$而不是$$G(\mathrm{c})$$进行计数。
+由于我们使用Burnside定理的情况下，置换群的大小一般不会很大，但是染色集合是巨大的，我们会使用$$\mathcal{C}(f)$$而不是$$G(\mathrm{c})$$进行计数。
 
 ## Pólya定理
 
