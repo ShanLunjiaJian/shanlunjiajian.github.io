@@ -83,10 +83,19 @@ $$
 这个$$f$$可以$$O(n\log n)$$计算。然后化一下式子，就变成了
 
 $$
-=\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}f(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}
+\begin{aligned}
+=&\prod_{d}\left(\prod_{d\vert S}\prod_{T\neq\varnothing,T\subseteq S}\prod_{k\vert T}f(k)^{(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+=&\prod_{d}\left(\prod_{k}f(k)^{\sum_{d\vert S}\sum_{T\neq\varnothing,T\subseteq S,k\vert T}(-1)^{\vert T\vert+1}}\right)^{\varphi(d)}\\
+\end{aligned}
 $$
 
-最后那个指数是说，这个集合要满足每个数都被$$d$$整除，且某个数能被$$k$$整除。
+这个指数后面那个$$\sum$$好像在哪里见过?干掉它。
+
+$$
+=\prod_{d}\left(\prod_{k}f(k)^{\sum_{d\vert S}[\exists a\in S,k\vert a]}\right)^{\varphi(d)}
+$$
+
+最后剩下的那个指数是说，这个集合要满足每个数都被$$d$$整除，且某个数能被$$k$$整除。
 
 进行容斥，我们分别计算 每个数都被$$d$$整除，没有数被$$k$$整除 和 每个数都被$$d$$整除。
 
