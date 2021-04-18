@@ -87,9 +87,9 @@ Tarjan是在dfs树上乱搞。
 
 考虑一个记搜，如果$$u$$连向的点$$v$$已经遍历完了并且求出了$$\mathrm{low}(v)$$，那么
 
-	如果$$u,v$$强连通，$$\mathrm{low}(u):=\min(\mathrm{low}(u),\mathrm{low}(v))$$
+ - 如果$$u,v$$强连通，$$\mathrm{low}(u):=\min(\mathrm{low}(u),\mathrm{low}(v))$$
 
-	如果$$u,v$$不强连通，什么都不做
+ - 如果$$u,v$$不强连通，什么都不做
 
 。那么怎么判断$$u,v$$是否强连通?
 
