@@ -7,3 +7,5 @@ ShanLunjiaJian is a strange name produced by tommy0103's wrong spelling of HuaSh
 There are many strange things in my blog. I think many of them are useless. But I love writing notes in my blog!
 
 Welcome to exchange friends links with me!
+
+Except the default background, unless otherwise specified, other backgrounds come from Pixiv, and ID is the file name in the URL.
