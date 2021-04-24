@@ -343,7 +343,7 @@ $$
 
 整一个`calc(u,k)`表示前面已经有前缀最大值$$k$$的情况下，结点$$u$$区间内的上面那个东西。
 
- - 如果`k>t[lq(u)].max`，维护`t[u].s`表示最小的`cost_r-suf_r`，返回`min(t[lq(u)].s+k,calc(rq(u),k))`。
+ - 如果`k>t[lq(u)].max`，维护`t[u].s`表示最小的$$cost_r-suf_r$$，返回`min(t[lq(u)].s+k,calc(rq(u),k))`。
 
  - 如果`k<=t[lq(u)].max`，维护`t[u].val=calc(rq(u),t[lq(u)].max)`返回`min(calc(lq(u),k),t[u].val)`。
 
