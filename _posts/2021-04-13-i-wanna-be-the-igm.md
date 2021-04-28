@@ -602,5 +602,45 @@ sqrt{n})$$了。
 
 实际上只有最大的那个加法操作有用，所以我们可以每次选了最大的之后更新 选取次大的带来的$$\ln$$变化量。复杂度$$O(n\log n)$$。
 
+你发现实际上计算这个$$\ln$$的变化量所做的就是把加法变成乘法，所以我这个跟题解做法是一样的。
+
 -----
 
+576D : 众所周知1000才是Floyd的数据范围（恼
+
+考虑如果$$d$$很小，那么分层图就好了。
+
+但是$$d$$不小!
+
+考虑实际上只有$$m$$层是新开辟了一些边，此后最多再有$$2m$$层就可以走完这次开辟的新边，为了奇怪的走法我们把它增加到$$3m$$，总之只有$$O(m^2)$$层是有用的，别的层中总是可以在一条边上来回走。bfs即可，复杂度$$O(m^3)$$，不过没写，不知道正确性。
+
+正解是矩阵快速幂+倍增。每次我们尝试一直走到下一条边开放，如果在此之前就能到达我们就倍增找到最短时间，否则继续尝试走到再下一条边开放。用bitset存储矩阵，复杂度是$$O(\frac{n^3m}{w}\log v)$$。
+
+-----
+
+1278F : 这个$$x^k$$来者不善。
+
+直接写式子!
+
+$$
+\sum_{x=0}^nx^k\binom{n}{x}(\frac{1}{m})^x(1-\frac{1}{m})^{n-x}
+$$
+
+然后考虑怎么算。这个$$n$$大上天了啊!
+
+不过这让你想起一道题叫 组合数问题，或者 如何优雅地求和。那个题也是$$n$$大上天，但是$$k$$很小啊!
+
+我们硬推!
+
+$$
+\begin{aligned}
+&\sum_{x=0}^nx^k\binom{n}{x}\left(\frac{1}{m}\right)^x\left(1-\frac{1}{m}\right)^{n-x}\\
+=&\sum_{x=0}^n\sum_{i=0}^k{k\brace i}x^\underline{i}\binom{n}{x}\left(\frac{1}{m}\right)^x\left(1-\frac{1}{m}\right)^{n-x}\\
+=&\sum_{i=0}^k{k\brace i}n^\underline{i}\sum_{x=0}^n\binom{n-i}{x-i}\left(\frac{1}{m}\right)^x\left(1-\frac{1}{m}\right)^{n-x}\\
+=&\sum_{i=0}^k{k\brace i}n^\underline{i}\sum_{x=0}^{n-i}\binom{n-i}{x}\left(\frac{1}{m}\right)^{x+i}\left(1-\frac{1}{m}\right)^{n-x-i}\\
+=&\sum_{i=0}^k{k\brace i}n^\underline{i}\left(\frac{1}{m}\right)^i\sum_{x=0}^{n-i}\binom{n-i}{x}\left(\frac{1}{m}\right)^x\left(1-\frac{1}{m}\right)^{n-i-x}\\
+=&\sum_{i=0}^k{k\brace i}n^\underline{i}\left(\frac{1}{m}\right)^i
+\end{aligned}
+$$
+
+就做完了，复杂度$$O(k^2)$$。利用带项式科技快速求一行斯特林数，可以做到$$O(k\log k)$$。鰰给出了一个$$O(k)$$做法，我不懂。
