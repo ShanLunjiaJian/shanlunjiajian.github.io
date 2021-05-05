@@ -52,7 +52,7 @@ $$
 考虑一个复读机 : 
 
 $$
-\hat{F}=\sum_{i=0}^{n}[d\vert i]z^i
+\hat{F}=\sum_{i=0}^{n}[d\vert i]\frac{z^i}{i!}
 $$
 
 单位根反演一下，
