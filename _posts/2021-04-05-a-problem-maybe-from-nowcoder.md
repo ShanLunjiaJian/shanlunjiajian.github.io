@@ -27,7 +27,7 @@ $$
 \begin{aligned}
 &\prod_{a}\mathrm{lcm}(a_i)^{\gcd(a_i)}\\
 =&\prod_{d}\prod_{d\vert a}\mathrm{lcm}(a_i)^{\varphi(d)}\\
-=&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n}\left(\prod_{a\in[1,\lfloor\frac{m}{d}\rfloor]}\mathrm{lcm}(a_i)\right)^d
+=&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n\varphi(d)}\left(\prod_{a\in[1,\lfloor\frac{m}{d}\rfloor]}\mathrm{lcm}(a_i)\right)^{\varphi(d)}
 \end{aligned}
 $$
 
@@ -47,8 +47,8 @@ $$
 \begin{aligned}
 &\prod_{a}\mathrm{lcm}(a_i)^{\gcd(a_i)}\\
 =&\prod_{d}\prod_{d\vert a}\mathrm{lcm}(a_i)^{\varphi(d)}\\
-=&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n}\left(\prod_{a\in[1,\lfloor\frac{m}{d}\rfloor]}\mathrm{lcm}(a_i)\right)^d\\
-=&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n}\left(f(\lfloor\frac{m}{d}\rfloor)\right)^d\\
+=&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n\varphi(d)}\left(\prod_{a\in[1,\lfloor\frac{m}{d}\rfloor]}\mathrm{lcm}(a_i)\right)^{\varphi(d)}\\
+=&\prod_{d}d^{\lfloor\frac{m}{d}\rfloor^n\varphi(d)}\left(f(\lfloor\frac{m}{d}\rfloor)\right)^{\varphi(d)}\\
 f(m)=&\prod_{p^e}p^{m^n-(m-\lfloor\frac{m}{p^{e}}\rfloor)^n}
 \end{aligned}
 $$
