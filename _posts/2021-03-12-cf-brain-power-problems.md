@@ -430,6 +430,9 @@ Radewoosh, Um_nik没能pp，neal, scott\_wu, Benq, matthew99都fst了，切掉AB
 
 所以如果一个老兄开局斜线异或和全是$$0$$，那么他一定没了，因为他必须玩起点的斜线改变异或和。
 
+另一道题 : 1149E Election Promises。
+
+
 -----
 
 1340D : wqy图论选讲讲了这题来着。
