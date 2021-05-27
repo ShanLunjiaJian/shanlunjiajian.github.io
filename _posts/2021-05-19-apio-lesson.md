@@ -332,9 +332,9 @@ Japanese Knowledge
 
 给一个单调递增序列$$a$$，对于所有$$0\leq k\leq n$$，求满足
 
- - $$x$$单调递增
+ - $$x$$单调递增，
 
- - $$x_i\leq a_i$$
+ - $$x_i\leq a_i$$，
 
  - 有恰好$$k$$个下标满足$$x_i=a_i$$
 
