@@ -1,11 +1,11 @@
 ---
 layout: post
-title: IGM养成计划 题目整理
+title: CF再选做
 subtitle: 定个小目标，今年上Newbie
 tags: 题选做 cf
 ---
 
-打算今年上个IGM（
+打算今年上个Newbie（
 
 所以来刷穿CF了，选了Rating 2600+，按通过人数降序。
 
