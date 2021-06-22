@@ -219,9 +219,22 @@ $$
 
 $$
 \begin{aligned}
-(T^n)^\prime(z)=nT^{n-1}(z)T^\prime(z)=nT^{n-1}(z)(T(z)+\frac{z^{b-1}}{(b-1)!})
+(T^k)^\prime(z)&=kT^{k-1}(z)T^\prime(z)\\
+&=kT^{k-1}(z)\left(T(z)+\frac{z^{b-1}}{(b-1)!}\right)
 \end{aligned}
 $$
+
+呃看起来有一个$$T^k$$，还有一个$$(T^k)^\prime$$，注意到它俩系数是错开的，那么如果直接提取系数的话，每一次都会得到相邻两项的一个方程，而常数项肯定是$$1$$，所以好像可以解出来$$T^k$$的每一项系数?
+
+$$
+\begin{aligned} 
+(T^k)^\prime(z)&=kT^{k}(z)+\frac{z^{b-1}}{(b-1)!}kT^{k-1}(z)\\
+ [z^n](T^k)^\prime(z)&=[z^n]kT^{k}(z)+[z^n]\frac{z^{b-1}}{(b-1)!}kT^{k-1}(z)\\
+ [z^{n+1}]T^k(z)&=k[z^n]T^{k}(z)+\frac{1}{(b-1)!}[z^{n-b+1}]kT^{k-1}(z)
+\end{aligned}
+$$
+
+呃这就结束了。最右边是已知的，$$[z^0]T^k(z)$$是已知的，所以从$$0$$次开始每次解出$$[z^{n+1}]T^k(z)$$就好了。
 
 -----
 
