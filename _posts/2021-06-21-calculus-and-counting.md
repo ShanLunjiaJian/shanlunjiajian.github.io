@@ -23,11 +23,13 @@ tags: 数学 生成函数
 
 超几何
 
-大家都知道超几何函数。具体数学说，我们搞的函数，95%都是超几何函数。
+本来打算写一下有关超几何函数的一类微分方程，但是因为没找到应用就不写了，只记录一下超几何函数的LaTeX怎么打（
 
-超几何函数有很多应用，但是今天我们只关心关于它们的一个通用微分方程。
+$$
+F\left(\begin{array}{ccc|}a_1,a_2,\cdots,a_n\ \\b_1,b_2,\cdots,b_m\ \end{array}\ z\right)=\sum_{k=0}^\infty\frac{a_1^\overline{k}a_2^\overline{k}\cdots a_n^\overline{k}z^k}{b_1^\overline{k}b_2^\overline{k}\cdots b_n^\overline{k}k!}
+$$
 
-众所周知，超几何函数是
+呃这个符号打起来真麻烦。
 
 -----
 
