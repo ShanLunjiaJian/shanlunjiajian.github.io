@@ -21,15 +21,113 @@ tags: 数学 生成函数
 
 -----
 
+常系数线性微分方程，微分有限和递推
+
+如果一个生成函数满足一个常系数线性微分方程(ODE)，那么它就是微分有限的，注意这里的常系数可以是常多项式。根据这个ODE容易推出它系数的递推式。如果你并不理解，你可以看一看第一个题，也就是 排列。
+
+-----
+
 超几何
 
-本来打算写一下有关超几何函数的一类微分方程，但是因为没找到应用就不写了，只记录一下超几何函数的LaTeX怎么打（
+这一段照抄 具体数学。
+
+大家都知道超几何函数。具体数学说，我们搞的函数，95%都是超几何函数。
+
+超几何函数有很多应用，但是今天我们只讨论它们满足的一类微分方程。
+
+众所周知，超几何函数是
 
 $$
 F\left(\begin{array}{ccc|}a_1,a_2,\cdots,a_n\ \\b_1,b_2,\cdots,b_m\ \end{array}\ z\right)=\sum_{k=0}^\infty\frac{a_1^\overline{k}a_2^\overline{k}\cdots a_n^\overline{k}z^k}{b_1^\overline{k}b_2^\overline{k}\cdots b_n^\overline{k}k!}
 $$
 
 呃这个符号打起来真麻烦。
+
+考虑超几何函数的导数，它是
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}z}F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)=\sum_{k=0}^\infty\frac{a_1^\overline{k+1}\cdots a_n^\overline{k+1}z^{k}}{b_1^\overline{k+1}\cdots b_n^\overline{k+1}k!}=\frac{a_1\cdots a_n}{b_1\cdots b_m}F\left(\begin{array}{ccc|}a_1+1,\cdots,a_n+1\ \\b_1+1,\cdots,b_m+1\ \end{array}\ z\right)
+$$
+
+我们定义$$\vartheta$$算子为$$\vartheta=z\frac{\mathrm{d}}{\mathrm{d}z}$$，也就是求导再移一位的算子。
+
+$$\vartheta$$作用于超几何函数会有很奇妙的现象 : 
+
+$$
+\vartheta F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)=z\sum_{k=1}^\infty\frac{a_1^\overline{k}\cdots a_n^\overline{k}z^{k-1}}{b_1^\overline{k}\cdots b_n^\overline{k}(k-1)!}=\sum_{k=0}^\infty\frac{ka_1^\overline{k}\cdots a_n^\overline{k}z^k}{b_1^\overline{k}\cdots b_n^\overline{k}k!}
+$$
+
+呃好像不是很奇妙，这就是一个OGF凑系数啊?
+
+但是凑出来的系数有妙用。让我们继续往下看 : 
+
+$$
+\begin{aligned}
+\vartheta F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)+a_1F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)&=\sum_{k=0}^\infty\frac{(k+a_1)a_1^\overline{k}\cdots a_n^\overline{k}z^k}{b_1^\overline{k}\cdots b_n^\overline{k}k!}\\
+&=\sum_{k=0}^\infty\frac{a_1(a_1+1)^\overline{k}a_2^\overline{k}\cdots a_n^\overline{k}z^k}{b_1^\overline{k}\cdots b_n^\overline{k}k!}\\
+&=a_1F\left(\begin{array}{ccc|}a_1+1,a_2,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)
+\end{aligned}
+$$
+
+我们可以这样改一个参数!呃说句闲话，第一行中乘在$$F$$上的$$a_1$$也可以看做一个算子，所以我们可以把它写作$$(\vartheta+a_1)F$$，这看起来简洁多了。
+
+同理，我们也有
+
+$$
+(\vartheta+b_1-1)F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)=(b_1-1)F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1-1,b_2,\cdots,b_m\ \end{array}\ z\right)
+$$
+
+这两个式子看起来很有意思。如果把上面的参数全改一遍，我们得到
+
+$$
+(\vartheta+a_1)\cdots(\vartheta+a_m)F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)=a_1\cdots a_m F\left(\begin{array}{ccc|}a_1+1,\cdots,a_n+1\ \\b_1,\cdots,b_m\ \end{array}\ z\right)
+$$
+
+同理也有
+
+$$
+(\vartheta+b_1-1)\cdots(\vartheta+b_m-1)F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1,\cdots,b_m\ \end{array}\ z\right)=(b_1-1)\cdots(b_m-1)F\left(\begin{array}{ccc|}a_1,\cdots,a_n\ \\b_1-1,\cdots,b_m-1\ \end{array}\ z\right)
+$$
+
+根据我们推的第一个式子，也就是直接求导的式子，你发现第一个是第二个的导数。草?
+
+所以我们知道有微分方程
+
+$$
+(\vartheta+a_1)\cdots(\vartheta+a_n)F=\frac{\mathrm{d}}{\mathrm{d}z}(\vartheta+b_1-1)\cdots(\vartheta+b_m-1)F
+$$
+
+，这就很好!
+
+展开之后我们得到一个$$\max(n,m+1)$$阶的常系数线性微分方程，而它当然可以直接给出一个递推式。
+
+-----
+
+ODE自动机
+
+一个给出生成函数，写ODE并解出递推式的算法。
+
+基于这么几件事 : 
+
+ - 常见的很多函数是微分有限的，它们的ODE很容易搞定。
+
+  - 有限多项式
+
+  - 幂函数
+
+  - 超几何函数
+
+ - 两个微分有限的函数，它们的和、积都是微分有限的，并且可以根据它们的ODE推出它们和、积的ODE。
+
+ - 如果$$f$$微分有限，$$g$$是代数的并且常数项是$$0$$，那么$$f(g)$$也是微分有限的，也可以推出它的ODE。
+
+ - 推出的过程是可以机器完成的~~，并且是不可以人手完成的~~，这个算法实际表现良好。
+
+呃当然你不会希望场上写这个，不过在允许使用机器帮你计算的比赛中，你可以使用别人的或者你自己闲着没事的时候写好的ODE自动机板子~~，所以你并不需要了解原理，就算你想了解也不应该看我这里~~。在不允许的比赛中，不应该出现这种见鬼题。
+
+呃不知道啥时候会补完整原理。
+
+不过有一个小问题，就是ODE自动机推出来的ODE项数有明确的界，但是作为系数的常多项式次数最坏情况下是指数级的，所以这个递推式可能很拖拉机，此时还是爆力分治法法塔，或者用一个中间恰到好处位置的式子直接使用带项式科技求解。
 
 -----
 
@@ -125,7 +223,7 @@ $$
 
 呃是不是可以直接硬推出这个递推式啊/ll
 
-你发现这个过程非常机械化，所以我们可以写一个东西来模拟，在场上或许不会花很长的时间。
+你发现这个过程非常机械化，所以我们可以写一个弱于ODE自动机的东西来模拟，在场上或许不会花很长的时间。
 
 -----
 
@@ -165,9 +263,9 @@ $$
 
 的形式。然后呢?
 
-这个东西不能直接积分，所以考虑拿个东西把右边的$$f(x)$$扔到左边来变成同一个导数，容易想到使用积的求导法则。
+这个东西不能直接积分，所以考虑拿个东西把右边的$$f(x)$$扔到左边来变成同一个导数，然后就可以直接积分了。容易想到使用积的求导法则。
 
-想要搞出一个$$-a(x)$$，我们两边同乘$$e^{-\int a(x)}$$。然后就得到
+我们两边同乘$$e^{-\int a(x)}$$。然后就得到
 
 $$
 \begin{aligned}
@@ -227,6 +325,12 @@ $$
 
 -----
 
+牛迭
+
+据说牛迭可以解任意微分有限GF的复合逆，不过我并不会/cy
+
+-----
+
 [UR19 通用测评号](https://uoj.ac/contest/51/problem/514)
 
 有$$n$$个变量，一开始全是$$0$$，有上界$$a$$和阀值$$b$$。你每次随机选一个没有达到上界的让它$$+1$$，如果全都$$\geq b$$了就停止，求期望有多少个达到上界。$$n,a\leq 250$$，膜$$998244353$$。
@@ -264,7 +368,7 @@ $$
 \end{aligned}
 $$
 
-呃看起来有一个$$T^k$$，还有一个$$(T^k)^\prime$$，注意到它俩系数是错开的，那么如果直接提取系数的话，每一次都会得到相邻两项的一个方程，而常数项肯定是$$1$$，所以好像可以解出来$$T^k$$的每一项系数?
+呃看起来有一个$$T^k$$，还有一个$$(T^k)^\prime$$，注意到它俩系数是错开的，那么如果直接提取系数的话，这个ODE好像确定了一个递推关系。
 
 $$
 \begin{aligned} 
@@ -274,7 +378,7 @@ $$
 \end{aligned}
 $$
 
-呃这就结束了。最右边是已知的，$$[z^0]T^k(z)$$是已知的，所以从$$0$$次开始每次解出$$[z^{n+1}]T^k(z)$$就好了。
+呃这就结束了。
 
 -----
 
@@ -291,17 +395,57 @@ $$
 于是我们就是要求
 
 $$
-\sum_{i=0}^k \binom{d}{k}n![x^n]\left(\frac{e^z-e^{-z}}{2}\right)^i\left(\frac{e^z+e^{-z}}{2}\right)^{d-i}
-$$。
+\sum_{i=0}^k\binom{d}{i}n![z^n]\left(\frac{e^z-e^{-z}}{2}\right)^i\left(\frac{e^z+e^{-z}}{2}\right)^{d-i}
+$$
 
-这个咋快速计算?首先你发现$$z$$全是以$$e^z$$或者$$e^{-z}$$形式出现的，我们可以把$$z$$改设为$$e^z$$，
+。呃这个不是很好看，可以提出来各种东西
 
+$$
+\frac{n!}{2^d}[z^n]\sum_{i=0}^k\binom{d}{i}\left(e^z-e^{-z}\right)^i\left(e^z+e^{-z}\right)^{d-i}
+$$
 
+，然后可以写成一个生成函数
+
+$$
+F(z)=\sum_{i=0}^k\binom{d}{i}\left(e^z-e^{-z}\right)^i\left(e^z+e^{-z}\right)^{d-i}
+$$
+
+。这个咋快速计算?首先你发现$$z$$全是以$$e^z$$或者$$e^{-z}$$形式出现的，我们考虑另一个东西 : 
+
+$$
+\sum_{i=0}^k\binom{d}{i}\left(z-\frac{1}{z}\right)^i\left(z+\frac{1}{z}\right)^{d-i}
+$$
+
+这个还不是很好看，因为有一个$$-1$$次方，不过我们还是可以提一下
+
+$$
+\sum_{i=0}^k\binom{d}{i}\left(z^2-1\right)^i\left(z^2+1\right)^{d-i}
+$$
+
+，然后你发现关于$$z$$的又只剩下$$z^2$$了，我们可以再换一发
+
+$$
+G(z)=\sum_{i=0}^k\binom{d}{i}\left(z-1\right)^i\left(z+1\right)^{d-i}
+$$
+
+，这就很好!原来的答案是
+
+$$
+F(z)=\frac{1}{e^{dz}}G(e^{2z})
+$$
+
+这样只要搞出$$G$$，算$$F$$就是普及组内容了。
+
+别说了，直接求导/cy
+
+$$
+G^\prime(z)=\sum_{i=1}^{k}\binom{d}{i}\left(i(z-1)^{i-1}(z+1)^{d-i}+(z-1)^i(d-i)(z+1)^{d-i-1}\right)
+$$
+
+呃这个怎么跟$$G$$联系起来呢......你发现有这么一个奇怪的式子 : 
 
 -----
 
 中国象棋
 
 退役了也不会写（
-
-不过我看懂了一句话 : 当你的ODE太长了，你写了一个$$114514$$项的递推式，那还不如爆力分治法法塔或者对着一个中间推出来的比较简单但是没那么长的式子法法塔。
