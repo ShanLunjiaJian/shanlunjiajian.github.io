@@ -5,6 +5,8 @@ subtitle: 奇妙
 tags: 数学 多项式 生成函数
 ---
 
+这是一篇拖拉机blog。
+
 CF438E是 [小朋友和二叉树](https://www.luogu.com.cn/problem/CF438E)，而BZOJ#3684是 [大朋友和多叉树](https://darkbzoj.tk/problem/3684)。
 
 -----
