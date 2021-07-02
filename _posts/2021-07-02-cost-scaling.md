@@ -95,7 +95,7 @@ $$
 
 **证明** 你发现所有费用足够负的边一上来都被充满了，这样我们得到一个$$\epsilon$$最优的伪流，而push/relabel保持它的$$\epsilon$$最优，在push/relabel结束之后没有溢出点，所以我们得到了一个$$\epsilon$$最优的循环流。
 
-**定理5** 每一轮refine，只有$$O(n^2)$$次relabel，$$O(nm)$$次饱和push，$$O(n^2m)$$次不饱和push。
+**定理5** 不管你使用啥数据结构维护溢出点，每一轮refine，只有$$O(n^2)$$次relabel，$$O(nm)$$次饱和push，$$O(n^2m)$$次不饱和push。
 
 **证明** 咕咕咕。
 
