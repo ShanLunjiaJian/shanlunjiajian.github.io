@@ -85,7 +85,7 @@ $$
 
 第二部分，考虑只有$$v$$的邻边会改变费用，其中所有$$(w,v)$$的费用上升了，它们不需要考虑，只有$$(v,w)$$的费用下降了。
 
-考虑一条没有满的$$(v,w)$$，因为relabel是尽可能少地增加势能，有$$p^\prime(v)\leq p(w)+c(v,w)+\epsilon$$，所以我们知道$$c_p(v,w)\geq-\epsilon$$。
+考虑一条没有满的$$(v,w)$$，因为relabel是尽可能少地增加势能，有$$p^\prime(v)\leq p(w)+c(v,w)+\epsilon$$，所以我们知道$$c_{p^\prime}(v,w)\geq-\epsilon$$。
 
 好了现在我们可以给出完整的refine了。我们首先把$$\epsilon$$砍一半，然后充满所有负边，用一个数据结构维护溢出点，进行push/relabel直到不再有溢出点。
 
