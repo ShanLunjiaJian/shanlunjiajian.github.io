@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cost Scaling
+title: Cost Scaling和Double Scaling
 subtitle: uoj屠榜算法
 tags: 图论 网络流
 ---
@@ -53,7 +53,7 @@ $$
 
 容易知道，任意一个循环流都是$$C$$最优的，所以如果我们每轮把$$\epsilon$$缩小一半，$$\log(nC)$$轮之后就会得到答案。
 
-### refine
+### Refine
 
 refine是cost scaling的核心。它接受一组$$\epsilon,f,p$$，其中$$f$$是$$\epsilon$$最优的，$$p$$给出了此时的势能，它将$$\epsilon$$除以$$2$$，计算一组$$\epsilon$$最优的$$f,p$$。
 
@@ -109,4 +109,8 @@ $$
 
 于是我们得到结论 : cost scaling的复杂度是$$O(n^3\log(nC))$$。
 
-todo : double scaling。
+如果使用动态树，可以得到更好的时间界，但是实际上跑的更慢，并且我们用double scaling也可以得到差不多的界。
+
+### Double Scaling
+
+结合capacity scaling和cost scaling。先咕咕咕。
