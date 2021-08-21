@@ -432,7 +432,6 @@ Radewoosh, Um_nik没能pp，neal, scott\_wu, Benq, matthew99都fst了，切掉AB
 
 另一道题 : 1149E Election Promises。
 
-
 -----
 
 1340D : wqy图论选讲讲了这题来着。
