@@ -864,12 +864,12 @@ ARC087E : 看起来比较复杂。
 如何求一个满的子树的sg值?假设它的高度是$$h$$，那么我们可以选择深度为$$1,...,h$$的结点，同一深度的两个结点是等价的。如果我们选了深度为$$k$$的结点，那么会得到高度为$$h-1,...,h-k-1$$的子树，所以有
 
 $$
-\mathrm{SG}(i)=\mathrm{mex}\limits_{j=1}^i\mathrm{xor}\limits_{k=i-j-1}^{i-1}\mathrm{SG}(k)
+\mathrm{SG}(i)=\mathop{\mathrm{mex}}_{j=1}^i\mathop{\mathrm{xor}}_{k=i-j-1}^{i-1}\mathrm{SG}(k)
 $$
 
 然后就可以打个表，你发现它就是lowbit，所以就做完了。
 
-对了，关于如何在mex和xor上下打限制而不是右边，可以使用\limits。右键公式获取更多信息。
+对了，关于如何在mex和xor上下打限制而不是右边，可以使用\mathop将它们转为巨运算符。右键公式获取更多信息。
 
 -----
 
