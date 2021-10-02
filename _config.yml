@@ -35,7 +35,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # from PR#40, to support local preview for Jekyll 3.0
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+# plugins: [jekyll-paginate]
 
 
 
@@ -68,7 +68,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "sdjn sdfz初三菜鸡OIer ShanLunjiaJian的blog 遇到公式阅读问题，请右键任意一个公式，选择Math Settings->Math Renderer->Common HTML，可以解决部分问题"
+sidebar-about-description: "sdjn sdfz高一菜鸡OIer"
 sidebar-avatar: /img/photo.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

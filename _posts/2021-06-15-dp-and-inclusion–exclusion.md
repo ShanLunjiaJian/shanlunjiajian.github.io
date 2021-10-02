@@ -3,6 +3,7 @@ layout: post
 title: dp和容斥
 subtitle: 玄幻
 tags: 数学 dp
+show: true
 ---
 
 一些容斥之后用dp计算的题目整合。

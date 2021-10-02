@@ -3,6 +3,7 @@ layout: post
 title: NOIP2021 游记
 subtitle: 退役了啊!
 tags: 游记
+show: true
 ---
 
 打完Day 1，晚上睡不太着，先写一下。

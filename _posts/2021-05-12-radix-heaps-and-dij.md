@@ -3,6 +3,7 @@ layout: post
 title: 基数堆和Dij
 subtitle: 为什么我这么喜欢用/kk当subtitle啊，/kk
 tags: 数据结构 图论
+show: true
 ---
 
 最短路算法Dijkstra大家都知道!

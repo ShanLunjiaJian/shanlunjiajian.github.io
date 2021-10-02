@@ -2,6 +2,7 @@
 layout: post
 title: Hello World!
 subtitle: ShanLunjiaJian's new blog!
+show: true
 ---
 
 ## Hello world!

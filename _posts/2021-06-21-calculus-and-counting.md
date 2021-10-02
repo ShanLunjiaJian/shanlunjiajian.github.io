@@ -3,6 +3,7 @@ layout: post
 title: 微积分和组合计数
 subtitle: ¿
 tags: 数学 生成函数
+show: true
 ---
 
 参考cmd 《多项式计数杂谈》，MiFaFaOvO 《A problem collection of ODE and differential technique》。

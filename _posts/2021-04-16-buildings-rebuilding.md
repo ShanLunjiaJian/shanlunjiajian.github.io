@@ -3,6 +3,7 @@ layout: post
 title: 类楼房重建线段树
 subtitle: 有意思
 tags: 线段树 数据结构
+show: true
 ---
 
 默认$$n,q\leq 10^5$$。

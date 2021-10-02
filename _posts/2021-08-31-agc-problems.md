@@ -3,6 +3,7 @@ layout: post
 title: AGC选㗅
 subtitle: fuck
 tags: 题选做 atc
+show: true
 ---
 
 远古ARC(058~103)做完了，咕咕咕结束了，原坑 AGC数数题，但是反正要刷穿不如直接全做了。
