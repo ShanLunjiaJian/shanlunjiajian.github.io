@@ -1,9 +1,10 @@
 ---
 layout: keynote
-iframe: http://magolor.cn/2020/08/12/data_structures_2/
+iframe: /slides/slide_test.html
 title: Silde Test
 subtitle: 好耶
 tags: 杂项
 show: true
 ---
 
+很好很好，以后可以用reveal.js了
