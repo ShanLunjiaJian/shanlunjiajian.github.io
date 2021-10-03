@@ -62,14 +62,32 @@ layout: default
                 <!-- 网易云跟帖 评论框 end -->
                 {% endif %}
 
-                <!-- IntenseDebate -->
+                {% if site.gitment == true %}
+                <div id="container"></div>
+                <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                var gitment = new Gitment({
+                //id: '页面 ID', // 可选。默认为 location.href
+                  owner: 'ShanLunjiaJian',
+                  repo: 'gitment_shanlunjiajian.github.io',
+                  oauth: {
+                    client_id: '1099b79d95e8f3a8f3c6',
+                    client_secret: 'c7e14b9752bb25e17fe1be9b316a80444c5afeb3',
+                  },
+                })
+                gitment.render('container')
+                </script>
+                {% endif %}
+
+                <!-- IntenseDebate 
                 <script>
                 var idcomments_acct = '1781e3916037957d7a683a3ab29ede4c';
                 var idcomments_post_id;
                 var idcomments_post_url;
                 </script>
                 <span id="IDCommentsPostTitle" style="display:none"></span>
-                <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+                <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>-->
             </div>  
 
     <!-- Side Catalog Container -->
