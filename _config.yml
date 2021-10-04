@@ -176,3 +176,9 @@ friends: [
         href: "https://www.luogu.com.cn/blog/lindongli2004/"
     }
 ]
+
+gitalk_client_id: '06b7efda61742d7e5a44'
+gitalk_client_secret: '297d5ae3c7558d570bc3deead920d58ad298c302'
+gitalk_repo: 'shanlunjiajian.github.io'
+gitalk_owner: 'ShanLunjiaJian'
+gitalk_admin: ["ShanLunjiaJian","pbrinotwyh","suxxsfe"]
