@@ -22,7 +22,7 @@ show: true
 
 设$$f(S)$$表示$$A=S$$的答案，$$g(S)$$表示$$A\subseteq S$$的答案，那么只要这个东西性质不是太差，我们枚举钦定了哪个，应该有$$g(S)=\sum\limits_{S\subseteq T}f(T)$$，此时子集反演给出$$f(S)=\sum\limits_{S\subseteq T}(-1)^{\vert T\vert-\vert S\vert}g(T)$$。
 
-为什么这是正确的?我不知道，你可以爆力代入$$\sum_{T\subseteq S}(-1)^{\vert T\vert}=[S=\varnothing]$$验证。
+为什么这是正确的?我不知道，你可以爆力代入$$\sum\limits_{T\subseteq S}(-1)^{\vert T\vert}=[S=\varnothing]$$验证。
 
 -----
 
@@ -86,7 +86,7 @@ $$
 
 其中$$c(S,T)$$表示$$S$$到$$T$$的边数，容易$$3^n$$递推，具体做法就是$$c(S,T)=c(S-x,T)+\mathrm{popcnt}(e_x\operatorname{and}T)$$，其中$$e_x$$是$$x$$的出边指向的集合。
 
-但是这个是错的，因为我们不能保证我们钦定的就是所有入度为$$0$$的SCC。这形成了 恰好是一个子集 和 钦定这个子集 的关系，于是我们进行子集反演。设$$f(T,S)$$为$$T$$恰好是$$S$$中所有入度为$$0$$的点的方案数，$$g(T,S)=2^{c(T,S-T)}dp(S-T)$$为钦定了$$T$$是的方案数，那么有$$g(T,S)=\sum_{T\subseteq R\subseteq S}f(R,S)$$，于是$$f(T,S)=\sum_{T\subseteq R\subseteq S}(-1)^{\vert R\vert-\vert T\vert}g(R,S)$$。$$g$$显然可以在$$O(3^n)$$预处理之后$$O(1)$$计算。
+但是这个是错的，因为我们不能保证我们钦定的就是所有入度为$$0$$的SCC。这形成了 恰好是一个子集 和 钦定这个子集 的关系，于是我们进行子集反演。设$$f(T,S)$$为$$T$$恰好是$$S$$中所有入度为$$0$$的点的方案数，$$g(T,S)=2^{c(T,S-T)}dp(S-T)$$为钦定了$$T$$是的方案数，那么有$$g(T,S)=\sum\limits_{T\subseteq R\subseteq S}f(R,S)$$，于是$$f(T,S)=\sum\limits_{T\subseteq R\subseteq S}(-1)^{\vert R\vert-\vert T\vert}g(R,S)$$。$$g$$显然可以在$$O(3^n)$$预处理之后$$O(1)$$计算。
 
 直接把这个代进去，我们得到一个看起来正确了的式子
 
@@ -94,7 +94,7 @@ $$
 dp(S)=2^{c(S,S)}-\sum_{T\subseteq S,T\neq\varnothing}\sum_{T\subseteq R\subseteq S}(-1)^{\vert R\vert-\vert T\vert}g(R,S)
 $$
 
-这个式子有两个$$\sum$$，看起来不像很能算，考虑化简一下。换个求和号，然后使用著名恒等式$$\sum_{T\subseteq S}(-1)^{\vert T\vert}=[S=\varnothing]$$ : 
+这个式子有两个$$\sum$$，看起来不像很能算，考虑化简一下。换个求和号，然后使用著名恒等式$$\sum\limits_{T\subseteq S}(-1)^{\vert T\vert}=[S=\varnothing]$$ : 
 
 $$
 \begin{aligned}
