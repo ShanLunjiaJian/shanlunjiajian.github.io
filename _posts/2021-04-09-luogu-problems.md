@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 模拟赛题整理
-subtitle: 膜拜神仙出题人
-tags: 题解
+title: luogu省选计划2021
+subtitle: 今天又是爆零的好日子
+tags: 课
 show: true
 ---
 
