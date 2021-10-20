@@ -78,10 +78,10 @@ SHOI2016 黑暗前的幻想乡
 
 注意到每个SCC都是一个子问题，这个性质非常好(实际上这就是非强连通图的结构，我们只是根据结构设计算法)，于是考虑一个拓扑排序，我们枚举所有入度为$$0$$的SCC删掉，把这些点设为$$T$$，那么$$T$$到$$S-T$$就可以随便连边，而$$T$$内部和$$S-T$$到$$T$$一条也不能连。
 
-把边界设为每个子集的强连通生成子图个数，可以写出这样的东西 : 
+重设$$dp(S)$$表示点集$$S$$的**不**强连通生成子图个数，那么答案就是$$2^m-dp(2^n)$$。把边界设为每个子集的强连通生成子图个数，可以写出这样的东西 : 
 
 $$
-dp(S)=2^{c(S,S)}-\sum_{T\subseteq S,T\neq\varnothing}2^{c(T,S-T)}dp(S-T)
+dp(S)=\sum_{T\subseteq S,T\neq\varnothing}2^{c(T,S-T)}dp(S-T)
 $$
 
 其中$$c(S,T)$$表示$$S$$到$$T$$的边数，容易$$3^n$$递推，具体做法就是$$c(S,T)=c(S-x,T)+\mathrm{popcnt}(e_x\operatorname{and}T)$$，其中$$e_x$$是$$x$$的出边指向的集合。
@@ -91,7 +91,7 @@ $$
 直接把这个代进去，我们得到一个看起来正确了的式子
 
 $$
-dp(S)=2^{c(S,S)}-\sum_{T\subseteq S,T\neq\varnothing}\sum_{T\subseteq R\subseteq S}(-1)^{\vert R\vert-\vert T\vert}g(R,S)
+dp(S)=\sum_{T\subseteq S,T\neq\varnothing}\sum_{T\subseteq R\subseteq S}(-1)^{\vert R\vert-\vert T\vert}g(R,S)
 $$
 
 这个式子有两个$$\sum$$，看起来不像很能算，考虑化简一下。换个求和号，然后使用著名恒等式$$\sum\limits_{T\subseteq S}(-1)^{\vert T\vert}=[S=\varnothing]$$ : 
@@ -112,7 +112,7 @@ $$
 仔细观察这个式子，你发现它和缩点后的具体情况没有关系，它只关心你枚举的这个子集里面缩成了奇数还是偶数个SCC。所以我们把前面设的$$f$$忘掉，设$$f(S,0/1)$$表示$$S$$的生成子图中SCC个数为奇/偶数，并且SCC之间没有边的方案数，就有转移
 
 $$
-dp(S)=2^{c(S,S)}-\sum_{T\subseteq S,T\neq\varnothing}(f(T,0)-f(T,1))2^{c(T,S-T)}dp(S-T)
+dp(S)=\sum_{T\subseteq S,T\neq\varnothing}(f(T,0)-f(T,1))2^{c(T,S-T)}dp(S-T)
 $$
 
 然后我们再考虑$$f$$的转移，你发现$$f(...,0)$$的转移就是枚举$$\mathrm{lowbit}$$所在的SCC，用它的$$dp$$卷上剩下的的$$f(...,1)$$。做完了，复杂度是$$O(3^n)$$。
