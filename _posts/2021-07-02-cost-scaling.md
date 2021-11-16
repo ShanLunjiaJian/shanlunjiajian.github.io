@@ -99,7 +99,7 @@ $$
 
 **证明** 咕咕咕。
 
-**定理6(Wave implementation)** 如果我们使用队列维护溢出点，一轮refine复杂度会变成$$O(n^3)$$。
+**定理6(Wave implementation)** 如果我们使用队列维护溢出点，一轮refine复杂度会变成$$O(n^3)$$，当然我们认为$$m=\Omega(n)$$。
 
 **证明** 还是咕咕咕。
 
@@ -107,10 +107,22 @@ $$
 
 **证明** 咕咕咕咕咕。
 
-于是我们得到结论 : cost scaling的复杂度是$$O(n^3\log(nC))$$。
+于是我们得到结论 : 如果值域不是 非 常 大，cost scaling的复杂度是$$O(n^3\log(nC))$$。这看起来比capacity scaling快不少。
 
 如果使用动态树，可以得到更好的时间界，但是实际上跑的更慢，并且我们用double scaling也可以得到差不多的界。
 
 ### Double Scaling
 
-结合capacity scaling和cost scaling。先咕咕咕。
+如果你不知道capacity scaling，可以去[ouuan的blog](https://ouuan.github.io/post/%E5%9F%BA%E4%BA%8E-capacity-scaling-%E7%9A%84%E5%BC%B1%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%9C%80%E5%B0%8F%E8%B4%B9%E7%94%A8%E6%B5%81%E7%AE%97%E6%B3%95/)学习一下。
+
+如果你知道capacity scaling，那么double scaling就是在cost scaling的refine中采用capacity scaling的方法。它非常的牛逼，以至于可以做到$$O(nm\operatorname{poly}(\log v))$$。不使用动态树数据结构的话，可以做到$$O(nm\log U(1+\log(nC)/\log\log U))$$，使用的话则是$$O(nm\log(nC)\log\log U)$$。
+
+在直接做之前，我们需要重要的一步，消除费用流问题的流量。这个听起来很离谱，但是继续往下看你就懂了。
+
+定义一个transportation problem(试译 最小费用二分图流量平衡问题，以下简称 平衡问题)是，有一个二分图，每个点有一个需求，左部点的需求是负的，右部点是正的，需求总和是$$0$$，每条边有费用而没有容量上限，求一个流使得供需平衡并且费用最小，供需平衡指的是左部点流出去的等于它的需求(的绝对值)，右部点流进来的等于它的需求。
+
+容易把一个最小循环流转化成平衡问题，也就是给每条边(不包括反向边)建一个虚点，所有的虚点构成二分图的左部，原图中的点构成二分图的右部。每条边的虚点连向它的两个端点，连向起点的费用是$$0$$，而连向终点的费用是这条边的费用。对于一条边的虚点，它的需求是负的容量；对于原图中的一个点，它的需求是出边的容量之和。一条边的虚点的一个单位需求，流向起点表示原图中不流这条边的这个单位，流向终点表示原图中流了这条边的这个单位，这样我们就可以在最小循环流和平衡问题的可行解之间转化而费用不变，于是平衡问题的最优解就是对应的最小循环流的最优解。
+
+注意到直接用这个看起来没有任何帮助 : 总点数是$$n+m=O(m)$$，边数也是$$O(m)$$，于是即使用最快的二分图带权匹配也会有一个$$m^3$$这样的东西，就直接飞了。
+
+用在平衡问题上的dinic看起来像是push-relabel，同时capacity scaling被称为excess scaling，因为容量变成了溢出的需求。我们从一个极大的$$\Delta=2^k$$开始，每次把$$\Delta$$减半，并且检查所有需求的溢出量超过$$\Delta$$的结点，对它们进行一轮push-relabel，每次push $$\Delta$$个单位。这个东西的复杂度是$$O(nm\log U)$$，因为它实在就是capacity scaling的dinic。
