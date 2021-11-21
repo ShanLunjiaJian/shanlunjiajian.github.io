@@ -9,6 +9,8 @@ tags: 杂项
 
 按时间排序。
 
+加粗的是特别牛逼的。我尽可能少加粗?
+
 ## 红魔乡
 
 开始了。
@@ -55,15 +57,15 @@ Locked Girl ~ 少女密室
 
 -----
 
-献给已逝公主的七重奏
+**献给已逝公主的七重奏**
 
-U.N.OWEN就是她吗?
+**U.N.OWEN就是她吗?**
 
 只能说神了?
 
 -----
 
-红楼 ~ Eastern Dream...
+**红楼 ~ Eastern Dream...**
 
 只能说神了!
 
@@ -91,13 +93,13 @@ Magical and Hopeless
 
 -----
 
-Sacred Battle(圣战)
+**Sacred Battle(圣战)**
 
 旋律很棒，高音冲上去的时候只能说太爽了。
 
 -----
 
-False Strawberry(伪莓)
+**False Strawberry(伪莓)**
 
 旋律很棒。我认为可以跟Alice Maestra并列。
 
@@ -135,7 +137,7 @@ Disastrous Gemini(灾难的双子星)
 
 -----
 
-斯普特尼克幻夜
+**斯普特尼克幻夜**
 
 节奏感很轻松。像是喝大了在夜晚的观星台跳舞。
 
@@ -151,13 +153,13 @@ Disastrous Gemini(灾难的双子星)
 
 -----
 
-卡纳维拉尔角的梦幻少女
+**卡纳维拉尔角的梦幻少女**
 
 旋律很棒。可以和Alice Maestra并列，不过为什么Alice Maestra成了良曲计量单位?
 
 -----
 
-魔法少女十字军
+**魔法少女十字军**
 
 好像比莲台野夜行早一点（
 
@@ -179,19 +181,19 @@ Disastrous Gemini(灾难的双子星)
 
 -----
 
-少女神性 ~ Pandora's Box
+**少女神性 ~ Pandora's Box**
 
 旋律很好听。这或许可以超越Alice Maestra了。
 
 -----
 
-Silk Road Alice(丝绸之路的爱丽丝)
+**Silk Road Alice(丝绸之路的爱丽丝)**
 
 rush!
 
 -----
 
-魔女们的舞蹈会
+**魔女们的舞蹈会**
 
 可能有些人还不知道魔理沙还有这首曲子（
 
@@ -199,7 +201,7 @@ rush!
 
 -----
 
-永远的巫女
+**永远的巫女**
 
 下着大雨，落魄的少女独自在公园的木亭子下弹钢琴。
 
@@ -213,7 +215,7 @@ The Legend of KAGE(影子传奇)
 
 -----
 
-博丽 ~ Eastern Wind
+**博丽 ~ Eastern Wind**
 
 旋律很棒。
 
@@ -227,15 +229,17 @@ Master Spark 的原曲?
 
 -----
 
-Complete Darkness
+**Complete Darkness**
 
 Reincarnation(重生)
 
 还能怎么说呢?
 
+重生还是推荐蓬莱人形版。
+
 -----
 
-Tabula rasa ~ 空白少女
+**Tabula rasa ~ 空白少女**
 
 很轻快的曲子。
 
@@ -243,11 +247,11 @@ Tabula rasa ~ 空白少女
 
 梦消失 ~ Lost Dream
 
-推荐Assaultdoor的版本。这一版鼓点有点打乱感觉?
+推荐Assaultdoor的版本。这一版鼓点感觉有点乱?
 
 -----
 
-永远的满月
+**永远的满月**
 
 音色棒极了。
 
@@ -261,13 +265,13 @@ Witching Dream(魔法之梦)
 
 -----
 
-灵战 ~ Perdition Crisis(毁灭的危机)
+**灵战 ~ Perdition Crisis(毁灭的危机)**
 
 燃起来了，很有感觉。
 
 -----
 
-Alice Maestra
+**Alice Maestra**
 
 只能说神了。
 
@@ -285,9 +289,9 @@ Alice Maestra
 
 -----
 
-沉睡的恐怖 ~ Sleeping Terror
+**沉睡的恐怖 ~ Sleeping Terror**
 
-幽梦 ~ Inanimate Dream
+**幽梦 ~ Inanimate Dream**
 
 幽香的主题曲。旋律很刺激。
 
@@ -319,7 +323,7 @@ Romantic Children
 
 -----
 
-Maple Wise
+**Maple Wise**
 
 神了?
 
@@ -327,7 +331,7 @@ Maple Wise
 
 -----
 
-禁断之魔法 ~ Forbidden Magic
+**禁断之魔法 ~ Forbidden Magic**
 
 很帅气的开头，接下来的旋律听起来非常棒。
 
@@ -335,7 +339,7 @@ Maple Wise
 
 真红之少女 ~ Crimson Dead!!(绯红的死亡)
 
-背叛之少女 ~ Judas Kiss(犹大之吻)
+**背叛之少女 ~ Judas Kiss(犹大之吻)**
 
 尽管 真红 应该翻译成 绯红，但是我还是喜欢直接读汉字。这样感觉上更有感觉?
 
@@ -345,7 +349,7 @@ Judas是基督教故事中的耶稣十二门徒之一，他出卖了耶稣，使
 
 -----
 
-the Last Judgement(最后的~~评测~~审判)
+**the Last Judgement(最后的~~评测~~审判)**
 
 神了!
 
@@ -357,7 +361,7 @@ the Last Judgement(最后的~~评测~~审判)
 
 -----
 
-不可思议之国的爱丽丝
+**不可思议之国的爱丽丝**
 
 这一版很棒。反正曲子是神曲（
 
@@ -365,7 +369,7 @@ the Last Judgement(最后的~~评测~~审判)
 
 -----
 
-Peaceful Romancer
+**Peaceful Romancer**
 
 高音冲上去的时候太帅了。
 
@@ -395,7 +399,7 @@ Inventive City~~(创新型城市)~~
 
 -----
 
-梦幻回廊
+**梦幻回廊**
 
 全体起立?
 
@@ -415,7 +419,7 @@ Inventive City~~(创新型城市)~~
 
 -----
 
-蓬莱传说
+**蓬莱传说**
 
 还能说什么?
 
@@ -427,13 +431,13 @@ Inventive City~~(创新型城市)~~
 
 -----
 
-樱花之恋冢 ~ Japanese Flower
+**樱花之恋冢 ~ Japanese Flower**
 
 比起稀翁玉要激烈了一些?毕竟背景故事摆在那里（
 
 -----
 
-明治十七年的上海爱丽丝
+**明治十七年的上海爱丽丝**
 
 神了!
 
@@ -445,9 +449,9 @@ Inventive City~~(创新型城市)~~
 
 -----
 
-神秘的人偶
+**神秘的人偶**
 
-Circus Reverie(马戏团幻想)
+**Circus Reverie(马戏团幻想)**
 
 很激烈。但是这么激烈是在描述什么?我不知道。
 
@@ -459,19 +463,19 @@ Circus Reverie(马戏团幻想)
 
 -----
 
-Witch of Love Potion
+**Witch of Love Potion**
 
 这一版的镅药更冲了（
 
 -----
 
-重生
+**重生**
 
 最棒的重生。不可超越。
 
 -----
 
-永远的巫女
+**永远的巫女**
 
 下着雷雨，落魄的少女在古老的宅子里独自演奏着什么悲伤的乐器，为了避免气氛太过沉重我们就认为是唢呐吧。
 
@@ -479,7 +483,7 @@ Witch of Love Potion
 
 -----
 
-空中飞翔的巫女不可思议的每天
+**空中飞翔的巫女不可思议的每天**
 
 很爽快的曲子。
 
@@ -487,7 +491,7 @@ Witch of Love Potion
 
 -----
 
-无何有之乡 ~ Deep Mountain
+**无何有之乡 ~ Deep Mountain**
 
 很有感觉。
 
@@ -541,13 +545,13 @@ Witch of Love Potion
 
 令人怀念的东方之血 ~ Old World
 
-Plain Asia(亚州平原)
+**Plain Asia(亚州平原)**
 
 很适合交响乐，比如neets的版本。
 
 -----
 
-永夜的报应 ~ Imperishable Night(不朽之夜)
+**永夜的报应 ~ Imperishable Night(不朽之夜)**
 
 我总觉得这首应该跟 夜幕降临 放在一起，不知道为什么，可能是因为科学世纪里面就在一起吧（
 
@@ -563,7 +567,7 @@ Plain Asia(亚州平原)
 
 -----
 
-灰姑娘的笼子 ~ Kagome-Kagome(笼子)
+**灰姑娘的笼子 ~ Kagome-Kagome(笼子)**
 
 前奏很吸引人，然后风格突变?
 
@@ -577,13 +581,13 @@ Plain Asia(亚州平原)
 
 -----
 
-旅人1969/旅人1970
+**旅人1969/旅人1970**
 
 1970失去了高潮部分，导致整个变得十分沉郁。但是69的小号真的太牛逼了!
 
 -----
 
-千年幻想乡 ~ History of the Moon
+**千年幻想乡 ~ History of the Moon**
 
 还能怎么说呢?
 
@@ -595,13 +599,13 @@ Plain Asia(亚州平原)
 
 -----
 
-飘上月球，不死之烟
+**飘上月球，不死之烟**
 
 那个声音很清脆的乐器(所以那是什么?)一出来我就觉得不对劲了，这个神了。
 
 -----
 
-Eternal Dream(永恒之梦) ~ 幽玄的槭树
+**Eternal Dream(永恒之梦) ~ 幽玄的槭树**
 
 钢琴响起来我就感觉不对劲了。很平静，但是又很有感觉。
 
@@ -615,13 +619,13 @@ Eternal Dream(永恒之梦) ~ 幽玄的槭树
 
 -----
 
-众神眷恋的幻想乡
+**众神眷恋的幻想乡**
 
 怎么说呢?
 
 -----
 
-妖怪之山 ~ Mysterious Mountain(神秘的山脉)
+**妖怪之山 ~ Mysterious Mountain(神秘的山脉)**
 
 还是去听同人曲，原曲的鼓点太密了。旋律已经神了。
 
@@ -633,13 +637,13 @@ Eternal Dream(永恒之梦) ~ 幽玄的槭树
 
 -----
 
-信仰是为了虚幻之人
+**信仰是为了虚幻之人**
 
 传世经典。
 
 -----
 
-明日之盛，昨日之俗
+**明日之盛，昨日之俗**
 
 传世经典。过年的感觉?
 
@@ -649,13 +653,13 @@ Eternal Dream(永恒之梦) ~ 幽玄的槭树
 
 -----
 
-少女觉 ~ 3rd eye
+**少女觉 ~ 3rd eye**
 
 传世经典。
 
 -----
 
-哈德曼的妖怪少女
+**哈德曼的妖怪少女**
 
 传世经典。
 
@@ -675,13 +679,13 @@ Eternal Dream(永恒之梦) ~ 幽玄的槭树
 
 -----
 
-不可思议的驱魔棒
+**不可思议的驱魔棒**
 
 传世经典。为什么人气投票排的那么靠后呢?
 
 -----
 
-幻想净琉璃
+**幻想净琉璃**
 
 速度很快，鼓点很密集，但是不觉得凌乱。
 
@@ -689,7 +693,7 @@ Eternal Dream(永恒之梦) ~ 幽玄的槭树
 
 -----
 
-沉向空中的辉针城
+**沉向空中的辉针城**
 
 大概40秒的地方，正片开始，就好像穿过云层看到了落日下的辉针城。
 
@@ -703,7 +707,7 @@ Reverse Ideology(反叛的意识)
 
 -----
 
-辉光之针的小人族 ~ Little Princess
+**辉光之针的小人族 ~ Little Princess**
 
 传世经典。
 
@@ -723,7 +727,7 @@ Reverse Ideology(反叛的意识)
 
 -----
 
-寄世界于偶像 ~ Idoratrize World
+**寄世界于偶像 ~ Idoratrize World**
 
 传世经典。
 
@@ -733,7 +737,7 @@ Reverse Ideology(反叛的意识)
 
 -----
 
-妖异们的骤雨
+**妖异们的骤雨**
 
 拉扯的感觉很舒适。不得不提 空中飞翔的巫女不可思议的每天?
 
@@ -751,7 +755,7 @@ Reverse Ideology(反叛的意识)
 
 -----
 
-神代矿石
+**神代矿石**
 
 刺激!
 
@@ -765,7 +769,7 @@ Reverse Ideology(反叛的意识)
 
 -----
 
-熙攘市场今何在 ~ Immemorial Marketeers
+**熙攘市场今何在 ~ Immemorial Marketeers**
 
 十七次人气投票的虹龙洞冠军。
 
@@ -773,7 +777,7 @@ Reverse Ideology(反叛的意识)
 
 -----
 
-幻想地下大轨道网
+**幻想地下大轨道网**
 
 个人认为可以和 寄世界于偶像 相媲美。更加入了一些轻快的元素。
 
