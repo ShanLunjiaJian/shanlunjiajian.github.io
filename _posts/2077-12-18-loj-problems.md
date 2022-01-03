@@ -883,60 +883,7 @@ C. 怪兽游戏
 
 如果$$r-l+1=2$$，那么我们拿$$l,r$$问得不到任何信息，因为不管其实是什么，答案都是一样的。/fn/fn/fn
 
-那怎么办呢?
-
-```cpp
-#include<stdio.h>
-#include<algorithm>
-using std::random_shuffle;
-
-int a[100002];
-
-int cnt,maxcnt;
-inline bool cmp(const int &x,const int &y){ cnt++; return (x-y==1||y-x==1)?x>y:x<y; }
-void merge_sort(int l,int r,int *a)
-{
-    static int t[100002];
-    if(l==r) return;
-    int mid=(l+r)>>1;
-    merge_sort(l,mid,a),merge_sort(mid+1,r,a);
-    for(int i=l,j=mid+1,p=l;i<=mid||j<=r;)
-        if(i<=mid&&(j>r||cmp(a[i],a[j]))) t[p++]=a[i++];
-        else t[p++]=a[j++];
-    for(int i=l;i<=r;i++) a[i]=t[i];
-}
-
-const int N=1000;
-
-inline int max(int x,int y){ return x>y?x:y; }
-
-int p[10002],pcnt;
-
-int main()
-{
-    int T=1;
-    while(T--)
-    {
-        cnt=0;
-        for(int i=0;i<N;i++) a[i]=i;
-        random_shuffle(a,a+N);
-        merge_sort(0,N-1,a);
-        //for(int i=0;i<10;i++) printf("%d ",a[i]);
-        p[pcnt=1]=0;
-        for(int i=1;i<N;i++)
-            if(a[i]!=a[i-1]-1)
-                p[++pcnt]=i;
-        for(int i=2;i<=pcnt;i++)
-            if(a[p[i]]<a[p[i-1]]) printf("fuck1");
-        for(int i=2;i<=pcnt;i++)
-            if(p[i-1]+2<p[i]) printf("fuck2");
-        //putchar('\n');
-        printf("%d\n",cnt),maxcnt=max(cnt,maxcnt);
-    }
-    printf("! %d",maxcnt);
-    return 0;
-}
-```
+那怎么办呢?考虑换一个扫描线方向。
 
 -----
 
