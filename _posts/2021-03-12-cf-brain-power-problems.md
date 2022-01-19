@@ -2,7 +2,7 @@
 layout: post
 title: CF思维题选㗅
 subtitle: 不想上GM的Newbie不是好Newbie
-tags: 思维 题选做 cf
+tags: 题选做 cf
 show: true
 ---
 

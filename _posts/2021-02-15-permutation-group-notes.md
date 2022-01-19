@@ -2,7 +2,7 @@
 layout: post
 title: 置换群论学习笔记
 subtitle: 玄妙而优美的鬼东西
-tags: 数学 置换群 群论
+tags: 数学
 show: true
 ---
 
