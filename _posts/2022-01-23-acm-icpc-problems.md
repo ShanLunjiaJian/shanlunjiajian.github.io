@@ -461,6 +461,46 @@ F. Neighbor Friend
 
 G. Paper Cutting Game
 
+注意切一刀是同时切所有的纸/jy
+
+模拟。
+
+H. Largest Submatrix
+
+枚举答案由哪个字符贡献，然后dp。
+
+I. Memory Control
+
+模拟。
+
+#### contest8
+
+A. Another Snake
+
+直接dp。
+
+B. Bomb Game
+
+注意到有 炸弹相撞会消失 的规则，于是我们似乎不能用sg定理了。
+
+诶真的不能用吗?考虑两个同一位置的炸弹相当于没有，这是真的，因为后手可以模仿先手操作。于是我们可以把这个规则删去，答案是不变的。递推sg值即可。
+
+C. Connections between cities
+
+注意 no circle exists as well 说的是真的没有环，而不是可能没有环。板子。
+
+D. DNA Sequence
+
+第二类限制是一组里面两两不同，可以连个边。
+
+为什么我会以为是要计数（
+
+计数非常复杂，感觉上像是不弱于图着色，没法多项式时间做掉。
+
+然后你发现这个问题相当于是有一些边，然后要做一个四染色，对相邻的还有一些要求。
+
+
+
 ### 2016
 
 -----
