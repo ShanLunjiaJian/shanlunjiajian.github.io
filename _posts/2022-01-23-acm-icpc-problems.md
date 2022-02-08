@@ -531,7 +531,7 @@ H. HeHe
 
 前面有一个 Self-Replicating Numbers 指出，$$x^2\equiv x\pmod{n}$$变换成$$n\mid x(x-1)$$，并且$$x\perp x-1$$，于是需要把$$n$$的素因子成两部分分别扔进$$x$$和$$x-1$$，然后通过乘上一些东西使得它俩差$$1$$。这是两条直线，所以只可能有一个解，而由于裴蜀定理必然有一个解，所以方案数就是$$2^{\omega(n)}$$。求和即可。
 
-看起来可以做到$$\tilde(O)(n^\frac{3}{5})$$，也就是用因数个数函数$$d$$构造powerful number，然后问题变成算$$d$$的前缀和$$S_d$$在$$n$$的基本和组处的值。基本和组就是$$\lfloor\frac{n}{i}\rfloor$$形成的集合，它只有$$O(\sqrt{n})$$个元素。
+看起来可以做到$$\tilde{O}(n^\frac{3}{5})$$，也就是用因数个数函数$$d$$构造powerful number，然后问题变成算$$d$$的前缀和$$S_d$$在$$n$$的基本和组处的值。基本和组就是$$\lfloor\frac{n}{i}\rfloor$$形成的集合，它只有$$O(\sqrt{n})$$个元素。
 
 我们有方法在$$O(n^\frac{1}{3}\log n)$$内算$$S_d$$在$$n$$处的值，参见 https://www.luogu.com.cn/problem/SP26073 。
 
