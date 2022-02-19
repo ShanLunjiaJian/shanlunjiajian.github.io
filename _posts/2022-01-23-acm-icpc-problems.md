@@ -1812,7 +1812,7 @@ D. ~~Bitset Master~~ Magic Number
 
 什么时候我们会用到一个01矩阵?感觉上只有邻接矩阵和高消的时候。这个看起来并不像是消元，于是考虑前者，你发现它的意思是，不管怎么走到任意一个没有出度的点，都会经过的点。那么查询就是查询哪些点是被给出的点之一必然走到的。
 
-这个看起来就是，把没有出度的点用一个虚点穿起来，然后每个点到这个虚点的支配点。建立支配树，查询的时候求出lca，从lca往上跑就行了。
+这个看起来就是，把没有出度的点用一个虚点穿起来，然后每个点到这个虚点的支配点。建立支配树，查询的时候建个虚树在上面跑就行了。
 
 一眼看出支配树，然后看反了，想着从没有出度的点走到每个点/yun。实际上因为没有出度的点总是那些，所以我们可以建一个虚点把它们串起来。
 
@@ -2046,13 +2046,14 @@ $$
 \begin{aligned}
 G_k^\prime(F)&=F^\prime\sum_{i=0}^\infty (i+1)^k\frac{F^i}{i!}\\
 &=F^\prime\sum_{i=0}^\infty\sum_{j=0}^k\binom{k}{j}i^j\frac{F^i}{i!}\\
-&=F^\prime\sum_{j=0}^k\binom{k}{j}\left(G_j(F)+1\right)
+&=F^\prime\sum_{j=0}^k\binom{k}{j}\left(G_j(F)+1\right)\\
+G_k^\prime(F)-G_k(F)&=1+F^\prime\sum_{j=0}^{k-1}\binom{k}{j}\left(G_j(F)+1\right)
 \end{aligned}
 $$
 
-，然后就可以递推了。复杂度是$$O(nk(k+\log n))$$。
+，然后这是一个微分方程，两边提取系数得到递推式，法法塔算出右边就做完了。复杂度是$$O(nk(k+\log n))$$。
 
-网上有篇题解好像有一个看起来很像的做法，不过他没有二项式定理硬展，而是直接得到了一个从$$A_{k-1}^\prime$$到$$A_k$$的式子，可惜他LaTeX挂了一半。
+网上有篇题解好像有一个看起来很像的做法，不过他没有二项式定理硬展，而是直接得到了一个从$$A_{k-1}^\prime$$到$$A_k$$的式子，看起来比我这个牛逼多了。可惜他LaTeX挂了一半。
 
 E. permu
 
@@ -2060,7 +2061,95 @@ E. permu
 
 容易感觉到在一般的dag上这个问题是做不了的，所以我们需要一些牛逼性质。
 
+猜一手，如果一个排列的逆序对包含另一个排列，那么它必然可以操作成那另一个。
 
+但是可能的逆序对有36对，我们并不能跑一个法嘛塔。不过这个可以做$$n\leq 7$$。但是爆力也能做$$n\leq 7$$啊?
+
+然后就不会了。拉了。
+
+做法非常牛逼。考虑一般的dag不能做，是因为两个点之间的路径可能不唯一。
+
+考虑一个看起来还比较自然的想法，我们要从一个排列变到另一个排列，必然可以先换最靠前的不对的，这样方案就唯一了。那么给每个排列建$$n$$个点，第$$i$$个表示现在要换第$$i$$位，然后转移可以选择开始换下一位，或者把这一位跟后面某一个换一换。
+
+这个换的选择可能有很多，但是实际上只有很少的是有用的。我们只可能选择
+
+```cpp
+#include<stdio.h>
+#include<string.h>
+#include<algorithm>
+#include<vector>
+using std::vector;
+using std::next_permutation;
+
+const int N=6;
+
+int fac[11];
+inline int calc(int n,int *a)
+{
+    int ans=0;
+    for(int i=1;i<=n;i++)
+        for(int j=i+1;j<=n;j++)
+            if(a[i]>a[j]) ans+=fac[n-i];
+    return ans;
+}
+
+vector<int> e[11*N+2];
+int f[11*N+2];
+
+int a[11],b[11];
+inline void swap(int &x,int &y){ x^=y^=x^=y; }
+inline void init(int n)
+{
+    for(int i=0;i<n*fac[n];i++) e[i].clear(),f[i]=0;
+    for(int i=1;i<=n;i++) a[i]=i;
+    do
+    {
+        int h=calc(n,a);
+        for(int i=1;i<=n;i++)
+        {
+            e[h+(i-1)*fac[n]].push_back(h+i*fac[n]);
+            for(int j=i+1,min=a[i];j<=n;j++)
+                if(a[j]<min)
+                {
+                    min=a[j];
+                    memcpy(b,a,sizeof(int)*(n+1));
+                    swap(b[i],b[j]);
+                    int th=calc(n,b);
+                    e[h+(i-1)*fac[n]].push_back(th+(i-1)*fac[n]);
+                }
+        }
+    }
+    while(next_permutation(a+1,a+n+1));
+}
+
+int n,m,t[11],g[N+2];
+
+int main()
+{
+    int T;
+    scanf("%d",&T);
+    fac[0]=1;
+    for(int i=1;i<=9;i++) fac[i]=fac[i-1]*i;
+    while(T--)
+    {
+        scanf("%d%d",&n,&m);
+        init(n);
+        for(int i=1;i<=m;i++)
+        {
+            for(int j=1;j<=n;j++) scanf("%d",&t[j]);
+            int h=calc(n,t);
+            f[h]=g[h]=1;
+        }
+        for(int k=0;k<n;k++)
+            for(int u=(k+1)*fac[n]-1;u>=k*fac[n];u--)
+                for(auto v:e[u]) f[v]+=f[u];
+        int ans=0;
+        for(int u=(n+1)*fac[n]-1;u>=n*fac[n];u--) ans+=f[u];
+        printf("%lld\n",ans);
+    }
+    return 0;
+}
+```
 
 F. 
 
