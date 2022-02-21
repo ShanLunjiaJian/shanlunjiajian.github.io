@@ -2069,87 +2069,21 @@ E. permu
 
 做法非常牛逼。考虑一般的dag不能做，是因为两个点之间的路径可能不唯一。
 
-考虑一个看起来还比较自然的想法，我们要从一个排列变到另一个排列，必然可以先换最靠前的不对的，这样方案就唯一了。那么给每个排列建$$n$$个点，第$$i$$个表示现在要换第$$i$$位，然后转移可以选择开始换下一位，或者把这一位跟后面某一个换一换。
+考虑一个看起来还比较自然的想法，我们每次确定一位，这样方案就唯一了。如果需要把$$a_j<a_i$$换到$$a_i$$，如果$$j<i$$那就没救了，否则我们可以直接换，但是这样做可能会丢解。
 
-这个换的选择可能有很多，但是实际上只有很少的是有用的。我们只可能选择
+考虑怎么做才不会丢解，显然是尽可能把大的放在前面，小的放在后面，不过麻烦的是我们也不知道什么是大的什么是小的。
 
-```cpp
-#include<stdio.h>
-#include<string.h>
-#include<algorithm>
-#include<vector>
-using std::vector;
-using std::next_permutation;
+把$$a_j$$换到位置$$i$$的过程是把它顺着某一串东西换过来(此外的交换可以放到后面进行)。然后就可以进行一个结论的猜，并进行一个结论的证。
 
-const int N=6;
+**结论** 最优交换方案是，从$$i$$向右找到所有$$>a_j$$的前缀$$\min$$，然后把$$a_j$$沿着这一串换到$$i$$。
 
-int fac[11];
-inline int calc(int n,int *a)
-{
-    int ans=0;
-    for(int i=1;i<=n;i++)
-        for(int j=i+1;j<=n;j++)
-            if(a[i]>a[j]) ans+=fac[n-i];
-    return ans;
-}
+比如现在有5 4 1 2 3，我们要把3换到第一位，那么从第一位出发所有的前缀min是4 1，于是我们做交换5 4 1 2 3->5 4 3 2 1->5 3 4 2 1->3 5 4 2 1。
 
-vector<int> e[11*N+2];
-int f[11*N+2];
+**证明** 如果我们选的不是这个序列，可以尝试证明选的是这个序列加上/删掉一项的情况，你会发现都可以在之后的交换中被这个替代。
 
-int a[11],b[11];
-inline void swap(int &x,int &y){ x^=y^=x^=y; }
-inline void init(int n)
-{
-    for(int i=0;i<n*fac[n];i++) e[i].clear(),f[i]=0;
-    for(int i=1;i<=n;i++) a[i]=i;
-    do
-    {
-        int h=calc(n,a);
-        for(int i=1;i<=n;i++)
-        {
-            e[h+(i-1)*fac[n]].push_back(h+i*fac[n]);
-            for(int j=i+1,min=a[i];j<=n;j++)
-                if(a[j]<min)
-                {
-                    min=a[j];
-                    memcpy(b,a,sizeof(int)*(n+1));
-                    swap(b[i],b[j]);
-                    int th=calc(n,b);
-                    e[h+(i-1)*fac[n]].push_back(th+(i-1)*fac[n]);
-                }
-        }
-    }
-    while(next_permutation(a+1,a+n+1));
-}
+这应该算是一道构造题吧（
 
-int n,m,t[11],g[N+2];
-
-int main()
-{
-    int T;
-    scanf("%d",&T);
-    fac[0]=1;
-    for(int i=1;i<=9;i++) fac[i]=fac[i-1]*i;
-    while(T--)
-    {
-        scanf("%d%d",&n,&m);
-        init(n);
-        for(int i=1;i<=m;i++)
-        {
-            for(int j=1;j<=n;j++) scanf("%d",&t[j]);
-            int h=calc(n,t);
-            f[h]=g[h]=1;
-        }
-        for(int k=0;k<n;k++)
-            for(int u=(k+1)*fac[n]-1;u>=k*fac[n];u--)
-                for(auto v:e[u]) f[v]+=f[u];
-        int ans=0;
-        for(int u=(n+1)*fac[n]-1;u>=n*fac[n];u--) ans+=f[u];
-        printf("%lld\n",ans);
-    }
-    return 0;
-}
-```
+放上[我的代码](/file/2022-01-23-acm-icpc-problems/hdu_mutc2016_c8e.cpp)吧。为了搞的好像全是题解的篇幅所以放link了（
 
 F. 
 
