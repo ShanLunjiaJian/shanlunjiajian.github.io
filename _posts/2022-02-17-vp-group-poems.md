@@ -59,6 +59,26 @@ but, can anyone?\
 
 I have felt confused and lost before. I will fight on, for changing OI, but, can anyone?
 
+赵神赢用生草机翻译了一下。
+
+> wyx：比赛以0的热潮结束
+，他的OI生涯
+在叹息中结束。
+他整个青春
+都在内卷中度过，
+因为他的平凡而内卷。
+羟基使他成为失败者。
+fys：他的代码很累，有很多错误！
+qyc：今天我只有n的蛮力！^8！
+我会很高兴地繁荣0
+，但八先生很容易AK。
+在我继续战斗之前，我感到困惑和迷失
+，因为改变了 OI
+，但是，有人可以吗？
+——Wyx的繁荣的旧时光
+
+boom 0 : 繁荣0
+
 -----
 
 2022-02-19

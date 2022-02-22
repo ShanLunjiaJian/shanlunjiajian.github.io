@@ -8,8 +8,6 @@ int h[3628802],ecnt;
 inline void add_edge(int u,int v){ e[++ecnt]={v,h[u]},h[u]=ecnt; }
 inline void clear(int n){ memset(h,0,sizeof(int)*(n+2)),ecnt=0; }
 
-const int N=9;
-
 int fac[10];
 inline int calc(int n,int *a)
 {
@@ -27,7 +25,6 @@ inline void swap(int &x,int &y){ x^=y^=x^=y; }
 inline void init(int n)
 {
 	clear((n+1)*fac[n]);
-	memset(f,0,sizeof(int)*((n+1)*fac[n]));
 	for(int i=1;i<=n;i++) a[i]=i;
 	do
 	{
