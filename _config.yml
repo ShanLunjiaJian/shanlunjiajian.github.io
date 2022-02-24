@@ -3,7 +3,7 @@ title: "ShanLunjiaJian's Blog"
 SEOTitle: "ShanLunjiaJian's Blog"
 header-img: img/bg.png
 email: "1391137786@qq.com"
-description: "sd初三菜鸡OIer ShanLunjiaJian的blog"
+description: "ShanLunjiaJian's blog"
 keyword: "ShanLunjiaJian"
 url: "https://shanlunjiajian.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -185,4 +185,4 @@ gitalk_client_id: '06b7efda61742d7e5a44'
 gitalk_client_secret: '297d5ae3c7558d570bc3deead920d58ad298c302'
 gitalk_repo: 'shanlunjiajian.github.io'
 gitalk_owner: 'ShanLunjiaJian'
-gitalk_admin: ['ShanLunjiaJian','pbrinotwyh','suxxsfe']
+gitalk_admin: ['ShanLunjiaJian','pbrinotwyh','vectorwyx']
