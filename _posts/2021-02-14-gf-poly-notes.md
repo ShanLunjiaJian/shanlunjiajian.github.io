@@ -3,7 +3,6 @@ layout: post
 title: 生成函数和多项式学习笔记
 subtitle: 毒瘤
 tags: 数学 生成函数 多项式
-show: true
 ---
 
 注意日期!别人情人节在和girlfriend亲亲，我呢在和generating function亲亲......

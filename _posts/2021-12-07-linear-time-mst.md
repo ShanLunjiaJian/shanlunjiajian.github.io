@@ -3,7 +3,6 @@ layout: post
 title: 期望线性MST
 subtitle: ¿
 tags: 图论
-show: true
 ---
 
 好水（

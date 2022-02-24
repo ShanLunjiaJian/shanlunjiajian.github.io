@@ -3,7 +3,6 @@ layout: post
 title: luogu省选计划2021
 subtitle: 今天又是爆零的好日子
 tags: 课
-show: true
 ---
 
 R1 T2

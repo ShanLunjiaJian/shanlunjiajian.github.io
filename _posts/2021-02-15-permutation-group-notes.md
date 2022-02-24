@@ -3,7 +3,6 @@ layout: post
 title: 置换群论学习笔记
 subtitle: 玄妙而优美的鬼东西
 tags: 数学
-show: true
 ---
 
 这里主要是对Burnside定理(或者说引理)和Pólya定理的一点讲解。主要来自机械工业出版社的《组合数学》第五版。

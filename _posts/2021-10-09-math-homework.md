@@ -4,7 +4,6 @@ iframe: /slides/2021-10-09-math-homework.html
 title: 数学作业
 subtitle: 退钱
 tags: 杂项
-show: true
 ---
 
 参考cmd 《多项式计数杂谈》，MiFaFaOvO 《A problem collection of ODE and differential technique》。
