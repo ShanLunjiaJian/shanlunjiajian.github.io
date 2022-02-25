@@ -2410,23 +2410,23 @@ C. Chess Puzzle
 
 事实上，答案是，除了2和4都有走完的解。我的方法是，如果$$n\bmod{3}=0$$，走一个看起来像这样的东西 : 
 
-![img](/img/2021-01-23-acm-icpc-problems/ptzsc16c2c-1.png)
+![img](/img/2022-01-23-acm-icpc-problems/ptzsc16c2c-1.png)
 
 如果可以正反走两遍，就赢麻了。我们可以把下面这两个以某种方式拼起来得到解。
 
-![img](/img/2021-01-23-acm-icpc-problems/ptzsc16c2c-2.png)
+![img](/img/2022-01-23-acm-icpc-problems/ptzsc16c2c-2.png)
 
 如果你很想知道具体怎么做，下面给出了$$n=6$$的解。
 
-![img](/img/2021-01-23-acm-icpc-problems/ptzsc16c2c-3.png)
+![img](/img/2022-01-23-acm-icpc-problems/ptzsc16c2c-3.png)
 
 同时，如果$$n\bmod{2}\neq 0$$，有一个非常绝妙的构造，也就是在下两行从左走到右，上两行从右走到左，下两行从左走到右，上两行从右走到左，这样来回几遍居然就走完了。下图给出了$$n=5,7$$的解。当然有很多类似的构造。
 
-![img](/img/2021-01-23-acm-icpc-problems/ptzsc16c2c-4.png)
+![img](/img/2022-01-23-acm-icpc-problems/ptzsc16c2c-4.png)
 
 如果$$n\bmod{2}=0$$，我们可以在走到边上的时候走一个第一张图里面的东西。比如这是$$n=8$$的构造 : 
 
-![img](/img/2021-01-23-acm-icpc-problems/ptzsc16c2c-5.png)
+![img](/img/2022-01-23-acm-icpc-problems/ptzsc16c2c-5.png)
 
 。看起来还是很有趣啊!
 
