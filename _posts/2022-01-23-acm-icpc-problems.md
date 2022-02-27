@@ -2537,6 +2537,10 @@ D. Downhill
 
 E. Expected LCP
 
-min-max容斥，然后直接做。
+考虑min-max容斥，显然这个min比较好算。但是这玩意是一些pair的max，所以我们需要在所有pair的集合上做min-max容斥。考虑一张图，我们钦点了一些pair相当于钦点了一些边，那么要求让这个min恰好是$$k$$的概率，你发现每个连通块内部的边是没有关系的(但是它需要连通)，只有连通块的数量和大小们有关系。具体地，对于一个大小为$$s$$的连通块，它的min恰好是$$k$$的概率是$$\frac{1}{2^{(s-1)k}}\left(1-\frac{1}{2^(s-1)}\right)$$，最后我们得到的min的期望是
 
-但是怎么直接做啊（
+$$
+\left(\prod_s\left(1-\frac{1}{2^{(s-1)}}\right)\right)\sum_{k=0}^\infty\left(\frac{1}{\prod\limits_s 2^{(s-1)}}\right)^k=\frac{\prod\limits_s\left(1-\frac{1}{2^{(s-1)}}\right)}{1-\prod\limits_s 2^{(s-1)}}
+$$
+
+哎，这就非常的好。
