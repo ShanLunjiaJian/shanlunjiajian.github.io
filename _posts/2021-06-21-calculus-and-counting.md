@@ -369,7 +369,7 @@ Gnutella Chessmaster
 我们写出$$g(i,...)$$的OGF $$G_i(z)$$，然后就有
 
 $$
-G_i=zG_{i-1}+b_iG_{i-1}-\varthetaG_{i-1}
+G_i=zG_{i-1}+b_iG_{i-1}-\vartheta G_{i-1}
 $$
 
 。这个有的移位有的不移位，看起来就只能$$n^2$$了，所以我们考虑用一个跟解一阶线性微分方程类似的方法把右边第一项和第三项统一凑成$$\vartheta$$。
