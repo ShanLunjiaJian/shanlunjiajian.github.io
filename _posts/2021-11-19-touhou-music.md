@@ -428,13 +428,13 @@ Witching Dream
 
 只能说神了。
 
-同时Assaultdoor做了一次失败尝试(挺好听的，但是离这个还有距离)，所以我觉得这一版很可能无敌了。
+Assaultdoor做了一次在我看来的失败尝试(挺好听的，但是离这个还有距离)。我觉得这一版很可能无敌了。
 
 -----
 
 少女绮想曲 ~ Capriccio
 
-很棒。但是少了新作执法曲超帅的钢琴?
+比起新作的版本，有一段比较有趣的旋律。
 
 -----
 
@@ -448,11 +448,11 @@ Witching Dream
 
 **幽梦 ~ Inanimate Dream**
 
-幽香的主题曲。旋律很刺激。
+很刺激。幽梦 这个名字还是太帅了。
 
 -----
 
-Dream Express(幻想快车)
+Dream Express
 
 很刺激。
 
@@ -461,12 +461,6 @@ Dream Express(幻想快车)
 梦想时空
 
 很帅气的曲子，旋律比较洗脑。
-
------
-
-Romantic Children
-
-看名字就很Romantic。
 
 -----
 
@@ -498,7 +492,7 @@ thbwiki表示，Crimson，深红，可能指的是 红莲地狱，佛教中的�
 
 -----
 
-**the Last Judgement~~(最后的评测(OI赛制))~~**
+**the Last Judgement~~( ~ System Test)~~**
 
 神了!
 
