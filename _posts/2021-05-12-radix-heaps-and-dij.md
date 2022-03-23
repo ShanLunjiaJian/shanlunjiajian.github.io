@@ -161,3 +161,106 @@ extract-min也很简单。首先从左往右扫到的第一个非空桶肯定包
 不过问题在于，不管这样的基数堆多么容易实现，谁会愿意去写Fib堆优化的部分呢?
 
 谢谢朋友们!
+
+在很多年以后，我写了一个基数堆优化的dij。这是CF1520G的代码。
+
+```cpp
+#include<stdio.h>
+#include<vector>
+#include<string.h>
+#include<iostream>
+using std::cin;
+using std::cout;
+using std::vector;
+
+int n,m,w,p,a[2002][2002];
+
+#define node(i,j) (((i)-1)*m+(j))
+#define inv_node_x(x) (((x)-1)/m+1)
+#define inv_node_y(x) (((x)-1)%m+1)
+
+long long dis[4000010];
+bool vis[4000010];
+struct DijRadixHeap
+{
+    #define highbit(x) ((x)?64-__builtin_clzll(x):0)
+    vector<int> b[60],temp[60];
+    int cur,c[60],c0p;
+    int p[4000010];
+    inline void build(int n,int s)
+    {
+        cur=s;
+        for(int i=1;i<=n;i++)
+            c[highbit(dis[i]^dis[s])]++,b[highbit(dis[i]^dis[s])].push_back(i),p[i]=b[highbit(dis[i]^dis[s])].size()-1;
+        for(int i=0;i<=55;i++) temp[i].reserve(1000000);
+    }
+    inline int top(){ return cur; }
+    inline void pop()
+    {
+        static int _c[60];
+        int last=cur;c[0]--,p[cur]=-1,cur=0;
+        if(c[0]){ while(p[b[0][c0p]]==-1) c0p++; cur=b[0][c0p]; return; }
+        for(int i=1;i<=55;i++) if(c[i])
+        {
+            for(int j=0;j<b[i].size();j++)
+                if(highbit(dis[b[i][j]]^dis[last])==i&&p[b[i][j]]==j&&dis[b[i][j]]<dis[cur]) cur=b[i][j];
+            for(int j=0;j<=i;j++) c[j]=0;
+            for(int j=0;j<=i;j++) temp[j].reserve(c[j]),temp[j].resize(0);
+            for(int j=0,t;j<=i;j++)
+                for(int k=0;k<b[j].size();k++)
+                    if(highbit(dis[b[j][k]]^dis[last])==j&&p[b[j][k]]==k)
+                        t=highbit(dis[b[j][k]]^dis[cur]),temp[t].push_back(b[j][k]),c[t]++,p[b[j][k]]=temp[t].size()-1;
+            for(int j=0;j<=i;j++) swap(temp[j],b[j]);
+            c0p=0;
+            break;
+        }
+    }
+    inline void decrease(int u,long long new_d)
+    {
+        c[highbit(dis[u]^dis[cur])]--,c[highbit(new_d^dis[cur])]++,
+        b[highbit(new_d^dis[cur])].push_back(u),p[u]=b[highbit(new_d^dis[cur])].size()-1;
+    }
+}q;
+
+inline void dij(int _n,int s)
+{
+    dis[0]=1e16;
+    for(int i=1;i<=_n;i++) dis[i]=1e16-1e9;
+    dis[s]=0,q.build(_n,s);
+    for(int T=1;T<=_n;T++)
+    {
+        int u=q.top();
+        if(vis[u]) continue;
+        vis[u]=1;
+        if(u==n*m) return;
+        if(u==p)
+        {
+            for(int i=1;i<=n;i++)
+                for(int j=1;j<=m;j++)
+                    if(a[i][j]>0&&dis[u]+a[i][j]<dis[node(i,j)]) q.decrease(node(i,j),dis[u]+a[i][j]),dis[node(i,j)]=dis[u]+a[i][j];
+        }
+        else
+        {
+            int i=inv_node_x(u),j=inv_node_y(u);
+            if(i<n&&a[i+1][j]!=-1&&dis[u]+w<dis[node(i+1,j)]) q.decrease(node(i+1,j),dis[u]+w),dis[node(i+1,j)]=dis[u]+w;
+            if(j<m&&a[i][j+1]!=-1&&dis[u]+w<dis[node(i,j+1)]) q.decrease(node(i,j+1),dis[u]+w),dis[node(i,j+1)]=dis[u]+w;
+            if(i>1&&a[i-1][j]!=-1&&dis[u]+w<dis[node(i-1,j)]) q.decrease(node(i-1,j),dis[u]+w),dis[node(i-1,j)]=dis[u]+w;
+            if(j>1&&a[i][j-1]!=-1&&dis[u]+w<dis[node(i,j-1)]) q.decrease(node(i,j-1),dis[u]+w),dis[node(i,j-1)]=dis[u]+w;
+            if(a[i][j]>0&&dis[u]+a[i][j]<dis[p]) q.decrease(p,dis[u]+a[i][j]),dis[p]=dis[u]+a[i][j];
+        }
+        q.pop();
+    }
+}
+
+int main()
+{
+    std::ios::sync_with_stdio(0);
+    cin.tie(0);
+    cin>>n>>m>>w,p=n*m+1;
+    for(int i=1;i<=n;i++)
+        for(int j=1;j<=m;j++) cin>>a[i][j];
+    dij(n*m+1,node(1,1));
+    cout<<(dis[node(n,m)]==1e16-1e9?-1:dis[node(n,m)]);
+    return 0;
+}
+```
