@@ -36,7 +36,7 @@ B. Building Block
 
 C. Swap
 
-不需要最小化步数![/jy](/img/qqemoji/0.gif)
+不需要最小化步数/jy
 
 考虑从行来看，每一行的内容不变，它们只是被换来换去，并且在列上重排了而已。那么如果某一行没有1，或者某一列没有1，必然完蛋了。
 
@@ -154,7 +154,7 @@ E. Game
 
 以前尝试过写超现实数入门，但是失败了。现在就去写/fn
 
-这题有两个人交了，全wa了，网上还没有题解![/jy](/img/qqemoji/0.gif)
+这题有两个人交了，全wa了，网上还没有题解/jy
 
 然后这个题应该就是直接做就彳亍了。
 
@@ -318,7 +318,7 @@ C. Find Its Place
 
 D. Mirror and Light
 
-计算几何![/jy](/img/qqemoji/0.gif)
+计算几何/jy
 
 直接做。
 
@@ -434,7 +434,7 @@ B. “Base B”
 
 C. Birthday Toy
 
-几分钟玩1e9个珠子![/jy](/img/qqemoji/0.gif)
+几分钟玩1e9个珠子/jy
 
 考虑冲一个burnside。burnside指出，置换群作用下不同的染色个数等于每个置换作用下不变的颜色数量的平均值。这里置换只有1e9个，所以我们先枚举一个置换，对于转$$i$$下的置换，它确定了$$\gcd(i,n)$$个等价类，每个等价类颜色必须是一样的，于是问题变成有$$\gcd(i,n)$$个珠子排成的环，中间还有一个珠子，不考虑同构，相邻的必须不同的方案数，设为$$f(\gcd(i,n))$$好了。搞完这个，我们的问题就是对所有$$n$$的因数$$d$$求$$f(d)$$然后反演算贡献而已。
 
@@ -470,7 +470,7 @@ F. Neighbor Friend
 
 G. Paper Cutting Game
 
-注意切一刀是同时切所有的纸![/jy](/img/qqemoji/0.gif)
+注意切一刀是同时切所有的纸/jy
 
 模拟。
 
@@ -598,7 +598,7 @@ H. Without Zero
 
 I. Longest Repeated subsequence
 
-请注意subsequence应为substring![/jy](/img/qqemoji/0.gif)，这玩意谁能看出来![/jy](/img/qqemoji/0.gif)
+请注意subsequence应为substring/jy，这玩意谁能看出来/jy
 
 考虑使用后缀树，我们直接在后缀树上模拟。如果一个点的子树中还有至少$$k$$个叶子，并且可以从中选出$$k$$个不相撞的串(也就是说如果这个点深度是$$d$$，可以选出$$k$$个叶子对应的后缀位置两两差$$\geq d$$)，这个点就合法，然后只需要找最深的合法点。如何判断 不相撞?感觉并不好做。
 
@@ -738,7 +738,7 @@ A. Go Fishing
 
 B. N Knight
 
-注意这里的knight说的是车![/jy](/img/qqemoji/0.gif)
+注意这里的knight说的是车/jy
 
 类似于错排的经典容斥。
 
@@ -750,7 +750,7 @@ C. Cut Pyramid
 
 D. Travel around the world
 
-哈密顿路![/jy](/img/qqemoji/0.gif)
+哈密顿路/jy
 
 考虑一对$$(a,b>a)$$什么时候是可行的，看起来最优策略总是先从$$a$$走到最小值，然后从最小值走到最大值，然后从最大值走到$$b$$，于是这玩意两边是两段双调的，可以强力dp，中间如果没有断层就不用管，有就直接输出$$0$$，复杂度是$$O(n^4)$$。
 
@@ -818,7 +818,7 @@ E. War
 
 F. Escape
 
-军训的教官还敢喝酒![/jy](/img/qqemoji/0.gif)
+军训的教官还敢喝酒/jy
 
 显然可以二分答案之后线性规划多物品流。考虑有没有正常一点的做法。
 
@@ -1034,7 +1034,7 @@ B. Counting spanning trees
 
 草，看起来好困难（
 
-不过实际上也不困难吧![/jy](/img/qqemoji/0.gif)，考虑一个强力做法，我们直接矩阵树，每个点开一个元，然后我们要拉插$$100$$元gf。是不是随随便便就做掉了/tuu
+不过实际上也不困难吧/jy，考虑一个强力做法，我们直接矩阵树，每个点开一个元，然后我们要拉插$$100$$元gf。是不是随随便便就做掉了/tuu
 
 考虑利用树的结构，直接dp即可。然后就做完了。但是我们看起来并不满意。
 
@@ -1050,7 +1050,7 @@ mst。
 
 E. Mars Life Tree
 
-火星生活在树上![/jy](/img/qqemoji/0.gif)
+火星生活在树上/jy
 
 完全没有看懂题。是说，找到一条边，使得从这条边开始长出这棵树代价最小?当这个做吧。注意到这个代价和谁在长叶子是无关的，于是模拟即可。
 
@@ -1202,7 +1202,7 @@ J. Stone Game, Why are you always there?
 
 A. Abandoned country
 
-强行套皮![/jy](/img/qqemoji/0.gif)
+强行套皮/jy
 
 mst然后换根。只换根不dp，是不是更适合称为up and down?
 
@@ -1306,7 +1306,7 @@ I. Solid Dominoes Tilings
 
 J. Subway
 
-树同构![/jy](/img/qqemoji/0.gif)
+树同构/jy
 
 经典做法是，我们找到重心，把重心当成根拎起来，如果有两个就把两种情况都试一下。
 
@@ -1550,7 +1550,7 @@ D. Gambler Bo
 
 E. Boss Bo
 
-ancient![/jy](/img/qqemoji/0.gif)
+ancient/jy
 
 这个ban掉一些子树的话，每个子树是一个区间，于是我们得到最多$$k+1$$个区间，然后对于sum我们就差分成前缀然后扫描线静态lct或者树剖BiT(这个是不是经典做法?求点到集合的lca深度和，就是把集合每个点到根的链+1，然后查询那个点到根的链和)，对于max和min看起来要分治多$$\log$$，但是实际上很有性质，min的话就是往上跳到第一个good node，max的话必然在直径端点取到，可以用合并直径的trick。
 
@@ -1646,9 +1646,9 @@ F. Substring
 
 G. Treasure
 
-treasure居然可以有负的价值![/jy](/img/qqemoji/0.gif)
+treasure居然可以有负的价值/jy
 
-然后看了一眼是简单路径啊![/jy](/img/qqemoji/0.gif)
+然后看了一眼是简单路径啊/jy
 
 考虑我们怎么$$n^2$$，你发现直接做就是$$n^2$$。
 
@@ -1716,7 +1716,7 @@ C. Divide the Sequence
 
 D. How Many Triangles
 
-锐角三角形![/jy](/img/qqemoji/0.gif)
+锐角三角形/jy
 
 三个角都是锐角，看起来就不如恰好一个角不是锐角性质好。考虑我们枚举那个角的顶点，然后再枚举另一个点，就变成半平面数点了。然后就每个点排个极角序，在上面三指针就行了。
 
@@ -1846,7 +1846,7 @@ G. This world need more Zhu
 
 H. To My Girlfriend
 
-我去，我也想要这样的girlfriend![/jy](/img/qqemoji/0.gif)
+我去，我也想要这样的girlfriend/jy
 
 不过这个题看起来还是挺就这的。
 
@@ -1992,7 +1992,7 @@ L. Lights
 
 学车是数数专长（
 
-G~K的出题人是 中二病也要谈恋爱 的粉丝![/jy](/img/qqemoji/0.gif)
+G~K的出题人是 中二病也要谈恋爱 的粉丝/jy
 
 A. Ball
 
@@ -2199,7 +2199,7 @@ C. Convex Hull
 
 D. Different Sums
 
-构造题![/jy](/img/qqemoji/0.gif)
+构造题/jy
 
 注意到钦点$$a_i<3(i+6)$$之后，$$n=2000$$的构造可以用在所有$$n\leq 2000$$上面，于是我们只需要找到一个这样的$$n=2000$$的构造。
 
@@ -2274,7 +2274,7 @@ K. K-th value
 
 分数规划。给0赋权$$1$$，给1赋权$$k-1$$，问题是找权值的最大值。这是点分的经典问题，看起来容易做到$$O(n\log n)$$。总复杂度$$O(n\log^2 n)$$。
 
-由于这个题$$l,r$$非常小，可以直接对这个dp，但是它真的会比优秀实现的点分快吗![/jy](/img/qqemoji/0.gif)，也就是预处理分治过程中每一层的dfs序这样的。
+由于这个题$$l,r$$非常小，可以直接对这个dp，但是它真的会比优秀实现的点分快吗/jy，也就是预处理分治过程中每一层的dfs序这样的。
 
 L. Less Time, More profit
 
@@ -2322,7 +2322,7 @@ B. Hard problem
 
 只需要手算$$l=1$$。画两个圆，然后积就行了。
 
-正叔说这个不好积，那就simpson![/jy](/img/qqemoji/0.gif)
+正叔说这个不好积，那就simpson/jy
 
 然后正叔说这个是小学数学题。好像真的是（
 
