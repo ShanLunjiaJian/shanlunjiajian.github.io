@@ -15,7 +15,7 @@ tags: 杂项
 
 神了! 应该是最高评价。一切尽在不言中?
 
------
+## 一些闲话
 
 旧作有不少收录在 东方幻想的音乐 了。
 
@@ -25,7 +25,21 @@ tags: 杂项
 
 说起来我入坑车万曲，是因为sdoi群里有一个bot，支持用记事本写乐谱然后生成声音文件，然后有个老哥写了Bad Apple!!。除此之外我听的前五首车万曲是梦幻回廊，梦消失，永远的满月，Strawberry Crisis!!，执法曲。
 
-# 原曲
+-----
+
+如果你对旧作和西方感兴趣但是不知道从哪里开始，那么我需要列一个表。
+
+灵异传 : 永远的巫女，献给神明之魂，同归于尽。
+
+封魔录 : End of Daylight，幻梦界，She's in a temper!!。如果觉得旧作的音源不是很舒适，封魔录是有midi的，可以在thwiki听到sc-88p版(或者在thwiki下载midi然后用你喜欢的音源)。
+
+梦时空 : 梦想超越时空，梦消失，Sailor of Time，Strawberry Crisis!!，永远的满月，时之风。
+
+幻想乡 : 装饰战，Alice Maestra，沉睡的恐怖，不可不禁止的游戏，Lotus Road，Dreamy pilot。
+
+怪绮谈 : Dream Express，梦想时空，the Last Judgement，可悲的人偶，不可思议之国的爱丽丝，the Grimoire of Alice。
+
+秋霜玉 : 应该刷一遍。
 
 ## 灵异传
 
@@ -79,10 +93,6 @@ fm音源的声音非常纯，我很喜欢。
 
 ## 封魔录
 
-差点劲（
-
------
-
 博丽 ~ Eastern Wind
 
 神了!
@@ -93,7 +103,7 @@ fm音源的声音非常纯，我很喜欢。
 
 **End of Daylight**
 
-bong bong bong的声音非常有感觉。
+bong bong bong的声音非常有感觉。然而实际上不是bong bong bong，不过现在我哼这首歌都是bong bong bong（
 
 鸟叫声很好听。
 
@@ -112,6 +122,12 @@ bong bong bong的声音非常有感觉。
 神篱，如紫色火焰般燃烧
 
 还是很帅的。
+
+-----
+
+夕阳下落
+
+感觉好像有什么东西跟着夕阳一起落下去了，然后还有什么东西跟着夜幕一起升起来了。很有意境的曲子。
 
 ## 梦时空
 
