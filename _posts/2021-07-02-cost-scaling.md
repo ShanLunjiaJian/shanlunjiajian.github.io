@@ -5,6 +5,8 @@ subtitle: uoj屠榜算法
 tags: 图论 网络流
 ---
 
+upd:现在不是了!rk1写的是网络单纯形，会学的会学的/ll
+
 以下默认我们做的是最小费用循环流。$$C,U$$分别指费用和流量的值域。
 
 网上找了一堆东西，最后找到了原论文，Finding Minimum-Cost Circulations by Successive Approximation，可以在[这里](https://apps.dtic.mil/sti/pdfs/ADA194028.pdf)看到。
