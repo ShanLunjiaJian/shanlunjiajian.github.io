@@ -6,7 +6,9 @@ tags: 数学 生成函数
 show: true
 ---
 
-参考cmd 《多项式计数杂谈》，MiFaFaOvO 《A problem collection of ODE and differential technique》。
+看了一眼，感觉以前写的东西都好拉啊?不过也不打算写新的了，因为还是会很拉/cy
+
+~~参考~~抄写cmd 《多项式计数杂谈》，MiFaFaOvO 《A problem collection of ODE and differential technique》。
 
 众所周知，处理生成函数的时候我们经常遇到导数和积分，常见的是三种情况 : 
 
