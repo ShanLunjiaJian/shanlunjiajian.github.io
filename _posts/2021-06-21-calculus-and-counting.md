@@ -565,11 +565,9 @@ $$
 
 -----
 
-Simple Permutations
+Simple Permutations([loj3397](https://loj.ac/p/3397))
 
 感谢alpha1022的指导。
-
-可以在loj3397找到。
 
 定义一个排列是一个单排列(simple permutation)，当且仅当它不存在非平凡的连续段，连续段就是值域连续区间，非平凡指的是长度不为$$0,1,n$$。求有多少长$$n$$的单排列。$$n\leq 10^5$$，膜$$998244353$$，2s。
 
