@@ -21,16 +21,7 @@ qwq。
 
 保留前$$k$$项，复杂度$$O(k^2\log n)$$或者$$O(k\log k\log n)$$。这个还有点用。
 
-考虑能不能不法法塔做到$$O(k^2)$$。为了计算$$z(z+1)(z+2)...(z+n-1)$$，取个$$\ln$$，然后推一推 : 
-
-$$
-\begin{aligned}
-&\exp\ln\prod_{i=0}^{n-1}(z+i)\\
-&\exp\ln\left(\prod_{i=0}^{n-1}i(1+\frac{z}{i})\right)\\
-=&\exp-\sum_{i=0}^{n-1}\ln i\sum_{j=1}^\infty\frac{(-\frac{z}{i})^j}{j}\\
-=&\exp-\sum_{j=1}^\infty\frac{(-z)^j}{j}\sum_{i=1}^{n-1}i^j
-\end{aligned}
-$$
+能不能不法法塔做到$$O(k^2)$$啊?
 
 求长$$k$$的行后缀
 
