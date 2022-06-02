@@ -178,3 +178,40 @@ rating总掉不到红\
 谁劝退学妹学弟\
 献丑了，谢谢朋友们
 
+> Shan Bei(actually qyc) : I am Mikado_Eight\
+I want to sing a song\
+Everybody ready\
+I will sing a song named I AK IOI\
+Will I still remember\
+water problems in IOI\
+Will I still think that\
+I have never wrote a brute force\
+tourist has forget\
+he never beat me\
+You opened the OJ by chance,\
+and remembered my win.\
+Who admired me AKing IOI\
+Who moded me with LGM\
+Who read my OI story\
+Who extended my rp\
+I was careful before\
+submit only after pai\
+I have said that\
+I like AC in 1 second.\
+The contest was hard then\
+that I can not drop to IGM\
+I was thinking my road is long\
+but I entered national team quickly.\
+Who failed on my fucking problem\
+Who damned fucking me\
+Who read my solution\
+Who asked his juniors\
+The days are gone\
+You are still a piece of shit\
+Now who can remember\
+the contests we participated in?\
+Who remembered my fucking problem\
+Who forgeted fucking me\
+Who teared up my solution\
+Who dissuaded his juniors\
+Sorry for my poor performance! Thanks for listening!
