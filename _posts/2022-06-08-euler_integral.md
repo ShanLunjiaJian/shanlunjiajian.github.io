@@ -39,7 +39,7 @@ $$
 。
 
 $$
-\frac{\displaystyle\int_0^1 p^{a+1}(1-p)^{b}\ \mathrm{d}p}{\displaystyle\int_0^1 x^a(1-x)^b\ \mathrm{d}x}=\frac{\frac{1}{(a+b+2)\binom{a+b+1}{a+1}}}{\frac{1}{(a+b+1)\binom{a+b}{a}}}=\frac{(a+b+1)(a+b)!(a+1)!b!}{a!b!(a+b+2)(a+b+1)!}=\frac{a+1}{a+b+2}
+\frac{\displaystyle\int_0^1 p^{a+1}(1-p)^{b}\ \mathrm{d}p}{\displaystyle\int_0^1 x^a(1-x)^b\ \mathrm{d}x}=\frac{\displaystyle\frac{1}{(a+b+2)\binom{a+b+1}{a+1}}}{\displaystyle\frac{1}{(a+b+1)\binom{a+b}{a}}}=\frac{(a+b+1)(a+b)!(a+1)!b!}{a!b!(a+b+2)(a+b+1)!}=\frac{a+1}{a+b+2}
 $$
 
 -----
