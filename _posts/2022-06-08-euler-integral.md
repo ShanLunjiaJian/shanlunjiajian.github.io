@@ -109,13 +109,13 @@ $$
 
 就结束了。
 
-另一个想法是......我们先抄一遍要求的式子。
+另一个想法是，既然直接beta积分不行......我们先抄一遍要求的式子。
 
 $$
 \sum_{k=r}^n(-1)^k\frac{\binom{k}{r}}{\binom{n}{k}}
 $$
 
-注意到$$r$$很小，所以它也是明示你把$$\binom{k}{r}$$拆掉。但是拆掉了到哪里去呢，可以考虑先不要用beta积分，而是把它的一部分拆掉，另一部分和分母拼成一个新的组合数，然后一起用beta积分。
+注意到$$r$$很小，所以它也是明示你把$$\binom{k}{r}$$拆掉。但是拆掉了到哪里去呢，可以考虑把它的一部分拆掉提出来变成系数，另一部分和分母拼成一个新的组合数(因为全提出来显然是不可能的)，然后一起用beta积分。
 
 $$
 \sum_{k=r}^n(-1)^k\frac{\binom{k}{r}}{\binom{n}{k}}=\frac{1}{r!n!}\sum_{k=r}^n(-1)^kk^{\underline{r}}k!(n-k)!
@@ -130,13 +130,13 @@ $$
 &\frac{1}{r!n!}\sum_{k=r}^n(-1)^kk^{\underline{r}}k!(n-k)!\\
 =&\frac{1}{r!n!}\sum_{i=0}^rc_i\sum_{k=r}^n(-1)^k(k+i)!(n-k)!\\
 =&\sum_{i=0}^r\frac{(n+i)!c_i}{r!n!}\sum_{k=r}^n\frac{(-1)^k}{\binom{n+i}{k+i}}\\
-=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!}\int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t\\
+=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!}\int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t=\mathrm{T}\\
 \int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t=&\int_0^1(-t)^r(1-t)^{n-r}\sum_{k=0}^{n-r}\left(\frac{-t}{1-t}\right)^k\mathrm{d}t\\
 =&\int_0^1(-t)^r(1-t)^{n-r}\frac{1-\left(\frac{-t}{1-t}\right)^{n-r+1}}{1-\frac{-t}{1-t}}\mathrm{d}t\\
 =&\int_0^1(-t)^r\left((1-t)^{n-r+1}-(-t)^{n-r+1}\right)\mathrm{d}t\\
 =&\int_0^1(-t)^r(1-t)^{n-r+1}\mathrm{d}t-\int_0^1(-t)^{n+1}\mathrm{d}t\\
 =&\frac{(-1)^r}{(n+2)\binom{n+2}{r}}+\frac{(-1)^n}{n+2}\\
-\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!}\int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!(n+2)}\left(\frac{(-1)^r}{\binom{n+2}{r}}+(-1)^n\right)
+\mathrm{T}=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!(n+2)}\left(\frac{(-1)^r}{\binom{n+2}{r}}+(-1)^n\right)
 \end{aligned}
 $$
 
