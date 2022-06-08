@@ -3,7 +3,6 @@ layout: post
 title: 两类欧拉积分
 subtitle: /ll
 tags: 数学
-
 ---
 
 第二类欧拉积分，gamma函数是
@@ -63,12 +62,10 @@ $$
 直接干。我们得到
 
 $$
-(n+1)\int_0^1\sum_{k=r}^n\binom{k}{r}(-t)^k(1-t)^{1-k}\mathrm{d}t
+(n+1)\int_0^1\sum_{k=r}^n\binom{k}{r}(-t)^k(1-t)^{n-k}\mathrm{d}t
 $$
 
-后面这个看起来不是很友好。注意到如果没有$$\binom{k}{r}$$，就可以等比数列求和合成一项，那么我们考虑把$$\binom{k}{r}$$凑出来。但是这个东西不是很好凑，杜爷说一眼，但是我可能并没有眼/ll
-
-注意到$$r$$很小，所以它也是明示你把$$\binom{k}{r}$$拆掉。但是拆掉了到哪里去呢，可以考虑先不要用beta积分，而是把它的一部分扔到分母上去，拼成一个新的组合数，然后一起用beta积分。
+后面这个看起来不是很友好。注意到如果没有$$\binom{k}{r}$$，就可以等比数列求和合成一项。注意到$$r$$很小，所以它也是明示你把$$\binom{k}{r}$$拆掉。但是拆掉了到哪里去呢，可以考虑先不要用beta积分，而是把它的一部分拆掉，另一部分和分母拼成一个新的组合数，然后一起用beta积分。
 
 $$
 \sum_{k=r}^n(-1)^k\frac{\binom{k}{r}}{\binom{n}{k}}=\frac{1}{r!n!}\sum_{k=r}^n(-1)^kk^{\underline{r}}k!(n-k)!
@@ -95,3 +92,43 @@ $$
 
 其中倒数第二行的第一项是一个beta积分。也许会有一些细节问题。
 
+另一个想法是考虑$$\binom{k}{r}$$是怎么来的，或者说我们硬凑这个式子。如果你不记得了，它是
+$$
+\sum_{k=0}^n\binom{k}{r}(-t)^k(1-t)^{n-k}
+$$
+的封闭形式。下降幂让我们想到求导，于是考虑用某个东西的$$r$$阶导来凑。发现这里面正好有一个$$(-t)^k$$，于是我们对$$t$$求$$r$$阶导再乘上$$(-t)^r$$就可以凑出$$k^{\underline{r}}$$......吗?注意到有一个$$(1-t)^{n-k}$$，所以我们就绷不住了。
+
+考虑强行把它干掉，设$$\displaystyle F(x,y)=\sum_{k=0}^nx^ky^{n-k}=\frac{x^{n+1}-y^{n+1}}{x-y}$$，记$$\displaystyle\mathrm D=\frac{\partial}{\partial x}$$，那么
+
+$$
+x^r(\mathrm D^rF)(x,y)=x^r\mathrm D^r\left(\sum_{k=0}^nx^ky^{n-k}\right)=\sum_{k=r}^nk^{\underline{r}}x^ky^{n-k}
+$$
+
+所以我们所要的东西就是$$\displaystyle\frac{(-t)^r(\mathrm D^rF)(-t,1-t)}{r!}$$。
+
+然后转而使用那个封闭形式
+
+$$
+\begin{aligned}
+&\mathrm D^r\left(\frac{x^{n+1}-y^{n+1}}{x-y}\right)\\
+=&\sum_{i=0}^r\binom{r}{i}\left(\mathrm D^i(x^{n+1}-y^{n+1})\right)\left(\mathrm D^{r-i}\frac{1}{x-y}\right)\\
+=&\sum_{i=0}^r\binom{r}{i}(n+1)^{\underline{i}}x^{n-i+1}(r-i)!(-1)^{r-i}(x-y)^{-1-r+i}
+\end{aligned}
+$$
+
+现在代入，得到
+
+$$
+\sum_{k=0}^n\binom{k}{r}(-t)^k(1-t)^{n-k}=\frac{(-t)^r}{r!}\sum_{i=0}^r\binom{r}{i}(n+1)^{\underline{i}}(-t)^{n-i+1}(r-i)!(-1)^{r-i}(-t-(1-t))^{-1-r+i}
+$$
+
+所以我们原来所要求的就变成了
+
+$$
+\begin{aligned}
+&(n+1)\int_0^1\frac{(-t)^r}{r!}\sum_{i=0}^r\binom{r}{i}(n+1)^{\underline{i}}(-t)^{n-i+1}(r-i)!(-1)^{r-i}(-t-(1-t))^{-1-r+i}\mathrm{d}t\\
+=&-\frac{(n+1)}{r!}\sum_{i=0}^r\binom{r}{i}(n+1)^{\underline{i}}(r-i)!\int_0^1(-t)^{n+r-i+1}\mathrm{d}t\\
+=&\frac{(n+1)}{r!}\sum_{i=0}^r(-1)^{n+r-i}\binom{r}{i}\frac{(n+1)^{\underline{i}}(r-i)!}{n+r-i+2}\\
+
+\end{aligned}
+$$
