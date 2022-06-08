@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 两类欧拉积分
-subtitle: /ll
+subtitle: 算力为负了/ll
 tags: 数学
 ---
 
@@ -10,6 +10,8 @@ tags: 数学
 $$
 \Gamma(z)=\int_0^\infty t^{z-1}e^{-t}\mathrm{d}t=(z-1)!
 $$
+
+，不是很知道它在哪里会被用到。
 
 第一类欧拉积分，beta函数是
 
@@ -22,6 +24,8 @@ $$
 $$
 \mathrm{B}(x+1,y+1)=\int_0^1t^x(1-t)^y\mathrm{d}t=\frac{\Gamma(x+1)\Gamma(y+1)}{\Gamma(x+y+2)}=\frac{x!y!}{(x+y+1)!}=\frac{1}{(x+y+1)\binom{x+y}{x}}
 $$
+
+。
 
 -----
 
