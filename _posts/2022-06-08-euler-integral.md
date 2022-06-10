@@ -55,7 +55,9 @@ $$
 \binom{n}{k}^{-1}=(n+1)\int_0^1 t^k(1-t)^{n-k}\mathrm{d}t
 $$
 
-试看看!例题1.7 给$$n\leq 10^9,r\leq 5000$$，求
+试看看!例题1.7
+
+给$$n\leq 10^9,r\leq 5000$$，求
 
 $$
 \sum_{k=r}^n(-1)^k\frac{\binom{k}{r}}{\binom{n}{k}}
@@ -109,7 +111,7 @@ $$
 
 就结束了。
 
-另一个想法是，既然直接beta积分不行......我们先抄一遍要求的式子。
+另一个想法是，既然直接beta积分很困难......我们先抄一遍要求的式子。
 
 $$
 \sum_{k=r}^n(-1)^k\frac{\binom{k}{r}}{\binom{n}{k}}
@@ -130,13 +132,13 @@ $$
 &\frac{1}{r!n!}\sum_{k=r}^n(-1)^kk^{\underline{r}}k!(n-k)!\\
 =&\frac{1}{r!n!}\sum_{i=0}^rc_i\sum_{k=r}^n(-1)^k(k+i)!(n-k)!\\
 =&\sum_{i=0}^r\frac{(n+i)!c_i}{r!n!}\sum_{k=r}^n\frac{(-1)^k}{\binom{n+i}{k+i}}\\
-=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!}\int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t=\mathrm{T}\\
+=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!}\int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t={\color{cyan}\mathrm{T}}\\
 \int_0^1\sum_{k=r}^n(-t)^k(1-t)^{n-k}\mathrm{d}t=&\int_0^1(-t)^r(1-t)^{n-r}\sum_{k=0}^{n-r}\left(\frac{-t}{1-t}\right)^k\mathrm{d}t\\
 =&\int_0^1(-t)^r(1-t)^{n-r}\frac{1-\left(\frac{-t}{1-t}\right)^{n-r+1}}{1-\frac{-t}{1-t}}\mathrm{d}t\\
 =&\int_0^1(-t)^r\left((1-t)^{n-r+1}-(-t)^{n-r+1}\right)\mathrm{d}t\\
 =&\int_0^1(-t)^r(1-t)^{n-r+1}\mathrm{d}t-\int_0^1(-t)^{n+1}\mathrm{d}t\\
 =&\frac{(-1)^r}{(n+2)\binom{n+2}{r}}+\frac{(-1)^n}{n+2}\\
-\mathrm{T}=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!(n+2)}\left(\frac{(-1)^r}{\binom{n+2}{r}}+(-1)^n\right)
+{\color{cyan}\mathrm{T}}=&\sum_{i=0}^r\frac{(n+i)!(n+1)c_i}{r!n!(n+2)}\left(\frac{(-1)^r}{\binom{n+2}{r}}+(-1)^n\right)
 \end{aligned}
 $$
 
