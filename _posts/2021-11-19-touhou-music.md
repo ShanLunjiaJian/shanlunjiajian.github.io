@@ -1327,6 +1327,12 @@ Moon Child ~ Homunculus Dream
 
 -----
 
+**亡月之王**
+
+请注意这首曲子里面1:40的那一段是组织的旋律。
+
+-----
+
 超越时空之翼 ~ M_theory
 
 **常轨之外的飞翔之羽 ~ Eleven-dimensional**
