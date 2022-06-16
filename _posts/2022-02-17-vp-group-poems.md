@@ -215,3 +215,9 @@ Who forgeted fucking me\
 Who teared up my solution\
 Who dissuaded his juniors\
 Sorry for my poor performance! Thanks for listening!
+
+-----
+
+2022-06-15
+
+> qyc : ac+bd，bc-ad。
