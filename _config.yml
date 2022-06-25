@@ -184,8 +184,14 @@ friends: [
         title: "dhclient",
         href: "https://www.luogu.com.cn/user/638646"
     },{
+        title: "Zimse",
+        href: "https://www.luogu.com.cn/user/328485"
+    },{
         title: "zimujun",
-        href: "https://www.cnblogs.com/zimujun"
+        href: "https://www.cnblogs.com/zimujun/"
+    },{
+        title: "Wild_Donkey",
+        href: "https://wild-donkey.github.io/"
     }
 ]
 
