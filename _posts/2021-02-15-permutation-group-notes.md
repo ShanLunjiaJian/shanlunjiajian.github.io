@@ -378,10 +378,10 @@ $$
 
 之前在 图的同构计数 那道题里面，我们定义了$$j_k(f)$$表示置换$$f$$的循环分解中大小为$$k$$的循环个数。
 
-对于一个置换群$$G$$，定义$$Z$$算子 : 
+为了形式简单，定义$$Z$$算子 : 
 
 $$
-Z(G;x_1,x_2,...,x_m)\frac{1}{\vert G\vert}\sum_{f\in G}\prod_{i=1}^mx_i^{j_i(f)}
+Z(G;x_1,x_2,...,x_m)=\frac{1}{\vert G\vert}\sum_{f\in G}\prod_{i=1}^mx_i^{j_i(f)}
 $$
 
 **带权的Pólya定理** 在置换群$$G$$的作用下，$$\mathcal{C}/G$$中所有染色等价类的权值之和是 : 
@@ -390,7 +390,9 @@ $$
 \sum_{\phi\in\mathcal{C}/G}w(\phi)=Z(G;\sum_{\beta\in\mathcal{B}}w(\beta),...,\sum_{\beta\in\mathcal{B}}w^m(\beta))
 $$
 
-这个定理有几个简单的特殊情况，比如如果取$$w(\beta)=z^\beta$$(呃$$z$$只是形式变量，它的指数可以是各种各样奇怪的东西对吧，比如是颜色，呃其实颜色也可以是各种各样奇怪的东西，比如可以是数，也可以是多项式)，我们就知道
+**证明** 懒了。
+
+这个定理有几个简单的特殊情况，比如如果取$$w(\beta)=z^\beta$$，我们就知道
 
 $$
 \sum_{\beta\in\mathcal{B}}w^i(\beta)=\sum_{\beta\in\mathcal{B}}z^{i\beta}=B(z^i)
@@ -407,5 +409,3 @@ $$
 $$
 \sum_{i=1}^\infty\sum_{\phi\in\mathcal{C}/R_i}w(\phi)=\exp\sum_{i=1}^\infty\frac{\sum_{\beta\in\mathcal{B}}w^i(\beta)}{i}
 $$
-
-**证明** 累了。
