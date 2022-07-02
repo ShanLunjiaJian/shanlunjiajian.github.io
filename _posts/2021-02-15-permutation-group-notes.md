@@ -142,8 +142,6 @@ $$
 \end{aligned}
 $$
 
-所以这是废物引理。
-
 ---
 
 **Burnside定理** 在置换群$$G$$的作用下，染色集合$$\mathcal{C}$$中本质不同的染色数$$N(G,\mathcal{C})$$为
@@ -322,13 +320,15 @@ $$\left(\begin{array}{}1,2,3\\2,3,1\end{array}\right), \left(\begin{array}{}1,2,
 
 ## 理解不能
 
-有些时候我们需要考虑带权计数问题。不加证明地给出带权的Burnside和Pólya定理。
+有些时候我们需要考虑带权计数问题，于是给出带权的Burnside和Pólya定理。
 
 定义一个颜色$$\beta\in\mathcal{B}$$的权值$$w(\beta)$$是随便一个什么东西，可以是数，也可以是多项式或者矩阵之类奇怪的东西。别忘了$$\mathcal{B}$$是颜色集合。
 
 定义一个染色$$\mathrm{c}\in\mathcal{C}$$的权值$$w(\mathrm{c})$$是它对被染色集合$$X$$中每个元素所染颜色权值的积，显然它在任意置换下不变。
 
 定义一个染色等价类$$\phi$$的权值$$w(\phi)$$是它里面所有染色的权值。这些权值显然相等。
+
+-----
 
 **带权的Burnside定理** 在置换群$$G$$的作用下，$$\mathcal{C}/G$$中所有染色等价类的权值之和是 : 
 
@@ -337,6 +337,44 @@ $$
 $$
 
 ，其中$$w(\mathcal{C}(f))$$指的是$$f$$作用下不动点的权值之和。它可以解释为，所有染色的权值之和等于各置换下不动点权值和的平均值。
+
+**证明** 如法炮制。
+
+**引理1** 对于置换$$f$$和染色$$\mathrm{c}$$，作用在$$\mathrm{c}$$上与$$f$$等价的置换$$g$$(即$$f\ast\mathrm{c}=g\ast\mathrm{c}$$)的数量为$$\vert G(\mathrm{c})\vert$$。
+
+**引理2** 对于染色$$\mathrm{c}\in\mathcal{C}$$，与$$\mathrm{c}$$本质相同的染色数量为$$\displaystyle\frac{\vert G\vert}{\vert G(\mathrm{c})\vert}$$
+
+**引理3** 
+
+$$
+\sum_{f\in G}w(\mathcal{C}(f))=\sum_{\mathrm{c}\in\mathcal{C}}\vert G(\mathrm{c})\vert w(\mathrm{c})
+$$
+
+**证明**
+
+$$
+\begin{aligned}
+\sum_{f\in G}w(\mathcal{C}(f))&=\sum_{f\in G}\sum_{\mathrm{c}\in\mathcal{C}}[f\ast\mathrm{c}=\mathrm{c}]w(\mathrm{c})\\
+&=\sum_{\mathrm{c}\in\mathcal{C}}\sum_{f\in G}[f\ast\mathrm{c}=\mathrm{c}]w(\mathrm{c})\\
+&=\sum_{\mathrm{c}\in\mathcal{C}}\vert G(\mathrm{c})\vert w(\mathrm{c})
+\end{aligned}
+$$
+
+现在我们回到带权的Burnside定理。
+
+根据引理3，我们知道$$\displaystyle\sum_{f\in G}w(\mathcal{C}(f))=\sum_{\mathrm{c}\in\mathcal{C}}\vert G(\mathrm{c})\vert w(\mathrm{c})$$。
+
+根据引理2，我们又知道$$\displaystyle\vert G(\mathrm{c})\vert=\frac{\vert G\vert}{\text{与}\mathrm{c}\text{本质相同的染色数}}$$。
+
+把第二个式子代入第一个式子，得到
+
+$$
+\sum_{f\in G}w(\mathcal{C}(f))=\vert G\vert\sum_{\mathrm{c}\in\mathcal{C}}\frac{w(\mathrm{c})}{\text{与}\mathrm{c}\text{本质相同的染色数}}
+$$
+
+考虑后面那个$$\sum$$，对于一个染色等价类，它里面的$$w(\mathrm{c})$$都相等，所以它们加起来的结果应该是$$w(\mathrm{c})$$。结束了。
+
+-----
 
 之前在 图的同构计数 那道题里面，我们定义了$$j_k(f)$$表示置换$$f$$的循环分解中大小为$$k$$的循环个数。
 
@@ -370,6 +408,4 @@ $$
 \sum_{i=1}^\infty\sum_{\phi\in\mathcal{C}/R_i}w(\phi)=\exp\sum_{i=1}^\infty\frac{\sum_{\beta\in\mathcal{B}}w^i(\beta)}{i}
 $$
 
-，证明类似某个Euler变换，这里还是略了吧。My math is toooooooooooooooooooo weak.
-
-这个东西暂时还没有例题/cy
+**证明** 累了。
