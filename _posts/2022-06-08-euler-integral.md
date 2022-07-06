@@ -143,3 +143,22 @@ $$
 $$
 
 其中倒数第二行的第一项是一个beta积分。也许会有一些细节问题。
+
+-----
+
+一个更恐怖的问题
+
+求
+
+$$
+\sum_{n=1}^\infty\frac{1}{n^2\binom{2n}{n}}
+$$
+
+。看起来比较oi无关。
+
+$$
+\begin{aligned}
+&\sum_{n=1}^\infty\frac{1}{n^2\binom{2n}{n}}\\
+=&\int_0^1\sum_{n=1}^\infty\frac{(2n+1)t^n(1-t)^n}{n^2}\mathrm{d}t
+\end{aligned}
+$$
