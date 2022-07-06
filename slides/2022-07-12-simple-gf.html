@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-transition="slide">
+                    <h1>生成函数入门</h1>
+                    <p>ShanLunjiaJian</p>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>胡乱说几句</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>Saying</h2>
+                        <p>生成函数是组合对象在代数结构上的投影。——EI</p>
+                        <p>这句话说的很好，但是当你尝试理解，你会感觉它好像说了什么又好像没有说（</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>什么是生成函数?</h2>
+                        <p class="fragment">大概是说，把数数问题中的东西翻译成一个函数，然后用代数手段处理它得到数数问题的答案。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>经典的引入</h2>
+                        <p class="fragment">fib数列的gf。看我口胡。</p>
+                    </section>
+                    <section data-transition="slide">
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>卷积</h2>
+                        <p class="fragment">gf入门的重要一步就是用卷积描述问题。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>简单题</h3>
+                        <p class="fragment">求周长为$n$的三角形个数。$n\leq 10^{18}$。</p>
+                        <p class="fragment">是三角形，等价于三边分别小于$\frac{n}{2}$。表演一下。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>另一个简单题</h3>
+                        <p class="fragment">01背包，支持插入一个物品，删除一个物品，查询凑出体积$m$的方案数。$m,q\leq 5000$。</p>
+                        <p class="fragment">也就是卷上$1+z^k$或$\frac{1}{1+z^k}$。前者是简单的，后者展开考虑其效果。</p>
+                        <p class="fragment">完全背包呢?</p>
+                        <p class="fragment">也就是卷上$\frac{1}{1-z^k}$或$1-z^k$。两个都是简单的。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>试看看!</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>luogu2000 拯救世界</h3>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>CF585E Present for Vitalik the Philatelist</h3>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>指数生成函数 egf</h2>
+                        <p class="fragment">有些时候我们可能想要描述两个东西有序地插起来，这种东西对应的卷积称为二项卷积，而二项卷积是egf的普通卷积。</p>
+                        <p class="fragment">类似地，狄利克雷卷积是狄利克雷生成函数的普通卷积，那么谁来构造一下狄利克雷生成函数?</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>微积分</h3>
+                        <p class="fragment">求导和积分对应egf的系数平移，正如乘$z$和乘$\frac{1}{z}$对应ogf的系数平移。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>试看看!</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>hdu多校 2009 contest5 B. Fibonacci Check-up</h3>
+                        <p class="fragment">给$n$，求$\displaystyle \sum_{i=0}^n\binom{n}{i}f_i$，其中$f$是斐波那契数。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p class="fragment">打表观察，发现答案是斐波那契数$f_{2n}$，于是矩阵快速幂就做完了，单组复杂度$O(\log n)$。</p>
+                        <p class="fragment">这个东西是二项卷积，所以我们使用egf，于是它相当于卷上一个$e^z$。关于fib数的egf，我们有微分方程$F^{\prime\prime}-F^\prime-F=0$，这个实在是懒得解，我们直接卷上$e^z$得到$e^zF^{\prime\prime}-e^zF^\prime-e^zF=0$。我们希望把它凑成$e^zF$的一个微分方程，也就是说求导的时候都是对$e^zF$求导，而不是只对$F$求导。</p>
+                        <p class="fragment">我们强行做这个事情。</p>
+                        <p class="fragment">给$e^zF^{\prime\prime}$凑一个$e^zF+2e^zF^\prime$，我们得到$(e^zF)^{\prime\prime}-e^zF^\prime-e^zF=e^zF+2e^zF^\prime$，移项得$(e^zF)^{\prime\prime}-3e^zF^\prime-2e^zF=0$。</p>
+                        <p class="fragment">给$-3e^zF^\prime$凑一个$-3e^zF$，我们得到$(e^zF)^{\prime\prime}-3(e^zF)^\prime-2e^zF=-3e^zF$，移项得$(e^zF)^{\prime\prime}-3(e^zF)^\prime+e^zF=0$，于是我们知道它的递归式就是$a_n=3a_{n-1}-a_{n-2}$。同时斐波那契数的递归式是$f_{2n}=f_{2n-1}+f_{2n-2}=2f_{2n-2}+f_{2n-3}=3f_{2n-2}-f_{2n-4}$，所以它俩确实是一样的。</p>
+                        <p class="fragment">这个题的启发是，生成函数的封闭形式固然体现了它的性质，但是有些时候它所满足的方程更加实用。在处理微分方程的时候这一点尤为突出，因为微分方程并不是那么容易解的。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>线性递推</h2>
+                        <p class="fragment">一个序列是线性递推的，当且仅当它的ogf是有理分式。有理分式是多项式除以多项式。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h1>Thanks for Listening!</h1>
+                    </section>
+                    <section data-transition="slide">
+                        <p>Powered by reveal.js</p>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/math/math.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealSearch, RevealZoom ]
+            });
+        </script>
+    </body>
+</html>
