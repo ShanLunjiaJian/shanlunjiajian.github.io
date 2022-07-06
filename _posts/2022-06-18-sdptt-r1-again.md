@@ -178,7 +178,7 @@ $$
 
 有标号有根树
 
-$$F=z\exp F$$，于是我们知道$$\left(\frac{z}{\exp z}\right)(F)=z$$，于是我们知道
+$$F=z\exp F+1$$，于是我们知道$$\left(\frac{z}{\exp z}\right)(F)=z$$，于是我们知道
 
 $$
 [z^n]F=[z^n]\left(\frac{z}{\exp z}\right)\exp^{n+1} z=[z^n]z\exp^n z=[z^{n-1}]\exp^n z
