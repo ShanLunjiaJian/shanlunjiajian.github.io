@@ -96,7 +96,7 @@
                         <p class="fragment">我们强行做这个事情。</p>
                         <p class="fragment">给$e^zF^{\prime\prime}$凑一个$e^zF+2e^zF^\prime$，我们得到$(e^zF)^{\prime\prime}-e^zF^\prime-e^zF=e^zF+2e^zF^\prime$，移项得$(e^zF)^{\prime\prime}-3e^zF^\prime-2e^zF=0$。</p>
                         <p class="fragment">给$-3e^zF^\prime$凑一个$-3e^zF$，我们得到$(e^zF)^{\prime\prime}-3(e^zF)^\prime-2e^zF=-3e^zF$，移项得$(e^zF)^{\prime\prime}-3(e^zF)^\prime+e^zF=0$，于是我们知道它的递归式就是$a_n=3a_{n-1}-a_{n-2}$。同时斐波那契数的递归式是$f_{2n}=f_{2n-1}+f_{2n-2}=2f_{2n-2}+f_{2n-3}=3f_{2n-2}-f_{2n-4}$，所以它俩确实是一样的。</p>
-                        <p class="fragment">这个题的启发是，生成函数的封闭形式固然体现了它的性质，但是有些时候它所满足的方程更加实用。在处理微分方程的时候这一点尤为突出，因为微分方程并不是那么容易解的。</p>
+                        <p class="fragment">这个题的启发是，生成函数的封闭形式固然体现了它的性质，但是有些时候它所满足的方程更加实用。在处理微分方程的时候这一点尤为突出，因为微分方程很难解出一个封闭形式，但是它确定了系数的递推式，更准确地说是一个整式递推。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>强连通竞赛图计数</h3>
@@ -111,14 +111,28 @@
                     </section>
                     <section data-transition="slide">
                         <p class="fragment">让我来表演一下默写定义。</p>
-                        <p class="fragment">可以看出$\exp$的组合意义，说的大概是，而$\ln$是其逆运算。</p>
-                        <p class="fragment">生成函数中的$\exp$长这样是因为具有那个组合意义的式子正好跟$e^z$的泰勒展开式一样，而生成函数中的$\ln$是其逆运算，它和$\ln$在$1$处泰勒展开得到的东西是一样的。</p>
+                        <p class="fragment">可以看出$\exp$的组合意义，也就是选择任意个东西无序地拼起来，而$\ln$是其逆运算。</p>
+                        <p class="fragment">它叫$\exp$是因为具有那个组合意义的式子正好跟$e^z$的泰勒展开式一样，而$\ln$是$\ln$在$1$处泰勒展开得到的东西。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>有标号有根树</h3>
                         <p class="fragment">求$n$个点的有标号有根树数量，不区分儿子的顺序。你只需要给出egf方程。</p>
-                        <p class="fragment">$F=z\exp F+1$，也就是非空树是儿子们胡乱拼起来再接上自己，空树就没有自己了，并且空树只有一种。</p>
-                        <p class="fragment">根据prufer序列的结论，或者直接对这个拉格朗日反演，可以得到$[z^n]F=n^{n-1}$。</p>
+                        <p class="fragment">$F=z\exp F+1$，也就是非空树是任意个儿子无序地拼起来再接上自己，空树就没有自己了，并且空树只有一种。</p>
+                        <p class="fragment">根据prufer序列的结论，或者直接对这个拉格朗日反演，可以知道$[z^n]F=n^{n-1}$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>基环树</h3>
+                        <p class="fragment">求$n$个点的有标号内向基环树数量。</p>
+                        <p class="fragment">注意到内向基环树每个点有恰好一条出边，于是考虑每个点有恰好一条出边的图是内向基环树森林，这样的图有$n^n$个，看起来它是内向基环树的$\exp$，所以我们对内向基环树森林取$\ln$即可。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>计算加减乘除导数积分$\ln,\exp$</h2>
+                        <p class="fragment">加减乘和微积分是简单的，根据定义算就好了。加减微积分是线性，乘是$O(n^2)$。</p>
+                        <p class="fragment">除也就是求逆，求$G$的逆，设为$F$，说的是$\sum\limits_{i+j=k}f_ig_j=[k=0]$这样的，所以从低到高做，就得到一个$f_k$的方程。</p>
+                        <p class="fragment">$\ln$的话，考虑$(\ln G)^\prime=\frac{G^\prime}{G}$，所以可以一次求逆，一次乘法，一次积分搞定。</p>
+                        <p class="fragment">$\exp$的话，考虑$(\exp G)^\prime=G^\prime\exp G$，两边提取$[z^k]$我们得到$(k+1)f_{k+1}=\sum\limits_{i+j=k}g^\prime_if_j$这样的。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -135,6 +149,65 @@
                         <h3>sdoi2017 序列计数</h3>
                         <p class="fragment">循环卷积也就是膜$z^p-1$的卷积。这里说一下如何理解多项式膜多项式。</p>
                         <p class="fragment">可以直接用卷积描述。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>十二重计数法</h3>
+                        <p>有$n$个球和$m$个盒子，球要全部装进盒子里，还有一些限制条件(接下来逐个给出)，求放完之后可能的情况有多少种?</p>
+                        <p>你可以只给出关于$n,m$多项式复杂度的计算方法(而不必优化到$O(n\log n)$)。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>1. 球之间互不相同，盒子之间互不相同。</p>
+                        <p class="fragment">$m^n$。</p>
+                        <p>2. 球之间互不相同，盒子之间互不相同，每个盒子至多装一个球。</p>
+                        <p class="fragment">先考虑哪些盒子装了，然后分配，也就是$\displaystyle\binom{m}{n}n!=m^{\underline{n}}$。</p>
+                        <p>3. 球之间互不相同，盒子之间互不相同，每个盒子至少装一个球。</p>
+                        <p class="fragment">容斥，答案是$\displaystyle\sum_{i=0}^n(-1)^i\binom{m}{i}(m-i)^n$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>4. 球之间互不相同，盒子全部相同。</p>
+                        <p class="fragment">也就是说一个盒子由它里面的球来区分，只要一个盒子装了球它就可以和别的盒子区分开，而所有没装的盒子是一样的，于是枚举有多少个盒子装了球。那么可以发现这个就是斯特林子集数(第二类斯特林数)。</p>
+                        <p>5. 球之间互不相同，盒子全部相同，每个盒子至多装一个球。</p>
+                        <p class="fragment">如果$n\leq m$答案是$1$，否则是$0$。</p>
+                        <p>6. 球之间互不相同，盒子全部相同，每个盒子至少装一个球。</p>
+                        <p class="fragment">直接就是斯特林子集数。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>7. 球全部相同，盒子之间互不相同。</p>
+                        <p class="fragment">使用隔板法，答案是$\binom{n+m-1}{m-1}$。</p>
+                        <p>8. 球全部相同，盒子之间互不相同，每个盒子至多装一个球。</p>
+                        <p class="fragment">$\binom{m}{n}$。</p>
+                        <p>9. 球全部相同，盒子之间互不相同，每个盒子至少装一个球。</p>
+                        <p class="fragment">相当于7中先往每个盒子放一个，所以答案是$\binom{n}{m-1}$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>10. 球全部相同，盒子全部相同。</p>
+                        <p class="fragment">考虑因为球无标号，盒子之间的区别就是球的个数；因为盒子无标号，我们可以任意重排，所以不妨把它排序。然后你就可以dp了，不过这里我们用gf来理解它。</p>
+                        <p class="fragment">相当于我们要选若干个大小为$0$的盒子，大小为$1$的盒子，大小为$2$的盒子......其中大小为$k$的盒子的gf应该是$\frac{1}{1-tz^k}$，这里我们引入一个新变量$t$，它的指数表示盒子的个数，最后答案就是提取$z^nt^m$这一项。也就是说我们要求$\displaystyle[z^nt^m]\prod_{k=0}^\infty\frac{1}{1-tz^k}$。但是二元gf比较复杂，能不能避开它?</p>
+                        <p class="fragment">这个东西看起来像分拆数，我们画一个Ferrers图 : </p>
+                        <p class="fragment">可以发现转置之后，从$m$个盒子，每个盒子放任意个球，变成了任意个非空盒子，每个盒子放不超过$m$个球。有人来写一下现在答案是什么吗?</p>
+                        <p class="fragment">$\displaystyle[z^n]\prod_{k=1}^m\frac{1}{1-z^k}$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>$\displaystyle[z^n]\prod_{k=1}^m\frac{1}{1-z^k}$。</p>
+                        <p class="fragment">现在计算这个是$O(n^2m)$的。考虑如何优化到$O(n^2)$。</p>
+                        <p class="fragment">
+$$
+\begin{aligned}
+&[z^n]\prod_{k=1}^m\frac{1}{1-z^k}\\
+=&[z^n]\frac{1}{\prod\limits_{k=1}^m(1-z^k)}\\
+=&[z^n]\frac{1}{\exp -\sum\limits_{k=1}^m\sum_{i=1}^\infty\frac{z^{ki}}{i}}\\
+=&[z^n]\frac{1}{\exp -\sum_{i=1}^\infty\frac{1}{i}\sum\limits_{k=1}^mz^{ki}}\\
+\end{aligned}
+$$
+                        </p>
+                        <p class="fragment">因为右边那个东西只对$z^{ki}$这样的项有贡献，我们直接算就是调和数的$O(n\log n)$，然后$\exp$再求逆就好了。</p>
+                        <p class="fragment">套路就是，看到一串东西乘起来，就考虑取$\ln$变成一串东西加起来，最后$\exp$回去。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>11. 球全部相同，盒子全部相同，每个盒子至多装一个球。</p>
+                        <p class="fragment">如果$n\leq m$答案是$1$，否则是$0$。</p>
+                        <p>12. 球全部相同，盒子全部相同，每个盒子至少装一个球。</p>
+                        <p class="fragment">类似于9，先往每个盒子放一个即可。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
