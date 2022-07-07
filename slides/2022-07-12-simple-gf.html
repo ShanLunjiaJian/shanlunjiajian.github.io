@@ -33,6 +33,11 @@
                         <h2>什么是生成函数?</h2>
                         <p class="fragment">大概是说，把数数问题中的东西翻译成一个函数，然后用代数手段处理它得到数数问题的答案。</p>
                     </section>
+                    <section data-transition="slide">
+                        <h2>禁止使用生成函数</h2>
+                        <p class="fragment">在cts以下的ccf组织的赛事中大概不会出现法法塔，所以那些$O(n\log n)$的法题我们只需要爆力做到$O(n^2)$就好了。</p>
+                        <p class="fragment">很遗憾，sdoi会出现法法塔。</p>
+                    </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
@@ -80,6 +85,7 @@
                     <section data-transition="slide">
                         <h3>微积分</h3>
                         <p class="fragment">求导和积分对应egf的系数平移，正如乘$z$和乘$\frac{1}{z}$对应ogf的系数平移。</p>
+                        <p class="fragment">生成函数的微积分被称为形式微积分，也就是说它只是按照多项式求导积分这么搞了一个东西，它和原来的求导积分具有几乎一样的性质，但是它不具有任何实际意义，所有的性质都是在形式上成立。有结论保证了我们在处理gf的时候总是不需要考虑收敛性，感觉一下你可能会觉得这很优美。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -133,11 +139,12 @@
                         <p class="fragment">除也就是求逆，求$G$的逆，设为$F$，说的是$\sum\limits_{i+j=k}f_ig_j=[k=0]$这样的，所以从低到高做，就得到一个$f_k$的方程。</p>
                         <p class="fragment">$\ln$的话，考虑$(\ln G)^\prime=\frac{G^\prime}{G}$，所以可以一次求逆，一次乘法，一次积分搞定。</p>
                         <p class="fragment">$\exp$的话，考虑$(\exp G)^\prime=G^\prime\exp G$，两边提取$[z^k]$我们得到$(k+1)f_{k+1}=\sum\limits_{i+j=k}g^\prime_if_j$这样的。</p>
+                        <p class="fragment">可以用$\ln-\exp$实现幂，也就是$\exp \ln F^n=\exp n\ln F$。需要注意常数项是$1$才能$\ln$，常数项是$0$才能$\exp$，所以这个需要提一提这样的。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
-                        <h2>小练习</h2>
+                        <h2>试看看!</h2>
                     </section>
                     <section data-transition="slide">
                         <h3>卡特兰数</h3>
