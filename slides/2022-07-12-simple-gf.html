@@ -140,7 +140,7 @@
                         <p class="fragment">除也就是求逆，求$G$的逆，设为$F$，说的是$\sum\limits_{i+j=k}f_ig_j=[k=0]$这样的，所以从低到高做，就得到一个$f_k$的方程。</p>
                         <p class="fragment">$\ln$的话，考虑$(\ln G)^\prime=\frac{G^\prime}{G}$，所以可以一次求逆，一次乘法，一次积分搞定。</p>
                         <p class="fragment">$\exp$的话，考虑$(\exp G)^\prime=G^\prime\exp G$，两边提取$[z^k]$我们得到$(k+1)f_{k+1}=\sum\limits_{i+j=k}g^\prime_if_j$这样的。</p>
-                        <p class="fragment">可以用$\ln-\exp$实现幂，也就是$\exp \ln F^n=\exp n\ln F$。需要注意常数项是$1$才能$\ln$，常数项是$0$才能$\exp$，所以这个需要提一提这样的。</p>
+                        <p class="fragment">可以用$\ln-\exp$实现幂，也就是$\exp \ln F^n=\exp n\ln F$。需要注意常数项是$1$才能$\ln$，常数项是$0$才能$\exp$，所以这个需要提一提这样的。也可以直接求导，也就是$(F^n)^\prime=nF^{n-1}F^\prime$，然后提取系数也结束了。当你不知道干什么的时候就求个导。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
