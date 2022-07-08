@@ -158,6 +158,14 @@
                         <p class="fragment">可以直接用卷积描述。</p>
                     </section>
                     <section data-transition="slide">
+                        <h3>cf1515 E. Phoenix and Computers(空的题?)</h3>
+                        <p class="fragment">考虑最后的情况是有若干段，每一段必然是从中间某个位置往两边选走选出来的。</p>
+                        <p class="fragment">考虑时间倒流，可以知道，长$l$的段方案数就是$2^{l-1}$。</p>
+                        <p class="fragment">考虑一段的egf，它是$\displaystyle\sum_{i=1}^\infty\frac{2^{i-1}z^i}{i!}=\frac{1}{2}(e^{2z}-1)$。</p>
+                        <p class="fragment">枚举选了多少个空，答案就是$\displaystyle\sum_{i=0}^n[z^{n-i}]\left(\frac{e^{2z}-1}{2}\right)^{i+1}$。每次卷一个东西上去即可，容易$O(n^3)$计算。</p>
+                        <p class="fragment">为了做到$O(n^2)$，考虑使用二项式定理展开后面的东西。</p>
+                    </section>
+                    <section data-transition="slide">
                         <h3>十二重计数法</h3>
                         <p>有$n$个球和$m$个盒子，球要全部装进盒子里，还有一些限制条件(接下来逐个给出)，求放完之后可能的情况有多少种?</p>
                         <p>你可以只给出关于$n,m$多项式复杂度的计算方法(而不必优化到$O(n\log n)$)。</p>
