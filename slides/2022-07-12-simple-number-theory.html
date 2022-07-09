@@ -152,6 +152,7 @@ long long exgcd(long long a,long long b,long long &x,long long &y)
                         <p class="fragment">给$a,b$，求$ax\equiv 1\pmod{b}$。</p>
                         <p class="fragment">等价于$ax-by=1$，所以解一组，然后取$x\bmod{b}$即可。</p>
                         <p class="fragment">一般来说我们会膜素数，此时有费马小定理$a^{p-1}\equiv 1\pmod{p}$，所以可以快速幂。</p>
+                        <p class="fragment">在你不需要比较大小的时候，逆元的性质和倒数非常接近，你可以大胆使用它。在答案是有理数的计数问题中很容易见到它。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>exCRT</h2>
@@ -246,6 +247,12 @@ inline int BSGS(int a,int b)
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>试看看!</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>线性逆元</h2>
+                        <p>给一个序列$a$和模数$m$，保证$a_i\perp m$，求其中每一项的逆元。$n\leq 10^7,m\leq 10^9$，不要管怎么读入。</p>
+                        <p class="fragment">hint : 我们只需要对整个序列的乘积求一次逆元。</p>
+                        <p class="fragment">求出整个序列乘积的逆元$b$，跑前后缀积$\mathrm{pre},\mathrm{suf}$，那么$a_i$的逆元就是$b\mathrm{pre}_i\mathrm{suf}_i$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>thupc2018 密码学第三次小作业</h2>
