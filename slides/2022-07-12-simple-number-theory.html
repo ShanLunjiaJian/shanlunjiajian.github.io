@@ -52,13 +52,13 @@
                     <section data-transition="slide">
                         <h2>埃氏筛</h2>
                         <p class="fragment">最简单的素数筛。我们从$2$开始从小到大考虑每个数，如果一个数是素数，则标记它的所有倍数不是素数。如果扫到一个数的时候，它还没被标记，那么它必然是素数。</p>
-                        <p class="fragment">复杂度是$O(n\log\log n)$。这里给出一个感性的分析，假设素数是随机分布的，根据素数定理，$k$有$\frac{1}{\ln k}$的概率是素数，并且如果它是，则会贡献$\frac{n}{k}$的代价。所以复杂度就是$\displaystyle n\int_2^n\frac{1}{x\ln x}\mathrm{d}x$之类的，积出来就是$n\ln\ln n$。</p>
+                        <p class="fragment">复杂度是$O(n\log\log n)$。这里给出一个感性的分析，假设素数是随机分布的，根据素数定理，$k$有$\frac{1}{\ln k}$的概率是素数，并且如果它是，则会贡献$\frac{n}{k}$的代价。所以复杂度就是$\displaystyle n\int_2^n\frac{1}{x\ln x}\mathrm{d}x$之类的，积出来就是$n\ln\ln n$。理性分析存在，但是比较复杂，大家可以自己百度一下。</p>
                         <p class="fragment">这个过程就像是每个素数给了一个筛子，把它的倍数筛出去了，最后剩下的就是所有素数，所以它被称为筛法。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>线性筛</h2>
                         <p class="fragment">线性筛把复杂度优化到线性，其核心是考虑每个合数都可以表示成它的最小素因子乘上另一个数，我们在枚举到那另一个数的时候把它筛掉，这样每个数只会筛掉一次。</p>
-                        <p class="fragment">具体一点，我们从小到大枚举，假设现在枚举到$i$，那么再枚举一个已经扫过的素数$p$，把$ip$标记为合数。然后如果$i$中含有一个$p$，我们就该停下来了，因为继续进行的话，$ip$的最小素因子就不是$p$了。</p>
+                        <p class="fragment">具体一点，我们从小到大枚举，假设现在枚举到$i$，那么再枚举一个已经扫过的素数$p$，把$ip$标记为合数。然后如果$i$中含有一个$p$，我们就该停下来了，因为继续进行的话，比如枚举到$p^\prime$，那么$ip^\prime$的最小素因子就不是$p^\prime$了，而是$p$。</p>
                     </section>
                     <section data-transition="slide" data-markdown>
 ```cpp
