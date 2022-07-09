@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>数论入门</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black-modified.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-transition="slide">
+                    <h1>数论入门</h1>
+                    <p>ShanLunjiaJian</p>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>胡乱说几句</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>Saying</h2>
+                        <p>我在打gen/fn ——数学皇冠上的明珠 wky</p>
+                        <p>这句话说的很好，但是当你尝试理解，你会感到wky老师的神力。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>数论是什么</h2>
+                        <p class="fragment">数论主要研究整数的性质。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>一个约定</h2>
+                        <p class="fragment">提到模数的时候，用$m$表示任意数，$p$表示素数。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>整除，素数，互素</h2>
+                        <p class="fragment">这些大家应该都接触过了。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>素数筛，唯一分解</h2>
+                        <p class="fragment">有些时候我们需要求出$1,...,n$的所有素数。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>埃氏筛</h2>
+                        <p class="fragment">最简单的素数筛。我们从$2$开始从小到大考虑每个数，如果一个数是素数，则标记它的所有倍数不是素数。如果扫到一个数的时候，它还没被标记，那么它必然是素数。</p>
+                        <p class="fragment">复杂度是$O(n\log\log n)$。这里给出一个感性的分析，假设素数是随机分布的，根据素数定理，$k$有$\frac{1}{\ln k}$的概率是素数，并且如果它是，则会贡献$\frac{n}{k}$的代价。所以复杂度就是$\displaystyle n\int_2^n\frac{1}{x\ln x}\mathrm{d}x$之类的，积出来就是$n\ln\ln n$。</p>
+                        <p class="fragment">这个过程就像是每个素数给了一个筛子，把它的倍数筛出去了，最后剩下的就是所有素数，所以它被称为筛法。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>线性筛</h2>
+                        <p class="fragment">线性筛把复杂度优化到线性，其核心是考虑每个合数都可以表示成它的最小素因子乘上另一个数，我们在枚举到那另一个数的时候把它筛掉，这样每个数只会筛掉一次。</p>
+                        <p class="fragment">具体一点，我们从小到大枚举，假设现在枚举到$i$，那么再枚举一个已经扫过的素数$p$，把$ip$标记为合数。然后如果$i$中含有一个$p$，我们就该停下来了，因为继续进行的话，$ip$的最小素因子就不是$p$了。</p>
+                    </section>
+                    <section data-transition="slide" data-markdown>
+```cpp
+const int N=10000002;
+bool _b[N];
+int prime[N/10],pcnt;
+inline void sieve(int n)
+{
+    for(int i=2;i<=n;i++)
+    {
+        if(!_b[i]) prime[++pcnt]=i;
+        for(int j=1;j<=pcnt&&i*prime[j]<=n;j++)
+        {
+            _b[i*prime[j]]=1;
+            if(!(i%prime[j])) break;
+        }
+    }
+}
+```
+                    </section>
+                    <section data-transition="slide">
+                        <h2>素数定理</h2>
+                        <p>$n$以内的素数个数$\pi(n)=\Theta(\frac{n}{\log n})$。更精确地，$\pi(n)\sim\frac{n}{\ln n}$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>唯一分解定理</h2>
+                        <p class="fragment">每个数有且仅有一种方式分解成若干个素数的乘积。</p>
+                        <p class="fragment">证明比较显然。首先归纳一下显然每个数都有至少一种方式分解。</p>
+                        <p class="fragment">考虑如果一个数有两种方式分解成若干个素数的乘积，那么约掉两种方式中都出现了的素数，我们就得到一些素数乘起来等于另一些素数，并且这两个素数集合都非空且不交。</p>
+                        <p class="fragment">考虑一个素数的性质，实际上它是素数的另一种定义 : 如果$p\mid ab$，那么必然有$p\mid a$或$p\mid b$，一会我们会证明这个。</p>
+                        <p class="fragment">于是如果这两个集合分别是$p_1,p_2,...$和$q_1,q_2,...$，那么必然有$p_1\mid q_1q_2...$，而素数都是互素的，所以必然有$p_1=q_i$，但是刚才我们已经约干净了，所以就矛盾了。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>计算唯一分解</h2>
+                        <p class="fragment">一个数超过根号的素因数最多有一个。我们枚举$\leq\sqrt{n}$的素数去除，然后如果剩下的部分不是$1$，它必然是一个超过根号的素因数。</p>
+                    </section>
+                    <section data-transition="slide" data-markdown>
+```cpp
+struct Pair{ int p,e; };
+inline vector&lt;Pair> factorization(int n)
+{
+    vector&lt;Pair> v;
+    for(int i=1,t=n;i<=pcnt&&prime[i]*prime[i]<=t;i++)
+        if(!(n%prime[i]))
+        {
+            int c=0;
+            while(!(n%prime[i])) n/=prime[i],c++;
+            v.push_back({i,c});
+        }
+    if(n>1) v.push_back({n,1});
+}
+```
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>扩展欧几里得算法(exgcd)</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <p class="fragment">最简单的欧几里得算法用于求解$\gcd(a,b)$。大家应该在小学接触过$\gcd$，也就是最大公因数。</p>
+                        <p class="fragment">这个太拉了。我们给出结论 : 对于不都是$0$的整数$a,b$，必然存在整数$x,y$，满足$ax+by=\gcd(a,b)$。</p>
+                        <p class="fragment">接下来描述如何用欧几里得算法计算$x,y$，以及证明这个结论和算法本身的正确性。</p>
+                        <p class="fragment">考虑我们现在知道了$bx+(a\bmod{b})y=\gcd(a,b)$的解，展开然后对照一下 : </p>
+                    </section>
+                    <section data-transition="slide" data-markdown>
+```cpp
+long long exgcd(long long a,long long b,long long &x,long long &y)
+{
+    if(!b){ x=1,y=0;return a; }
+    long long g=exgcd(b,a%b,y,x);
+    y=y-a/b*x;
+    return g;
+}
+```
+                    </section>
+                    <section data-transition="slide">
+                        <p>接下来我们进行证明。它求出的解显然确实满足$ax+by=g$，只需要证明$g$确实是$\gcd(a,b)$。</p>
+                        <p class="fragment">首先$ax+by$必然是$\gcd(a,b)$的倍数，所以我们求出的$g$必然是$\gcd(a,b)$的倍数。</p>
+                        <p class="fragment">于是自然考虑如何证明它也是$\gcd(a,b)$的因数。注意到它必然同时是$a,b$的因数，因为它同时是$b,a\bmod{b}$的因数，而$a\bmod{b}=a-kb=a-k^\prime\gcd(a,b)$。</p>
+                        <p class="fragment">所以我们同时证明了结论$\gcd(a,b)=\gcd(b,a\bmod{b})$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>回去证明在唯一分解定理里面用到的结论，也就是如果$p\mid ab$，则$p\mid a$或$p\mid b$。</p>
+                        <p class="fragment">如果$p\not\mid a$，那么由于$p$是素数，必然有$p\perp a$，所以存在$x,y$满足$px+ay=1$，所以$b=b(px+ay)=bpx+bay$。由于$p\mid ab$，所以必然有$p\mid b$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>随便切几个</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>乘法逆元</h2>
+                        <p class="fragment">给$a,b$，求$ax\equiv 1\pmod{b}$。</p>
+                        <p class="fragment">等价于$ax-by=1$，所以解一组，然后取$x\bmod{b}$即可。</p>
+                        <p class="fragment">一般来说我们会膜素数，此时有费马小定理$a^{p-1}\equiv 1\pmod{p}$，所以可以快速幂。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>exCRT</h2>
+                        <p class="fragment">给$a_1,m_1,a_2,m_2$，求$x\equiv a_1\pmod{m_1},x\equiv a_2\pmod{m_2}$的通解。</p>
+                        <p class="fragment">考虑一些简单的情况，容易感觉到通解具有$x\equiv a\pmod{m}$的形式，其中必然有$m\equiv\operatorname{lcm}(m_1,m_2)$。</p>
+                        <p class="fragment">两个式子分别改写成$x=a_1+k_1m_1,x=a_2+k_2m_2$，于是$k_1m_1-k_2m_2=a_2-a_1$，解可以得到一组$k_1,k_2$，然后就可以得到$x$。</p>
+                    </section>
+                    <section data-transition="slide" data-markdown>
+```cpp
+long long exgcd(long long a,long long b,long long &x,long long &y){ if(!b){ x=1,y=0;return a; } long long g=exgcd(b,a%b,y,x); y=y-a/b*x; return g; }
+inline void mod(long long &x,const long long &m){ (x>=m)&&(x-=m); }
+inline int excrt(long long a1,long long m1,long long a2,long long m2,long long &a,long long &m)//merge equations x=a1(mod m1), x=a2(mod m2), put the answer in x=a(mod m)
+{
+    long long x1,x2,c=a2-a1;
+    long long g=exgcd(m1,m2,x1,x2);
+    if(c%g) return 1;
+    m=m1/g*m2;
+    x1=(__int128)x1*(c/g)%m;
+    mod(a=a1+(__int128)m1*x1%m,m);
+    return 0;
+}
+```
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>求和</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>整除分块</h2>
+                        <p class="fragment">求$\sum_{i=1}^n\lfloor\frac{n}{i}\rfloor$。</p>
+                        <p class="fragment">注意到$\lfloor\frac{n}{i}\rfloor$只有$O(\sqrt{n})$种不同的取值。如果$i\leq\sqrt{n}$，那么只有根号个$i$；如果$i\geq\sqrt{n}$，那么$\frac{n}{i}\leq\sqrt{n}$，于是只有根号个$\lfloor\frac{n}{i}\rfloor$。实际上取值个数确实几乎是$2\sqrt{n}$。</p>
+                        <p class="fragment">由于它是单调的，我们知道相同的取值肯定是连续的一段。为了找到每一段，可以考虑二分，复杂度$O(\sqrt{n}\log n)$。</p>
+                        <p class="fragment">为了砍$\log$，我们需要$O(1)$求一段的端点。考虑如果这一段的$\lfloor\frac{n}{i}\rfloor=d$，那么也就是$d\leq\frac{n}{i}< d+1$，于是$\frac{n}{d+1}< i\leq\frac{n}{d}$，于是这一段的右端点就是$\lfloor\frac{n}{d}\rfloor$。各种整除分块都可以如此分析。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>cqoi2007 余数求和</h2>
+                        <p>求$\displaystyle\sum_{i=1}^nk\bmod{i}$。</p>
+                        <p class="fragment">模板 整除分块。</p>
+                        <p class="fragment">根据定义，$k\bmod{i}=k-i\lfloor\frac{k}{i}\rfloor$，所以答案就是$\displaystyle nk-\sum_{i=1}^ni\lfloor\frac{k}{i}\rfloor$。</p>
+                        <p class="fragment">注意到$\lfloor\frac{k}{i}\rfloor$只有根号段，每一段中都可以把它提出来，剩下的问题就是求$i$的区间和，可以$O(1)$。</p>
+                    </section>
+                    <section data-transition="slide" data-markdown>
+```cpp
+ans=(long long)n*k;
+for(long long l=1,r;l&lt;=n&&l&lt;=k;l=r+1)
+    r=min(n,k/(k/l)),
+    ans-=(long long)(l+r)*(r-l+1)/2*(k/l);
+```
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>一些别的</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>bsgs</h2>
+                        <p>给$a,b,p$，求解$a^x\equiv b\pmod{p}$。</p>
+                        <p class="fragment">考虑折半，取$B=\Theta(\sqrt{n})$，把$x$分解为$x=iB-j$，方程变为$(a^B)^i\equiv ba^j\pmod{p}$。左边有根号种，右边有根号种，预处理一边塞进hash table，枚举另一边查询。</p>
+                    </section>
+                    <section data-transition="slide" data-markdown>
+```cpp
+inline int BSGS(int a,int b)
+{
+    unordered_map&lt;int,int> mp;
+    int c=1;
+    for(int i=0;i&lt;B;i++)
+        mp[(long long)c*b%p]=i,c=(long long)c*a%p;
+    for(int i=1,temp=c;i&lt;=B;i++,temp=(long long)temp*c%p)
+        if(mp[temp]) return i*B-mp[temp];
+    return -1;
+}
+```
+                    </section>
+                    <section data-transition="slide">
+                        <h2>lucas</h2>
+                        <p>求$\binom{n}{m}\bmod{p}$，$n,m\leq 10^{18},p\leq 10^6$，$10^5$组询问。</p>
+                        <p class="fragment">lucas定理指出$\binom{n}{m}\equiv\binom{\lfloor n/p\rfloor}{\lfloor m/p\rfloor}\binom{n\bmod{p}}{m\bmod{p}}\pmod{p}$。递归即可，复杂度$O(\log_p n)$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>kummer</h2>
+                        <p>求$\binom{n}{m}\bmod{p}$，$n,m\leq 10^{18},p\leq 10^6$，$10^5$组询问。</p>
+                        <p class="fragment">lucas定理指出$\binom{n}{m}\equiv\binom{\lfloor n/p\rfloor}{\lfloor m/p\rfloor}\binom{n\bmod{p}}{m\bmod{p}}\pmod{p}$。递归即可，复杂度$O(\log_p n)$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>exEuler</h2>
+                        <p>(cf906D Power Tower)序列和一个数$m$，每次查询一个区间$l,...,r$，求$a_l^{a_{l+1}^{a_{l+2}^{...}}}\bmod{m}$。$n,q\leq 10^5$。</p>
+                        <p class="fragment">exEuler定理指出，$a^n\bmod{m}=a^{\varphi(m)+n\bmod{\varphi(m)}}\bmod{m}$。注意到奇数的$\varphi$是偶数，而偶数的$\varphi$折半，所以$\log$次之后就没了，爆力即可，复杂度$O(q\log^2 v)$。</p>
+                        <p class="fragment">Euler定理指出，如果$a\perp m$，那么$a^n\bmod{m}=a^{n\bmod{\varphi(m)}}\bmod{m}$。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>试看看!</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>thupc2018 密码学第三次小作业</h2>
+                        <p>给$a_1,a_2,e_1,e_2,m$，其中$e_1\perp e_2$且$m$只有两个素因数，求解$x^{e_1}\bmod{m}=a_1,x^{e_2}\bmod{m}=a_2$，保证答案中$x\perp m$。$v<2^{64}$。</p>
+                        <p class="fragment">hint : $e_1\perp e_2$和$x^1$有啥关系?</p>
+                        <p class="fragment">解出$e_1i+e_2j=1$，那么我们要求的就是$x^{e_1i+e_2j}=a_1^ia_2^j$。但是$i,j$可能是负数，不过发现如果$x\perp m$的话，$a_1,a_2$必须也$\perp m$，所以求个逆就好了。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>hdu5848 hdu多校16 D9 E. Easy Homework 弱化版 弱化版 加强版</h2>
+                        <p>给$a,x,p,l,r,f_0,f_1,f_n$，求膜$p$下以$f_0,f_1$为首项的fib数列的区间$[l,r]$中值$f_n$的出现次数。$a,p\leq 10^9,l,r\leq 10^{18}$，保证$5$是膜$p$的二次剩余。</p>
+                        <p>hint : 如果$5$是膜$p$的二次剩余，则fib数列膜$p$必然纯循环，并且循环节是$p-1$的因数。你可以通过枚举一个$p-1$的因数然后矩阵快速幂来计算循环节长度。</p>
+                        <p>hint : 卡西尼恒等式 : $f_{n+1}f_{n-1}-f_n^2=(-1)^{n-1}(f_0^2+f_1f_0-f_1^2)$，可以通过考虑fib数的转移矩阵得到。</p>
+                        <p>hint : cipolla算法可以$O(\log v)$对一个数开平方根，现在假设你可以随意使用它。</p>
+                        <p class="fragment">通过卡西尼恒等式和递推式，我们可以解二次方程得到$\displaystyle f_{n-1}=\frac{-f_n\pm\sqrt{f_n^2+4(f_n^2+(-1)^n)}}{2}$，枚举$n$的奇偶性可以得到四个$f_{n-1}$。</p>
+                        <p class="fragment">考虑bsgs。fib数的转移矩阵设为$M$，初值是$\mathrm{x}$，我们解出来的是$\mathrm{y}$，则有$M^k\mathrm{x}=\mathrm{y}$。可以bsgs解出一次循环中$\mathrm{y}$出现的所有位置，于是对四种可能的$\mathrm{y}$分别解一下就得到$f_n$在这个循环中出现的所有可能位置，于是容易统计答案。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>noio22 pj B. 数学游戏</h2>
+                        <p>给$z,x$，解$z=xy\gcd(x,y)$。$v\leq 2^{63}$。</p>
+                        <p class="fragment">考虑一个素因子$p$的幂次，我们得到$z=x+y+\min(x,y)$。也就是说现在我们知道$x,z,z-x=y+\min(x,y)$，要求$y$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        重新设$z=z-x$，问题变成知道$x,z,z=y+\min(x,y)$，要求$y$。看起来这是一个带$\min$的方程，我们应该如何解呢/yun，如果希望在$\log$时间内解决这个问题，除了乘除之外我们的工具只有$\gcd,\operatorname{lcm},\sqrt[c]{x}$，也就是说我们只能计算一个包含$+,-,\min,\max,\frac{1}{c}$的式子。</p>
+                        <p class="fragment">
+                        讨论就行了。当$x\leq y$，我们得到$z=y+x,y=z-x$。当$x\geq y$，我们得到$z=2y,y=\frac{z}{2}$。考虑如何才能搞出一个东西，它在$x\leq y$的时候得到$z-x$，在$x\geq y$的时候得到$\frac{z}{2}$。</p>
+                        <p class="fragment">这个$\frac{1}{2}$看起来不是很好，我们最后开根号，问题变成凑一个$2z-2x,z$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <p>考虑它看起来像是这样的 : </p>
+                        <img class="r-stretch" src="https://shanlunjiajian.github.io/img/2022-03-26-noio/pjB.png"/>
+                        <p>所以我们所要的东西就是$\max(2z-2x,z)$。答案就是$\sqrt{\operatorname{lcm}(\frac{z^2}{x^2},z)}$，但是$x$不一定整除$z$ ，所以我们把它改成$\displaystyle\sqrt{\frac{z\operatorname{lcm}(z,x^2)}{x^2}}$，就结束了。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>莫比乌斯反演</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2></h2>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>Saying again</h2>
+                        <p>我在打gen/fn ——数学皇冠上的明珠 wky</p>
+                        <p>这句话说的很好，但是当你尝试理解，你会感到wky老师的神力。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h1>Thanks for Listening!</h1>
+                    </section>
+                    <section data-transition="slide">
+                        <p>Powered by reveal.js</p>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/math/math.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealSearch, RevealZoom ]
+            });
+        </script>
+    </body>
+</html>
