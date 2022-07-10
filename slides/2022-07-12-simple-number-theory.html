@@ -288,6 +288,14 @@ for(long long l=1,r;l&lt;=n&&l&lt;=k;l=r+1)
                         <p class="fragment">考虑一个数和$n$的素因数$p$互素，当且仅当它不是$p$的倍数。为了计算不被任何$n$的素因数整除的数的个数，考虑容斥，钦点一个素因数集合$S$，设它里面素因数们的乘积是$c(S)$，则有$\frac{n}{c(S)}$个数被它们同时整除，所以我们知道答案就是$\displaystyle\sum_S(-1)^{\vert S\vert}\frac{n}{c(S)}$，也就是$\displaystyle n\sum_S\prod\limits_{p\in S}\left(-\frac{1}{p}\right)$。注意到这是一个多项式定理，它就是$\displaystyle n\prod_p\left(1-\frac{1}{p}\right)$，展开可以知道它和我们刚才推出的东西是相等的。</p>
                     </section>
                     <section data-transition="slide">
+                        <h2>$d$</h2>
+                        <p>$d$定义为$n$的因数个数，包括$1$和它本身。$1$的因数个数是$1$。</p>
+                        <p class="fragment">$d$是积性的。考虑$d$是$n$的因数，当且仅当$d$在每一个素数上次数都$\leq n$的次数，所以如果$n$分解之后各次数分别是$e_1,e_2,...$，那么$d(n)=\prod(e_i+1)$。</p>
+                        <p class="fragment">考虑如何求$d$的前缀和，也就是$\sum_{i=1}^nd(i)$。</p>
+                        <p class="fragment">注意到它就是$\sum_{i=1}^n\left\lfloor\frac{n}{i}\right\rfloor$，整除分块即可。</p>
+                        <p class="fragment">存在$O(n^{\frac{1}{3}}\log n)$计算它的方法，可以搜索divcnt1。</p>
+                    </section>
+                    <section data-transition="slide">
                         <h2>莫比乌斯反演</h2>
                         <p>(noi2010 能量采集)转化后是求$\displaystyle\sum_{i=1}^n\sum_{j=1}^m\gcd(i,j)$，$n,m\leq 10^5$。</p>
                         <p class="fragment">看我推式子。</p>
@@ -404,6 +412,7 @@ inline int BSGS(int a,int b)
                         <p class="fragment">考虑使用$d=\gcd(a,b)$来表示这个限制。改写成$[id+jd\mid ijd^2]$，也就是$[i+j\mid ijd]$。</p>
                         <p class="fragment">注意到$i\perp j$，所以$\gcd(ij,i+j)=\gcd(i,i+j)\gcd(j,i+j)=1$。也就是说$[i+j\mid ijd]=[i+j\mid d]$。也就是说我们转化成了计算三元组$i,j,d$的数量，需要满足$i>j,i\perp j,id\leq n$这样的。看我推式子。</p>
                         <p class="fragment">接下来分析复杂度。</p>
+                        <p class="fragment">如果我们使用$O(n^{\frac{1}{3}}\log n)$的技术，得到复杂度为$O(n^{\frac{2}{3}}\log n)$。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
