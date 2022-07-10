@@ -37,6 +37,10 @@
                         <h2>一个约定</h2>
                         <p class="fragment">提到模数的时候，用$m$表示任意数，$p$表示素数。</p>
                     </section>
+                    <section data-transition="slide">
+                        <h2>一句闲话</h2>
+                        <p class="fragment">如果你掉线了，请在翻过一页之后立刻尝试重连。</p>
+                    </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
@@ -119,7 +123,7 @@ inline vector&lt;Pair> factorization(int n)
                     </section>
                     <section data-transition="slide">
                         <p class="fragment">最简单的欧几里得算法用于求解$\gcd(a,b)$。大家应该在小学接触过$\gcd$，也就是最大公因数。</p>
-                        <p class="fragment">这个太拉了。我们给出结论 : 对于不都是$0$的整数$a,b$，必然存在整数$x,y$，满足$ax+by=\gcd(a,b)$。</p>
+                        <p class="fragment">这个太拉了。我们给出结论 : 对于不都是$0$的整数$a,b$，必然存在整数$x,y$，满足$ax+by=\gcd(a,b)$，这称为Bezout(裴蜀/贝祖)定理。</p>
                         <p class="fragment">接下来描述如何用欧几里得算法计算$x,y$，以及证明这个结论和算法本身的正确性。</p>
                         <p class="fragment">考虑我们现在知道了$bx+(a\bmod{b})y=\gcd(a,b)$的解，展开然后对照一下 : </p>
                     </section>
@@ -206,12 +210,45 @@ for(long long l=1,r;l&lt;=n&&l&lt;=k;l=r+1)
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
+                        <h2>经典数论函数</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>狄利克雷卷积</h2>
+                        <p>定义$h=f\ast g$为$\displaystyle h(n)=\sum_{d\mid n}f(d)g(\frac{n}{d})$。</p>
+                        <p class="fragment">在只考虑一个素数的所有幂时，狄利克雷卷积即为普通卷积。</p>
+                        <p class="fragment">这导出贝尔级数，不过我还是比较喜欢dgf，不过这都是闲话了。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>简单函数</h2>
+                        <p>定义$\mathrm{id}_k(n)=n^k,\mathbf{1}(n)=1,\epsilon(n)=[n=1]$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>$\mu$</h2>
+                        <p>$\mu$定义为容斥系数$\mu\ast\mathbf{1}=\mathrm{id}$。从低往高递推容易知道$\mu$是存在且唯一的。</p>
+                        <p class="fragment">接下来尝试直接获得$\mu$的值。唯一分解定理实际上说明了每个素数表示一个维度。可以猜测，如果我们构造一组函数$q_i(n)$满足只考虑所有$p_i^k$的时候它能完成容斥$q_i\ast\mathbf{1}=\mathrm{id}$，则把所有$q_i$狄利克雷卷积起来就得到$\mu$。</p>
+                        <p class="fragment">刚才我们说过只考虑一个素数的所有幂时，狄利克雷卷积即为普通卷积，而此时卷上$\mathbf{1}$的意义就是做前缀和。容易感觉到或算出$q_i$是差分$q_i(1)=1,q_i(p_i)=-1$，其它取值都为$0$。</p>
+                        <p class="fragment">所以我们把它们合起来，就得到$\mu(n)$的值 : 如果$n$所有的非零次素因数次数都是$1$，则$\mu(n)=(-1)^{\omega(n)}$，其中$\omega$是素因数个数；否则，也就是说有出现次数超过$1$的素因数，则$\mu(n)=0$。爆力可以验证它确实满足$\mu\ast\mathbf{1}=\mathrm{id}$。</p>
+                        <p class="fragment">如果一个函数像$\mu$这样是各个素因数幂的函数值乘起来，或者说它对各素数是独立的，那么就称它为积性的。等价定义是如果$a\perp b$，那么$f(ab)=f(a)f(b)$。</p>
+                        <p class="fragment">显然$\mathbf{1},\mathrm{id}$也是积性的。并且，它们不光对各素数独立，对一个素数的每次出现也是独立的，也就是说它的那个$q_i$满足$q_i(p_i^k)=q_i^k(p_i)$，或者说它不要求$a\perp b$也有$f(ab)=f(a)f(b)$。这样的函数称为完全积性的。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>$\varphi$</h2>
+                        <p>$\varphi$定义为$n$以内和$n$互素的数的个数。</p>
+                        <p class="fragment">$\varphi$的等价定义是系数$\varphi\ast\mathbf{1}=\mathrm{id}$，容易感觉到它也是积性的。</p>
+                        <p class="fragment">我们如法炮制，从第二种定义获得$\varphi$的值。卷$\mathbf{1}$相当于前缀和，所以可以感觉到它是$\mathrm{id}$的差分$q_i(p_i^k)=p_i^k-p_i^{k-1}$。</p>
+                        <p class="fragment">然后我们证明这确实是$n$以内和$n$互素的数的个数。可以发现$n\perp m$等价于$n$包含的每个素数都$\perp m$，证明考虑Bezout定理，$nx+my=1$，如果我们对每个素因数$p$构造了$px+my=1$，那么给每个方程乘上$\frac{n}{p}$就可以构造$nx+my=1$，而如果存在$p\mid n$满足$p\not\perp m$，必然也有$n\not\perp m$。</p>
+                        <p class="fragment">可以看出Bezout定理是用一个方程描述了互素，让难以直接处理的数论性质变得比较容易进行代数操作了。</p>
+                        <p class="fragment">考虑一个数和$n$的素因数$p$互素，当且仅当它不是$p$的倍数。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
                         <h2>一些别的</h2>
                     </section>
                     <section data-transition="slide">
                         <h2>bsgs</h2>
                         <p>给$a,b,p$，求解$a^x\equiv b\pmod{p}$。</p>
-                        <p class="fragment">考虑折半，取$B=\Theta(\sqrt{n})$，把$x$分解为$x=iB-j$，方程变为$(a^B)^i\equiv ba^j\pmod{p}$。左边有根号种，右边有根号种，预处理一边塞进hash table，枚举另一边查询。</p>
+                        <p class="fragment">考虑折半，取$B=\Theta(\sqrt{p})$，把$x$分解为$x=iB-j$，方程变为$(a^B)^i\equiv ba^j\pmod{p}$。左边有根号种，右边有根号种，预处理一边塞进hash table，枚举另一边查询。</p>
                     </section>
                     <section data-transition="slide" data-markdown>
 ```cpp
@@ -234,12 +271,15 @@ inline int BSGS(int a,int b)
                     </section>
                     <section data-transition="slide">
                         <h2>kummer</h2>
-                        <p>求$\binom{n}{m}\bmod{p}$，$n,m\leq 10^{18},p\leq 10^6$，$10^5$组询问。</p>
-                        <p class="fragment">lucas定理指出$\binom{n}{m}\equiv\binom{\lfloor n/p\rfloor}{\lfloor m/p\rfloor}\binom{n\bmod{p}}{m\bmod{p}}\pmod{p}$。递归即可，复杂度$O(\log_p n)$。</p>
+                        <p>(cf582D Number of Binominal Coefficients)给$p^e,L$，求$k\leq n\leq L$且$p^e\mid\binom{n}{k}$的$n,k$对数。$p,e\leq 10^9,L<10^{1000}$，答案膜$10^9+7$。</p>
+                        <p class="fragment">kummer定理指出$\displaystyle\nu_p\left(\binom{a+b}{a}\right)$就是$p$进制下$a$加上$b$时进位的次数，或者$a+b$减去$a$时退位的次数。</p>
+                        <p class="fragment">考虑$\displaystyle\nu_p((a+b)!)-\nu_p(a!)-\nu_p(b!)=\sum_k\left(\left\lfloor\frac{a+b}{p^k}\right\rfloor-\left\lfloor\frac{a}{p^k}\right\rfloor-\left\lfloor\frac{b}{p^k}\right\rfloor\right)$，可以发现右边这个描述的就是每一位是否进位。</p>
+                        <p class="fragment">考虑数位dp。设$dp(i,j,0/1,lim)$表示前$i$位，已经进位了$j$次，低位没有/有进位，$a+b$是否卡上限的方案数。转移的时候钦点下下位是否进位，如果这一位还卡着则决策下一位是否还卡着，如果卡着下一位是确定的，把这个和分到$a,b$里面即可；如果不卡着则随意分配，只要进位情况对就行，两个方案数显然都可以$O(1)$计算。复杂度$O(\log^2 L)$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>exEuler</h2>
                         <p>(cf906D Power Tower)序列和一个数$m$，每次查询一个区间$l,...,r$，求$a_l^{a_{l+1}^{a_{l+2}^{...}}}\bmod{m}$。$n,q\leq 10^5$。</p>
+                        <p class="fragment">对底数我们可以直接取膜，但是对指数不行。比如大家都知道费马小定理$a^{p-1}\equiv 1\pmod{p}$，也就是在膜素数下给指数取膜要膜$p-1$。</p>
                         <p class="fragment">exEuler定理指出，$a^n\bmod{m}=a^{\varphi(m)+n\bmod{\varphi(m)}}\bmod{m}$。注意到奇数的$\varphi$是偶数，而偶数的$\varphi$折半，所以$\log$次之后就没了，爆力即可，复杂度$O(q\log^2 v)$。</p>
                         <p class="fragment">Euler定理指出，如果$a\perp m$，那么$a^n\bmod{m}=a^{n\bmod{\varphi(m)}}\bmod{m}$。</p>
                     </section>
@@ -284,14 +324,6 @@ inline int BSGS(int a,int b)
                         <p>考虑它看起来像是这样的 : </p>
                         <img class="r-stretch" src="https://shanlunjiajian.github.io/img/2022-03-26-noio/pjB.png"/>
                         <p>所以我们所要的东西就是$\max(2z-2x,z)$。答案就是$\sqrt{\operatorname{lcm}(\frac{z^2}{x^2},z)}$，但是$x$不一定整除$z$ ，所以我们把它改成$\displaystyle\sqrt{\frac{z\operatorname{lcm}(z,x^2)}{x^2}}$，就结束了。</p>
-                    </section>
-                </section>
-                <section data-transition="slide">
-                    <section data-transition="slide">
-                        <h2>莫比乌斯反演</h2>
-                    </section>
-                    <section data-transition="slide">
-                        <h2></h2>
                     </section>
                 </section>
                 <section data-transition="slide">
