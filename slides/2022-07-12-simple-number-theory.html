@@ -403,15 +403,11 @@ inline int BSGS(int a,int b)
                         <p class="fragment">考虑bsgs。fib数的转移矩阵设为$M$，初值是$\mathrm{x}$，我们解出来的是$\mathrm{y}$，则有$M^k\mathrm{x}=\mathrm{y}$。可以bsgs解出一次循环中$\mathrm{y}$出现的所有位置，于是对四种可能的$\mathrm{y}$分别解一下就得到$f_n$在这个循环中出现的所有可能位置，于是容易统计答案。</p>
                     </section>
                     <section data-transition="slide">
-                        <h2>loj6222 幂数！ 加强版</h2>
-                        <p>定义powerful number是它的每个素因数都$\geq 2$次的数。求$n$以内powerful number的$k$次方和。$n\leq 10^{25},k\leq 1$，2s。</p>
+                        <h2>loj6222 幂数！ 加强版 加强版</h2>
+                        <p>定义powerful number是它的每个素因数都$\geq 2$次的数。求$n$以内powerful number的$k$次方和。$n\leq 10^{30},k=O(1)$，2s。</p>
                         <p class="fragment">hint : 我们需要第一步转化得到一个阳间一点的式子。一个数$n$是powerful number，当且仅当它可以唯一地表示成$n=a^2b^3$，其中$\mu^2(b)=1$。</p>
-                        <p class="fragment">答案即为$\displaystyle\sum_{i=1}^{\lfloor\sqrt[3]{n}\rfloor}\mu^2(i)\sum_{j=1}^{\left\lfloor\sqrt{\frac{n}{i^3}}\right\rfloor}(i^2j^3)^k$。化一化。</p>
-                        <p class="fragment">$\displaystyle\left\lfloor\sqrt{\frac{n}{i^3}}\right\rfloor$的取值只有$O(n^{\frac{1}{5}})$种。整除分块，问题变为求$S_{\mu^2\cdot\mathrm{id}_{3k}}$。</p>
-                        <p class="fragment">$\displaystyle\left\lfloor\frac{n}{d^2}\right\rfloor$的取值只有$O(n^{\frac{1}{3}})$种。整除分块，剩下的部分不超过$n^{1/5}$，可以预处理，于是可以$O(n^{\frac{1}{3}})$查询。</p>
-                        <p class="fragment">直接分析可以得到$O(n^{\frac{12}{45}})$。用这个演示一下如何分析。</p>
-                        <p class="fragment">注意到里面那个整除分块可以$O(K)$预处理然后$O(1)$回答$K$以内的查询。</p>
-                        <p class="fragment">把这个扔进去，我们可以得到取$K=\Theta(n^{\frac{3}{13}})$时最优，复杂度为$O(n^{\frac{3}{13}})$。</p>
+                        <p class="fragment">答案即为$\displaystyle\sum_{i=1}^{\lfloor\sqrt[3]{n}\rfloor}\mu^2(i)i^{3k}\sum_{j=1}^{\left\lfloor\sqrt{\frac{n}{i^3}}\right\rfloor}j^{2k}$。化一化。</p>
+                        <p class="fragment">$d$不超过$O(n^{\frac{1}{6}})$，可以爆力预处理，然后对$j$整除分块，它的取值只有$O(n^{\frac{1}{5}})$种，总复杂度$O(n^{\frac{1}{5}})$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>luogu4466 集训队互测2012 和与积</h2>
@@ -433,6 +429,7 @@ inline int BSGS(int a,int b)
                         <h1>Thanks for Listening!</h1>
                     </section>
                     <section data-transition="slide">
+                        <p>感谢数学皇冠上的明珠 wky的指导。洛谷关注wkywkywky喵，关注wkywkywky谢谢喵!</p>
                         <p>Powered by reveal.js</p>
                     </section>
                 </section>
