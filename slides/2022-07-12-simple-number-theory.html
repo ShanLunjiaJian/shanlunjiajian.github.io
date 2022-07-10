@@ -123,7 +123,7 @@ inline vector&lt;Pair> factorization(int n)
 ```
                     </section>
                     <section data-transition="slide">
-                        <h2>轮子筛</h2>
+                        <h2>轮子筛(spoj PRIMES2)</h2>
                         <p>可以在$O(\frac{n}{\log\log n})$内筛出前$n$个素数。</p>
                         <p class="fragment">考虑我们取前$k$个素数，设它们的乘积是$L$，那么$n$和$n+L$是否被这$k$个素数整除的情况是相同的，所以我们考虑把$kL,kL+1,...,(k+1)L$作为一段处理，这看起来就像用一个长$L$的轮子滚过数轴。</p>
                         <p class="fragment">取最大的$k$使得$L\leq\sqrt{n}$，素数定理分析一下可以知道$k$是$\Theta(\log n)$的。</p>
