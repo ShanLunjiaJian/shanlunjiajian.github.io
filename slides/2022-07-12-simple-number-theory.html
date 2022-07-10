@@ -44,20 +44,26 @@
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
-                        <h2>整除，素数，互素</h2>
+                        <h2>整除，素数，$\gcd$，互素，整值函数</h2>
                         <p class="fragment">这些大家应该都接触过了。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>几个我们将会用到的定义和性质</h2>
+                        <p class="fragment"></p>
+                        <p class="fragment">$n\bmod{k}=n-k\left\lfloor\frac{n}{k}\right\rfloor$</p>
+                        <p class="fragment">$\left\lfloor\frac{\left\lfloor\frac{n}{a}\right\rfloor}{b}\right\rfloor=\left\lfloor\frac{n}{ab}\right\rfloor$</p>
                     </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>素数筛，唯一分解</h2>
-                        <p class="fragment">有些时候我们需要求出$1,...,n$的所有素数。</p>
+                        <p class="fragment">筛指的是求解关于$1,...,n$中具有某种性质的数的问题的算法。</p>
+                        <p class="fragment">有些时候我们需要求出$1,...,n$的所有素数，此时我们需要素数筛。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>埃氏筛</h2>
                         <p class="fragment">最简单的素数筛。我们从$2$开始从小到大考虑每个数，如果一个数是素数，则标记它的所有倍数不是素数。如果扫到一个数的时候，它还没被标记，那么它必然是素数。</p>
                         <p class="fragment">复杂度是$O(n\log\log n)$。这里给出一个感性的分析，假设素数是随机分布的，根据素数定理，$k$有$\frac{1}{\ln k}$的概率是素数，并且如果它是，则会贡献$\frac{n}{k}$的代价。所以复杂度就是$\displaystyle n\int_2^n\frac{1}{x\ln x}\mathrm{d}x$之类的，积出来就是$n\ln\ln n$。理性分析存在，但是比较复杂，大家可以自己百度一下。</p>
-                        <p class="fragment">这个过程就像是每个素数给了一个筛子，把它的倍数筛出去了，最后剩下的就是所有素数，所以它被称为筛法。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>线性筛</h2>
@@ -122,7 +128,7 @@ inline vector&lt;Pair> factorization(int n)
                         <p class="fragment">考虑我们取前$k$个素数，设它们的乘积是$L$，那么$n$和$n+L$是否被这$k$个素数整除的情况是相同的，所以我们考虑把$kL,kL+1,...,(k+1)L$作为一段处理，这看起来就像用一个长$L$的轮子滚过数轴。</p>
                         <p class="fragment">取最大的$k$使得$L\leq\sqrt{n}$，素数定理分析一下可以知道$k$是$\Theta(\log n)$的。</p>
                         <p class="fragment">mertens定理指出这$L$个数里面有$O(\frac{L}{\log k})$个数不被前$k$个素数整除，也就是说我们一共有$O(\frac{n}{\log k})=O(\frac{n}{\log\log n})$个数还没被筛掉。</p>
-                        <p class="fragment">接下来我们只用$k+1$和之后的素数，在还没筛掉的数里面跑一个线筛，复杂度就是$O(\frac{n}{\log\log n})$。</p>
+                        <p class="fragment">这些还没筛掉的数就是所有最小素因数在$k+1$个及以后的素数。我们只用$k+1$及以后的素数，在这些数里面跑一个线筛，复杂度就是$O(\frac{n}{\log\log n})$。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -130,7 +136,7 @@ inline vector&lt;Pair> factorization(int n)
                         <h2>扩展欧几里得算法(exgcd)</h2>
                     </section>
                     <section data-transition="slide">
-                        <p class="fragment">最简单的欧几里得算法用于求解$\gcd(a,b)$。大家应该在小学接触过$\gcd$，也就是最大公因数。</p>
+                        <p class="fragment">最简单的欧几里得算法用于求解$\gcd(a,b)$。</p>
                         <p class="fragment">这个太拉了。我们给出结论 : 对于不都是$0$的整数$a,b$，必然存在整数$x,y$，满足$ax+by=\gcd(a,b)$，这称为Bezout(裴蜀/贝祖)定理。</p>
                         <p class="fragment">接下来描述如何用欧几里得算法计算$x,y$，以及证明这个结论和算法本身的正确性。</p>
                         <p class="fragment">考虑我们现在知道了$bx+(a\bmod{b})y=\gcd(a,b)$的解，展开然后对照一下 : </p>
