@@ -8,7 +8,7 @@ show: true
 
 问题是我们有一个gf $$F$$，要计算$$[z^0]F\bmod{z^n-1}$$。计算$$[z^k]$$的话可以先平移。
 
-考虑分解$$z^n-1$$为$$\prod\limits_i(z-\omega_n^i)$$，然后crt合并。我们知道$$F\bmod{z-a}=F(a)$$，所以就要代入各单位根求值，然后crt的结论是答案是它们的线性组合。
+考虑分解$$z^n-1$$为$$\prod\limits_i(z-\omega_n^i)$$，然后crt合并。我们知道$$F\bmod{(z-a)}=F(a)$$，所以就要代入各单位根求值，然后crt的结论是答案是它们的线性组合。
 
 为了crt，我们需要构造一个 插值基函数，设$$\displaystyle f^\prime(z)=\prod_{j\neq i}(z-\omega_n^j)$$，那么就有$$\displaystyle [z^0]F\bmod{z^n-1}=\sum_{i=0}^{n-1}F(\omega_n^i)[z^0]\frac{f_i^\prime(z)}{f^\prime_i(\omega_n^i)}$$。
 
