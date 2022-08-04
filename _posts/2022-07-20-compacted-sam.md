@@ -29,7 +29,7 @@ deepl有点拖拉机了，所以我用了生草机。然后就把au-tomaton翻�
 
 定义$$\mathrm{beginpos}(t),\mathrm{endpos}(t)$$是$$t$$在$$s$$中出现位置的左端点/右端点的集合。众所周知st压缩$$\mathrm{beginpos}$$等价类，sam压缩$$\mathrm{endpos}$$等价类。
 
-但是很遗憾，不完全是这样的，由于ukkonen算法实在是太棒了，我们更通常认为st是ukkonen算法构造的st，它压缩的是一个弱于$$\mathrm{beginpos}$$相等的等价关系$$=_L$$，定义为如果$$x$$可以向后增加若干个字符变成$$y$$，并且每次加字符都是唯一的(加别的字符得到的都不是原串的子串)，则$$x,y$$等价。压缩$$\mathrm{beginpos}$$等价类的st称为 完整后缀树，二者的区别在于，ukkonen的后缀树中，后缀对应的点可能被压进了边里，而完整后缀树不会出现这种情况。
+但是很遗憾，不完全是这样的，由于ukkonen算法实在是太棒了，我们更通常认为st是ukkonen算法构造的st，它压缩的是一个 $$\mathrm{beginpos}$$相等 的超集$$=_L$$，定义为如果$$x$$可以向后增加若干个字符变成$$y$$，并且每次加字符都是唯一的(加别的字符得到的都不是原串的子串)，则$$x,y$$等价。压缩$$\mathrm{beginpos}$$等价类的st称为 完整后缀树，二者的区别在于，ukkonen的后缀树中，后缀对应的点可能被压进了边里，而完整后缀树不会出现这种情况。
 
 定义上文 left context $$\mathrm{LC}(x)$$是$$t$$的$$\mathrm{endpos}$$等价类中最长的串，$$\mathrm{RC}(x)$$是$$\mathrm{beginpos}$$等价类中最长的串，于是$$\mathrm{endpos}$$等价类就是$$\mathrm{LC}$$等价类这样的。如果你看过集训队论文，你可能会比较知道这些。定义上下文 context $$\mathrm{LRC}(x)=\mathrm{LC}(\mathrm{RC}(x))=\mathrm{RC}(\mathrm{LC}(x))$$。
 
