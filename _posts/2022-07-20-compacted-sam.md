@@ -123,7 +123,7 @@ ukkonen算法所建立的后缀树定义为 :
 
 先考虑新的显式结点的合并。ukkonen中，除了挂上的叶子，剩下的新的显式结点都是变得不能唯一向右扩展的原串的后缀。
 
-[img](/img/2022-07-20-compacted-sam/merge.png)
+![img](/img/2022-07-20-compacted-sam/merge.png)
 
 可以看一下论文中给出的这个例子。显然我们在跳suffix link的过程中，$$\mathrm{endpos}$$是单调增加的，所以经过的点分成若干段，每一段会被合并成一个。所以问题是我们要判断两个原串后缀的$$\mathrm{endpos}$$是否相同。
 
