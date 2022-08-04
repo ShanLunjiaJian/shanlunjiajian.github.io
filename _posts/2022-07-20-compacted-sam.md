@@ -31,10 +31,6 @@ deepl有点拖拉机了，所以我用了生草机。然后就把au-tomaton翻�
 
 但是很遗憾，不完全是这样的，由于ukkonen算法实在是太棒了，我们更通常认为st是ukkonen算法构造的st，它压缩的是一个 $$\mathrm{beginpos}$$相等 的超集$$=_L$$，定义为如果$$x$$可以向后增加若干个字符变成$$y$$，并且每次加字符都是唯一的(加别的字符得到的都不是原串的子串)，则$$x,y$$等价。压缩$$\mathrm{beginpos}$$等价类的st称为 完整后缀树，二者的区别在于，ukkonen的后缀树中，后缀对应的点可能被压进了边里，而完整后缀树不会出现这种情况。
 
-定义上文 left context $$\mathrm{LC}(x)$$是$$t$$的$$\mathrm{endpos}$$等价类中最长的串，$$\mathrm{RC}(x)$$是$$\mathrm{beginpos}$$等价类中最长的串，于是$$\mathrm{endpos}$$等价类就是$$\mathrm{LC}$$等价类这样的。如果你看过集训队论文，你可能会比较知道这些。定义上下文 context $$\mathrm{LRC}(x)=\mathrm{LC}(\mathrm{RC}(x))=\mathrm{RC}(\mathrm{LC}(x))$$。
-
-定义$$x$$所在的$$\mathrm{endpos}$$等价类是$$\mathrm{R}(x)$$。对应定义$$\mathrm{L}(x)$$，不过我们可能不会用到它。
-
 压缩sam压缩$$=_L$$或$$\mathrm{endpos}$$等价类，也就是说两个子串相等当且仅当$$=_L$$或$$\mathrm{endpos}$$相等，或者存在第三个串和它们都相等。另一种你可能更喜欢的说法是，两个串相等当且仅当存在另一个串可以通过 不改变$$\mathrm{endpos}$$的向左扩展 和 唯一的向右扩展 得到这两个串。完整压缩sam压缩$$\mathrm{beginpos}$$或$$\mathrm{endpos}$$等价类。这个听起来有点抽象，我们可以考虑一个性质，每个等价类有且仅有一个最长串，它满足向左/右扩展都会让出现位置变少，所以完整压缩sam的每个点表示一个不能不改变$$\mathrm{beginpos}$$地向右扩展的串的$$\mathrm{endpos}$$等价类，压缩sam的每个点表示一个不能向右唯一扩展的串的$$\mathrm{endpos}$$等价类。
 
 -----
