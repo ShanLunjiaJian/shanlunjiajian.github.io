@@ -3787,9 +3787,11 @@ F. String Product
 
 G. Automaton
 
-考虑枚举一步，计算在这一步中有多少串新增了两个点。
+神题。
 
-考虑什么样的串新增了两个点。显然我们不能记录整个sam，所以需要一些转化。根据blumer的sam算法，如果新串的最长重后缀不是其原来等价类中的最长串，则发生分裂。看起来这个不够好，继续考虑这种情况发生，当且仅当新串的最长重后缀
+考虑统计每个点的最长串，在$$s$$的sam上一个串$$t$$是最长串，当且仅当它的$$\mathrm{endpos}$$和所有$$ct$$的$$\mathrm{endpos}$$都不同。
+
+注意到$$\mathrm{endpos}$$是一个匹配位置的问题，于是考虑kmp，我们爆搜$$t$$的$$\mathrm{border}$$集合，这个东西的数量是 https://oeis.org/A005434，可以知道它还是很小的。但是我们显然不能对$$t$$和所有$$ct$$存这个，不过可以发现如果存在$$\mathrm{endpos}(t)=\mathrm{endpos}(ct)$$，那么$$c$$是唯一的，所以转而计算$$\mathrm{endpos}(t)=\mathrm{endpos}(ct)$$的总数即可。枚举$$c$$，爆搜$$t,ct$$的$$\mathrm{border}$$集合，这个数量也不是很多，据说只有1e4，然后dp即可。dp具体就是border集合给出自动机，然后在上面跑就行了。
 
 H. Handsome multisets
 
