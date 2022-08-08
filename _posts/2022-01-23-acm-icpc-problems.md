@@ -3787,11 +3787,13 @@ F. String Product
 
 G. Automaton
 
-神题。
+经典trick题。
 
 考虑统计每个点的最长串，在$$s$$的sam上一个串$$t$$是最长串，当且仅当它的$$\mathrm{endpos}$$和所有$$ct$$的$$\mathrm{endpos}$$都不同。
 
 注意到$$\mathrm{endpos}$$是一个匹配位置的问题，于是考虑kmp，我们爆搜$$t$$的$$\mathrm{border}$$集合，这个东西的数量是 https://oeis.org/A005434，可以知道它还是很小的。但是我们显然不能对$$t$$和所有$$ct$$存这个，不过可以发现如果存在$$\mathrm{endpos}(t)=\mathrm{endpos}(ct)$$，那么$$c$$是唯一的，所以转而计算$$\mathrm{endpos}(t)=\mathrm{endpos}(ct)$$的总数即可。枚举$$c$$，爆搜$$t,ct$$的$$\mathrm{border}$$集合，这个数量也不是很多，据说只有1e4，然后dp即可。dp具体就是border集合给出自动机，然后在上面跑就行了。
+
+现在问题是怎么搜这个border集合。一个板子题是gym100958I substring pairs。一个简单做法大概是，根据弱周期引理，我们知道如果$$x<y<z$$是三个相邻的$$\mathrm{border}$$，那么要么有$$z>2y$$，要么有$$z-y=y-x$$。这样搜的复杂度，简单分析一下是$$O(n^{\lg n})$$，实际上可能更小。搜出来之后可以用并查集计算方案数，然后发现不是很对，如果一个方案的$$\mathrm{border}$$被另一个方案包含，我们还要让前者的的方案数减去后者，然后发现这样居然就对了。那么至于如何搜$$t,ct$$的$$\mathrm{border}$$集合，我们搜出$$t$$的，然后模拟一轮kmp求出所有可能的向右扩展，这样搜出来的东西数量是$$O(n^{\lg n+1})$$。
 
 H. Handsome multisets
 
