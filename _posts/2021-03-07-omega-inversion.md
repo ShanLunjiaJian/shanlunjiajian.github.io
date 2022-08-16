@@ -2,7 +2,7 @@
 layout: post
 title: 单位根反演学习笔记
 subtitle: 好家伙
-tags: 数学 单位根反演
+tags: 数学
 ---
 
 我们要求一个gf $$F(z)$$的所有$$k,2k,3k,...$$次项系数之和，它就是$$[z^0](F(z)\bmod{(z^k-1)})$$这样的。对这个东西我们看起来完全没办法，考虑把$$z^k-1$$分解成$$\displaystyle\prod_i (z-\omega_k^i)$$这样的，然后我们知道膜$$z-a$$就是求$$F(a)$$。最后crt合并即可。

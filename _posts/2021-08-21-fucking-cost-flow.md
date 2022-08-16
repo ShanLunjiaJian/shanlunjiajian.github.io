@@ -2,7 +2,7 @@
 layout: post
 title: 模拟费用流
 subtitle: 感性理解
-tags: 模拟费用流
+tags: 图论 贪心 网络流
 ---
 
 照抄command_block《模拟费用流小记》。
