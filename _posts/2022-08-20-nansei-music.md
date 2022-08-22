@@ -17,6 +17,8 @@ tags: 杂项
 
 其中可以明确地听出Bad Apple!!和Extra Love。
 
+封面很好看。
+
 ## Toxic Difficulty
 
 Curse of the New Gatekeeper
@@ -153,7 +155,15 @@ Fatastic Kokunai Shrine ~ Great Shrine
 
 二面zombie的内八好标准，我也想要（
 
+是不是芬兰人可能对内八没有什么情结啊。
 
+## Demons in Wonderland
+
+Safety Rules Must be Followed ~ Conductor
+
+-----
+
+Repeated Strange Dream ~ Alice Has Lost
 
 ## Kokunai Shrine
 
