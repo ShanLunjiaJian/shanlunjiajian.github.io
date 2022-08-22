@@ -165,6 +165,12 @@ Safety Rules Must be Followed ~ Conductor
 
 Repeated Strange Dream ~ Alice Has Lost
 
+## Destructive Force Monster
+
+**Mystical Monstrosity Power ~ Borderlands**
+
+我很喜欢。
+
 ## Kokunai Shrine
 
 **Am Endless Paranoid Night**
