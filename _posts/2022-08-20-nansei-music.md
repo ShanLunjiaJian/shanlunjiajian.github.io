@@ -171,6 +171,22 @@ Repeated Strange Dream ~ Alice Has Lost
 
 我很喜欢。
 
+-----
+
+Champion Racer Cat ~ Speedy Night
+
+我声称这是引诱曲。
+
+## Experienced Resident
+
+Director of The Values Over ~ Police Commissioner
+
+-----
+
+**Destroyed The Church and The Cemetery ~ Futuristic Night**
+
+
+
 ## Kokunai Shrine
 
 **Am Endless Paranoid Night**
