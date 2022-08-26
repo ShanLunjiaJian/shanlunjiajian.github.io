@@ -185,6 +185,8 @@ Director of The Values Over ~ Police Commissioner
 
 **Destroyed The Church and The Cemetery ~ Futuristic Night**
 
+## Chimera Generation
+
 
 
 ## Kokunai Shrine
