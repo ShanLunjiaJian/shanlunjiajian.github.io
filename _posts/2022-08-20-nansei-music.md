@@ -61,6 +61,12 @@ Walking in the Snow is Beautiful
 
 -----
 
+Shy Invisible in Dark
+
+好。但是还是天空国的版本更爽。
+
+-----
+
 Revenge-thirsty ~ Dead List
 
 据说南西是作者养成类游戏。
@@ -186,6 +192,20 @@ Director of The Values Over ~ Police Commissioner
 **Destroyed The Church and The Cemetery ~ Futuristic Night**
 
 ## Chimera Generation
+
+## Expressive Illumination
+
+封面好好看。
+
+-----
+
+Stymphalian Tetramorphs Concerto
+
+-----
+
+**Sinful Promethean Flare ~ Turn of Echoes**
+
+## Unconquered Album
 
 
 
