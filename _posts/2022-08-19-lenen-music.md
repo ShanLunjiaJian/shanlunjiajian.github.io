@@ -31,9 +31,9 @@ tags: 杂项
 
 -----
 
-End of History
+**End of History**
 
-感觉不足够刺激啊?
+灵烈传版还是很牛逼的。
 
 -----
 
