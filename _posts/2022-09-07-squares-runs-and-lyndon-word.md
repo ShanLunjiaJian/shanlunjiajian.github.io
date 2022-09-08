@@ -23,7 +23,7 @@ boi2004 repeats
 
 给出一个求所有重串的做法。从大到小枚举根的长度$$l$$，然后按$$l$$大小分块，那么根一定是一个块前缀和一个块后缀。用sa求出相邻两块的lcp和lcs，然后就得到一个区间的重串，这里还是画一下吧 : 
 
-![img](/img/2022-05-16-lyndon-word-runs-and-squares/lcp-lcs.png)
+![img](/img/2022-09-07-squares-runs-and-lyndon-word/lcp-lcs.png)
 
 然后为了求出连续重复次数，我们可以直接在这个上面尝试继续扩展，也就是把相同的块直接连起来，在两边尝试上面的东西。写起来并不困难。
 
