@@ -127,6 +127,20 @@ lyndon分解, lyndon array
 
 -----
 
+本原平方串，三平方串定理(three squares lemma)
+
+定义一个平方串是本原平方串，当且仅当长度的一半是它的最小周期。
+
+**三平方串定理** 如果三个本原平方串$$uu,vv,ww$$，满足$$uu$$是$$vv$$的真后缀，$$vv$$是$$ww$$的真后缀，那么$$\vert u\vert+\vert v\vert\leq\vert w\vert$$。
+
+所以我们知道本原平方串有$$O(n\log n)$$个。一种称为fib字符串的串达到了这个上界，具体可以看oi-wiki的main-lorentz词条。
+
+**定理3** 对于所有run $$(l,r,p)$$，其$$r-l-2p$$的和为$$O(n\log n)$$。
+
+**证明** 一个run中所有长$$2p$$的子串就是所有的本原平方串，其数量为$$r-l-2p+2$$，而本原平方串的数量是$$O(n\log n)$$。
+
+-----
+
 接下来是更多关于lyndon串的东西，而和runs关系不大了。
 
 求出一个lyndon分解
@@ -155,7 +169,7 @@ significant suffix
 
 定义一个串$$s$$的significant suffix，是它接上某一个串之后可能的在$$1,...,\vert s\vert$$中最小的后缀，也就是忽略空字符则不可比的最小后缀集合，也就是接下来可能作为lyndon分解的最后一部分的位置，看起来似乎也就是duval算法中维护的$$u^ku^\prime$$和对$$u^\prime$$递归duval得到的$$u^ku^\prime$$。
 
-**定理3** 长度相邻的significant suffix $$u,v$$，其中$$\vert u\vert>\vert v\vert$$，则$$\vert u\vert\geq 2\vert v\vert$$。
+**定理4** 长度相邻的significant suffix $$u,v$$，其中$$\vert u\vert>\vert v\vert$$，则$$\vert u\vert\geq 2\vert v\vert$$。
 
 **证明** 不使用引理1来证明它。我们知道，$$u,v$$要么前$$\vert u\vert-\vert v\vert$$个字符相同，要么$$v$$没有这么长。继续推可以知道它们都以$$\vert u\vert-\vert v\vert$$作为周期。设这个周期是$$p$$，那么如果$$v$$不完整包含$$p$$，显然满足$$\vert u\vert>\vert v\vert$$，则$$\vert u\vert\geq 2\vert v\vert$$；否则我们知道$$u=ppw,v=pw$$，其中$$w$$是某个串。此时由于$$v$$是significant suffix，存在一个$$x$$满足$$pwx<ppwx$$。但是这推出$$wx<pwx$$，所以此时$$v$$不是最小后缀，$$w$$比它更小，矛盾了。
 
@@ -171,7 +185,7 @@ zjoi2017 字符串
 
 区间加，求区间最小后缀。$$n\leq 2\times 10^5,q\leq 3\times 10^4$$。
 
-我们直接在线段树上维护significant suffix。直接保留右儿子所有significant suffix，虽然其中可能有不是significant suffix的串，我们只需要让信息在$$O(\log n)$$即可；左儿子最多有一个串是significant的，我们比较接上右儿子之后哪个最小，如果仍然存在忽略空字符不可比的，根据定理3的证明应该保留其中最长的那个。使用二分hash支持比较两个串，比较的时候需要$$O(\log^2 n)$$，总复杂度$$O(\log^4 n)$$。
+我们直接在线段树上维护significant suffix。直接保留右儿子所有significant suffix，虽然其中可能有不是significant suffix的串，我们只需要让信息在$$O(\log n)$$即可；左儿子最多有一个串是significant的，我们比较接上右儿子之后哪个最小，如果仍然存在忽略空字符不可比的，根据定理3的证明应该保留其中最长的那个。使用二分hash支持比较两个串，比较的时候需要$$O(\log^2 n)$$，复杂度$$O(\log^4 n)$$。
 
 为了让它跑的快一点，注意到我们有$$q\log^2 n$$次比较两个串和$$q$$次修改，所以考虑改用根号平衡维护hash值，就可以$$O(\sqrt{n})-O(1)$$了。总复杂度$$O(n\log^2 n+q\log^3 n+q\sqrt{n})$$。
 
