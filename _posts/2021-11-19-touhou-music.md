@@ -5,9 +5,9 @@ subtitle: /se
 tags: 杂项
 ---
 
-这里收录个人觉得还可以的，并稍加评论?
+收录车万及其相关作品。
 
-按时间排序。
+按作者分类，每个作者争取按时间排序。
 
 加粗的是特别牛逼的。我尽可能少加粗?(然而完全失败了)
 
@@ -15,7 +15,9 @@ tags: 杂项
 
 神了! 应该是最高评价。一切尽在不言中?
 
-## 一些闲话
+## ZUN/上海爱丽丝幻乐团
+
+### 一些闲话
 
 听了脸圆之后，我觉得这个应该拿来收录和车万有关的曲子，而不只是车万曲。
 
@@ -49,7 +51,7 @@ tags: 杂项
 
 还有提到 我最喜欢的小号。它们应该是，过去之花，旅人1969，53分钟的蓝色大海，妖怪之山，六十年目的东方裁判，未知物X，沉向空中的辉针城。这个列表可能继续扩展。
 
-## 灵异传
+### 灵异传
 
 开始了。
 
@@ -131,7 +133,7 @@ Theme of Eastern Story
 
 
 
-## 封魔录
+### 封魔录
 
 **End of Daylight**
 
@@ -177,7 +179,7 @@ fm版的话战车娘听起来非常爽，并且旋律过于牛逼了，以至于
 
 感觉好像有什么东西跟着夕阳一起落下去了，然后还有什么东西跟着夜幕一起升起来了。很有意境的曲子。
 
-## 梦时空
+### 梦时空
 
 **梦想超越时空**
 
@@ -249,7 +251,7 @@ upd : 某天晚上散步的时候感觉到了星星的感觉。但是很难说�
 
 请注意Starbow 星虹是一个词，也就是说它是由星光产生的彩虹。我家几乎看不到星星，但是在某些地方，星星足够多以至于银河看起来像是一个bow了。
 
-## 幻想乡
+### 幻想乡
 
 幻想乡 ~ Lotus Land Story
 
@@ -303,7 +305,7 @@ Lotus Love
 
 太帅了!
 
-## 怪绮谈
+### 怪绮谈
 
 zun做怪绮谈的时候以为这将是东方project大结局了，然后就把所有五作的曲子包括未使用曲都重制了扔进了music room。好像在网易云上听到的版本都是来自这个?
 
@@ -331,7 +333,7 @@ Plastic Mind
 
 高潮比较的洗脑。但是我觉得打不过Maniacal Princess。
 
-## 秋霜玉
+### 秋霜玉
 
 前面的部分见 东方幻想的音乐。
 
@@ -341,7 +343,7 @@ Titled Maid
 
 
 
-## 东方幻想的音乐
+### 东方幻想的音乐
 
 旧作的优秀曲目基本在这里了。
 
@@ -685,7 +687,7 @@ Inventive City~~(创新型城市)~~
 
 很有感觉。
 
-## 红魔乡
+### 红魔乡
 
 开始了。
 
@@ -751,7 +753,7 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 只能说神了!
 
-## 蓬莱人形
+### 蓬莱人形
 
 第一张音乐砖。
 
@@ -829,7 +831,7 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 很爽快的曲子。
 
-## 妖妖梦
+### 妖妖梦
 
 -----
 
@@ -863,7 +865,7 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 
 
-## 莲台野夜行
+### 莲台野夜行
 
 无敌。
 
@@ -937,7 +939,7 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 之前好像写过 梦机械 是幻想的感觉。我觉得这一首也很棒啊。
 
-## 永夜抄
+### 永夜抄
 
 我认为的正作音乐顶点?
 
@@ -1017,11 +1019,11 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 钢琴响起来我就感觉不对劲了。很平静，但是又很有感觉。
 
-## 花映塚
+### 花映塚
 
 还没听完。
 
-## 风神录
+### 风神录
 
 还没听完。
 
@@ -1063,7 +1065,7 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 无敌了!推荐neets的版本。
 
-## 地灵殿
+### 地灵殿
 
 还没听完。
 
@@ -1079,13 +1081,13 @@ upd : 这个和蓬莱人形那个不是一首曲子。
 
 传世经典。
 
-## 星莲船
+### 星莲船
 
-## 神灵庙
+### 神灵庙
 
 拉。
 
-## 辉针城
+### 辉针城
 
 牛逼!
 
@@ -1125,7 +1127,7 @@ Reverse Ideology(反叛的意识)
 
 仿佛翻看一本辉针城的史书。
 
-## 绀珠传
+### 绀珠传
 
 很好很好。
 
@@ -1173,7 +1175,7 @@ Pure Furies ~ 心之所在
 
 推荐**Assaultdoor的版本**。
 
-## 天空璋
+### 天空璋
 
 很有感觉!
 
@@ -1243,7 +1245,7 @@ Crazy Back Dancers
 
 太帅了。
 
-## 鬼形兽
+### 鬼形兽
 
 受不太了。
 
@@ -1253,7 +1255,7 @@ Crazy Back Dancers
 
 传世经典。
 
-## 虹龙洞
+### 虹龙洞
 
 水平好像不低。
 
@@ -1302,4 +1304,340 @@ Crazy Back Dancers
 个人认为可以和 寄世界于偶像 相媲美。更加入了一些轻快的元素。总之就是非常帅!
 
 也许输在了旋律不够简单（
+
+## LENK64
+
+律夏的立绘太好看了。麻啊。
+
+南西的风格，可以说是很空灵吧。
+
+### Performance of Rain
+
+感觉这一作有点......
+
+其中可以明确地听出Bad Apple!!和Extra Love。
+
+封面很好看。
+
+### Toxic Difficulty
+
+Curse of the New Gatekeeper
+
+很带劲。
+
+-----
+
+a Dark Blue Towards the Cave Prison
+
+让我想起来了一段很洗脑的旋律，但是是在哪里听到的呢?
+
+最后居然想起来了，来自 厄神降临之路 ~ Dark Road。这首也是传世经典啊。
+
+### On Thousand Joy
+
+没有找到啊。
+
+### God Hills
+
+这一作也没什么感觉呢。
+
+### Apocalypse
+
+I'll be Back Here in Winter
+
+感觉很耳熟，发现第一句和 幽梦 ~ Inanimate Dream 很像。然后某一段确凿是 无何有之乡 里面的。
+
+-----
+
+Walking in the Snow is Beautiful
+
+鼓很重，把我吓醒了。开头似乎和 古老的冥界寺 是一样的。
+
+### Night Creatures in a Mansion
+
+前面的都是车万同人，这一作才是南西project。
+
+感觉这一作开始出现较为明朗的旋律了。也许我应该装好均衡器之后重听前面的。
+
+-----
+
+Shy Invisible in Dark
+
+好。但是还是天空国的版本更爽。
+
+-----
+
+Revenge-thirsty ~ Dead List
+
+据说南西是作者养成类游戏。
+
+-----
+
+Manor Escaped Convict
+
+-----
+
+She Owns and Abandoned Mansion
+
+-----
+
+Escape From the Mansion ~ Prisoner Escaped
+
+-----
+
+Immortal Blood Soldier Merchant
+
+这个可能是很明确的南西主旋律。
+
+但是继续往后听，你发现主旋律越来越少了!
+
+### Performance of Meadow Rain
+
+**Former Frog God ~ Panties Thief**
+
+好久没有点加粗了，所以点一个吧（
+
+这首曲子的旋律还是较为鲜明。
+
+-----
+
+Black Winged Curse Spell ~ Black Wings
+
+音量诉讼了。
+
+-----
+
+Millions of Arrows ~ Marksman
+
+### Unknown Traveling East
+
+Welcome to Unknown Easter Road
+
+很清脆的音色。
+
+-----
+
+Shy Darkness Holder ~ Black Haze
+
+这一面的boss，是什么老巫婆吗/xia
+
+### Autumnal Mythology
+
+Hot and Windy Autumn Road ~ Fire Road
+
+当你把鼓砍了998244353db之后，还是挺安静的曲子。
+
+-----
+
+Youkai of the Fire World ~ Fire Winds
+
+很带劲啊!
+
+-----
+
+Cold Mist and Howling~ Surprise Guest
+
+感觉lenk受 厄神降临之路 影响很大啊（
+
+### Border of Heaven
+
+
+
+-----
+
+**Shy Invisible in Dark ~ Sparrow**
+
+这一首太刺激了。感觉多拼几段就可以超越 大天 了，但是要是作曲这么容易就太好了啊!
+
+-----
+
+Fatastic Kokunai Shrine ~ Great Shrine
+
+-----
+
+**A Light Year of Emptiness ~ Northern Lights Cloak**
+
+### Mystical Lost Village
+
+二面zombie的内八好标准，我也想要（
+
+是不是芬兰人可能对内八没有什么情结啊。
+
+### Demons in Wonderland
+
+Safety Rules Must be Followed ~ Conductor
+
+-----
+
+Repeated Strange Dream ~ Alice Has Lost
+
+### Destructive Force Monster
+
+**Mystical Monstrosity Power ~ Borderlands**
+
+我很喜欢。
+
+-----
+
+Champion Racer Cat ~ Speedy Night
+
+我声称这是引诱曲。
+
+### Experienced Resident
+
+Director of The Values Over ~ Police Commissioner
+
+-----
+
+**Destroyed The Church and The Cemetery ~ Futuristic Night**
+
+### Chimera Generation
+
+### Expressive Illumination
+
+封面好好看。
+
+-----
+
+Stymphalian Tetramorphs Concerto
+
+-----
+
+**Sinful Promethean Flare ~ Turn of Echoes**
+
+### Unconquered Album
+
+
+
+### Kokunai Shrine
+
+**Am Endless Paranoid Night**
+
+钢琴很痛快。
+
+## 海鲜堂
+
+其实他们的曲子不是很东方风啊，可能更偏脸圆一些?
+
+### 邪星章
+
+人类救济计划 ~ The Greatest Salvation
+
+### 导命树
+
+**引导生命之歌 ~ Prospect Mirai**
+
+神。
+
+### 桃源宫
+
+**从历史上被抹消的公主**
+
+神。
+
+-----
+
+**死灵之都拉莱耶**
+
+神。但是有点太复读了。
+
+我没有听完一遍，是不是这段实际上是从别的曲子搬的啊。
+
+-----
+
+幻想国家黎明 ~ Prayer Player
+
+感觉不是很有劲，如果能再有劲一点就好了。
+
+### 魔宝城
+
+**言语的大魔法 ~ Starry Wisdom**
+
+**春花不怨风吹去 ~ Eternal Wind**
+
+找个清脆一点的版本你可能就会很喜欢了。
+
+-----
+
+**堕落英雄之剑 ~ Legend of Sanada**
+
+非常帅。
+
+### 真珠岛
+
+**苦短之森**
+
+神了。
+
+-----
+
+Far-East El Dorado
+
+感觉那一句的结尾有点仓促。不是很懂。如果这是boss曲，是不是可以让它刺激一点啊?但是可惜不是。
+
+-----
+
+烈日的暴君 ~ Violent General
+
+-----
+
+**我乃将远方之人带回者**
+
+你会发现不是很能听懂。据说这个是七拍子。但是扫弦很好听。
+
+-----
+
+**黄金赞歌 ~ Ibis Trismegistus**
+
+神了!
+
+这是真珠岛主旋律吗?
+
+珠乌看起来非常可爱啊。感觉海鲜堂的立绘画的还是很有水平。
+
+### 鬼葬剑
+
+绝影神速的纯种马
+
+有一句特别有感觉。但是只有这一句。
+
+-----
+
+**伽蓝的灵殿 ~ Hollow Mansion**
+
+**奈落的十月节**
+
+神。但是感觉在哪听到过这个旋律?
+
+-----
+
+Starve Calamity
+
+某一段很牛逼啊。
+
+-----
+
+**桔梗冢传说**
+
+我很喜欢。
+
+-----
+
+**军神五兵的反叛者 ~ REBELLION God Force**
+
+神。
+
+中间一段是五拍子。所以可能不是很能完整记住旋律。
+
+-----
+
+**根之国的地脉**
+
+**切割~~磁感线~~子午线的逆鳞 ~ Dragon's Dream**
+
+为什么放在一起呢?可能比较像吧（
+
+切割磁感线实在是太牛逼了。如果你没感觉，请等到3:20左右再断言没感觉。
+
+-----
 
