@@ -4747,7 +4747,7 @@ B. Broken Sequence
 
 C. Chains Solitaire
 
-
+搜。不会爆搜。
 
 D. Double-Slit Experiment
 
