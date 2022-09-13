@@ -1,6 +1,6 @@
 ---
 layout: post
-title: acm/icpc题选做
+title: icpc及相关赛事题选做
 subtitle: /kk
 tags: 题选做
 show: true
@@ -4751,36 +4751,52 @@ C. Chains Solitaire
 
 D. Double-Slit Experiment
 
-
+转转，每一段三分即可。
 
 E. Easy Equation
 
+$$
+\begin{aligned}
+&\sum_x\sum_y\sum_z\sum_w\sum_t[x^5+y^4+z^3+w^2+t=n]\\
+=&\sum_{x^5<n}\sum_{x^5+y^4<n}\sum_{x^5+y^4+z^3<n}\sum_{x^5+y^4+z^3+w^2<n}1\\
+=&\sum_{x^5<n}\sum_{x^5+y^4<n}\sum_{x^5+y^4+z^3<n}\lfloor\sqrt[2]{n-1-x^5-y^4-z^3}\rfloor
+\end{aligned}
+$$
 
+然后呢?然后不会了，不过这个复杂度是$$O(n^{\frac{47}{60}})$$，就结束了。
 
 F. Format a Table
 
-
+看起来是，整除分块第一列，三分第二列。
 
 G. Game with Dominoes
 
-
+每一个连续段是一个nim。从小到大枚举一个长度，连续段只会变化$$O(n)$$次。
 
 H. Heracles
 
-
+从每个特殊点出发dij，然后状压dp。
 
 I. IQ
 
+枚举最大的，二分最小的，跑最大匹配。
 
+但是它远远简单。最大的必然和最小的配对。
 
 J. Jack and Jill
 
+也就是在一个环上随机游走。发现如果有两个连续的走过的位置，那么它就不可能再被跨过了。所以状态数是$$O(2^{\frac{n}{2}})$$。实现的时候，可以把往左往右走到的第一个11中间的部分推成1。
 
+petr指出这个是线性递推。
 
 K. Kinder Surprise
 
-
+模拟。
 
 L. Liquid Cats
 
+倒水。
 
+-----
+
+那么xix open cup就结束了!接下来我会搁置一段时间，而去做poland oi。
