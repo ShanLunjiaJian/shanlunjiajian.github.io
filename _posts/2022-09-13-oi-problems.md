@@ -9,9 +9,72 @@ tags: 题选做
 
 poi大概是，有三轮，r1五题，r2 r3都是有D0 D1 D2，D0一题，D1 D2两题。
 
-从2001~2002开始做。可能以后会做前面的。
+### VIII(2000~2001)
 
-### 2001~2002
+R1
+
+A. Liczby antypierwsze
+
+tooooooooooooooo classic。
+
+B. Mapa gęstości
+
+前缀和。
+
+C. Przedziały
+
+模拟。
+
+D. Gra w zielone
+
+幸运的，这个题在谷上有。
+
+请注意是在环上的部分要走过一个绿点，而不是整个/jy
+
+发现如果一个A的点的后继有让A赢的，它就也是赢的，否则它是输的。如果一个B的点后继全是让A赢的，那么它也是赢的，否则它是输的。但是只知道这些不管用，我们可以让所有点都赢，也可以让所有点都不赢。
+
+考虑一开始让所有绿点都是赢的，然后我们逐个删去输的绿点。首先按照上面的条件尝试能赢的点赢，然后尝试让不能赢的点输。如此迭代，直到不再有点变输，此时就得到了答案。注意到这个点集只和绿点有关，所以每次迭代要么绿点个数减少，要么结束，所以如果有$$c$$个绿点，复杂度是$$O(cm)$$。
+
+R2
+
+D0
+
+Gorszy Goldbach
+
+D1
+
+Spokojna komisja
+
+Wyspa
+
+D2
+
+Mrówki i biedronka
+
+Podróż
+
+R3
+
+D0
+
+Wędrowni treserzy pcheł
+
+D1
+
+Porównywanie naszyjników
+
+Zwiedzanie miasta
+
+D2
+
+Bank
+
+Kopalnia złota
+
+Łańcuch
+
+
+### IX(2001~2002)
 
 R1
 
@@ -93,7 +156,7 @@ D1
 
 A. Narciarze
 
-好像，直接就是最大流?
+这个看起来不是最小路径覆盖啊，也不是最小割。但是上下界最小流就好了!
 
 B. Waga
 
@@ -103,12 +166,14 @@ D2
 
 A. Liczby B-gładkie
 
+数论题/jy
 
+min_25/洲阁筛的第二部分。
 
 B. Nawiasy
 
-
+直接dp。
 
 C. Szyfr
 
-
+模板 knapsack。折半。

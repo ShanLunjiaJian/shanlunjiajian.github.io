@@ -1735,9 +1735,27 @@ Stymphalian Tetramorphs Concerto
 
 ### 邪星章
 
+**邪星之宴 ~ Celestial Burst**
+
+神!
+
+-----
+
+**受印者朝圣山行**
+
+很有感觉。
+
+-----
+
 人类救济计划 ~ The Greatest Salvation
 
 ### 导命树
+
+第1110年的飞梅传说
+
+小号作为主旋律有点太重了。没有找到一个比较轻的版本啊，可能有人做了做发现不是很容易吧（
+
+-----
 
 **引导生命之歌 ~ Prospect Mirai**
 
@@ -1747,7 +1765,7 @@ Stymphalian Tetramorphs Concerto
 
 **从历史上被抹消的公主**
 
-神。
+神。但是皇女的设定是会在曲子中加入海浪的声音的吗。
 
 -----
 
@@ -1759,7 +1777,7 @@ Stymphalian Tetramorphs Concerto
 
 -----
 
-幻想国家黎明 ~ Prayer Player
+**幻想国家黎明 ~ Prayer Player**
 
 感觉不是很有劲，如果能再有劲一点就好了。
 
@@ -1769,7 +1787,7 @@ Stymphalian Tetramorphs Concerto
 
 **春花不怨风吹去 ~ Eternal Wind**
 
-找个清脆一点的版本你可能就会很喜欢了。
+找个清脆一点的版本你可能就会很喜欢了。原版其实也很好听/oh
 
 -----
 
@@ -1778,6 +1796,10 @@ Stymphalian Tetramorphs Concerto
 非常帅。
 
 ### 真珠岛
+
+贝斯很硬气!但是可能并不是很喜欢它这么硬啊......
+
+-----
 
 **苦短之森**
 
