@@ -1786,6 +1786,10 @@ Stymphalian Tetramorphs Concerto
 
 感觉不是很有劲，如果能再有劲一点就好了。
 
+又听了听，感觉还是挺有劲的!
+
+
+
 ### 魔宝城
 
 **言语的大魔法 ~ Starry Wisdom**
