@@ -3,6 +3,7 @@ layout: post
 title: 重写平方串，润和琳墩串
 subtitle: /dk
 tags: 字符串
+show: true
 ---
 
 做xix open cup遇到了两个平方串题。再写一写，可能这次会比较深刻吧。

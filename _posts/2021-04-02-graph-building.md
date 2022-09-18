@@ -3,7 +3,6 @@ layout: post
 title: 优化建图
 subtitle: 有意思
 tags: 数据结构 图论
-show: true
 ---
 
 为了让复杂度能看一点，Dij默认使用Fib堆优化的Dij。

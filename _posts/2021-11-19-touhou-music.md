@@ -3,6 +3,7 @@ layout: post
 title: 听穿车万曲
 subtitle: /se
 tags: 杂项
+show: true
 ---
 
 收录车万及其相关作品。
@@ -1747,7 +1748,11 @@ Stymphalian Tetramorphs Concerto
 
 -----
 
-人类救济计划 ~ The Greatest Salvation
+**人类救济计划 ~ The Greatest Salvation**
+
+还是很有感觉的。
+
+
 
 ### 导命树
 
@@ -1826,6 +1831,14 @@ Far-East El Dorado
 -----
 
 **黄金赞歌 ~ Ibis Trismegistus**
+
+> 我乃时之主人\
+我乃将远方之人带回者\
+我乃分开两位战士，调停争斗者\
+我乃天空的先导\
+我乃计数万物者\
+我乃书写玛亚特者\
+我乃杀戮的主人
 
 神了!
 

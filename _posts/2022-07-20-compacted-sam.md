@@ -3,6 +3,7 @@ layout: post
 title: 从后缀尝试到在线线性紧致后缀金番茄
 subtitle: 狂笑
 tags: 字符串
+show: true
 ---
 
 部分译自 On-line construction of compact directed acyclic word graphs。外国看起来更习惯把suffix automaton称为directed acyclic word graph dawg，试译 有向无环字典图。但是我觉得sam就很好听啊（
