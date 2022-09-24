@@ -9,7 +9,7 @@ tags: 题选做
 
 poi大概是，有三轮，r1五题，r2 r3都是有D0 D1 D2，D0一题，D1 D2两题。
 
-### VIII(2000~2001)
+#### VIII(2000~2001)
 
 R1
 
@@ -99,31 +99,31 @@ Kopalnia złota
 
 Łańcuch
 
-直接dp。考虑我们首先要让$$n-1$$是1，剩下的都是0，所以设$$dp(i)$$表示变成$$i$$是1前面都是0的步数，
+直接dp。考虑我们首先要让$$n-1$$是1，剩下的都是0，所以设$$dp(i)$$表示变成$$i$$是1前面都是0的步数，为了这么做发现我们只有送一个1上去才能把最低的1拿掉，所以看起来策略就是每次把当前末尾极长我们想要的段(一些0之后一个1)往上扩展一个1，然后把下面那个1扔了，直到够到$$n$$这样的。
 
-### IX(2001~2002)
+#### IX(2001~2002)
 
 R1
 
-A. Superskoczek
+Superskoczek
 
 我们尝试让马分别往上走一步，往下走一步，往左走一步，往右走一步。注意到必然存在一种方案使得马的坐标绝对值保持在$$101$$以内。搜即可。
 
-或者使用格的线性基。std做法本质就是这个。
+或者使用格的线性基，称为hermite标准化的算法。std做法本质就是这个。
 
-B. Komiwojażer Bajtazar
+Komiwojażer Bajtazar
 
 模拟。
 
-C. Wyspa
+Wyspa
 
 转一圈双指针即可。
 
-D. Zamek
+Zamek
 
 直接dp。
 
-E. Koleje
+Koleje
 
 noip2012 借教室。noip出poi原题/jy
 
@@ -135,27 +135,27 @@ R2
 
 D0
 
-A. Izolator
+Izolator
 
 这是一个匹配问题。考虑每个数可能贡献正的它，负的它或者不贡献，不贡献显然没劲，然后我们希望让最大的若干个数贡献正的，最小的贡献负的，所以构造一下发现可以最大的$$\lfloor\frac{n}{2}\rfloor$$个数贡献正的，最小的$$\lfloor\frac{n}{2}\rfloor$$个数贡献负的。
 
 D1
 
-A. Działka
+Działka
 
 模板 最大子矩形。
 
-B. Wyliczanka
+Wyliczanka
 
 excrt。
 
 D2
 
-A. Kurort narciarski
+Kurort narciarski
 
 还是直接dp。
 
-B. Protokoły
+Protokoły
 
 不是很能看懂题意。不过肯定可以直接dp吧。
 
@@ -165,32 +165,124 @@ R3
 
 D0
 
-A. Minusy
+Minusy
 
 这个问题好像很经典，似乎在arc出现过。对于每一段连续的加号，我们在两边放一对括号。arc搬poi/jy
 
 D1
 
-A. Narciarze
+Narciarze
 
 这个看起来不是最小路径覆盖啊，也不是最小割。但是上下界最小流就好了!
 
-B. Waga
+Waga
 
 背包。
 
 D2
 
-A. Liczby B-gładkie
+Liczby B-gładkie
 
 数论题/jy
 
 min_25/洲阁筛的第二部分。
 
-B. Nawiasy
+Nawiasy
 
 直接dp。
 
-C. Szyfr
+Szyfr
 
 模板 knapsack。折半。
+
+#### X(2002~2003)
+
+R1
+
+Ciągi bez zająknięć
+
+考虑有没有一个$$\log$$个的构造。发现可以把原序列复制一份，在中间加入一个没有出现过的字符。
+
+交一发wa了。考虑有没有一个$$O(1)$$的构造。发现两个字母肯定不行，但是搜一搜或者手动构造，发现三个字母可以构造出$$n=8$$，一个做法是$$abcbabca$$。结论是thue-morse序列的差分是square free的。
+
+或者可以大力随。注意到长度超过某个足够大的$$k$$的square几乎不可能出现，而它们有$$n^2$$个，那么取$$k=120$$看起来足够，如果往后加入一个字符后，出现了长度$$\leq k$$的square，则删掉它。我们只需要维护$$k$$个前缀和即可。为了证明这个东西的复杂度，请见 https://www.sciencedirect.com/science/article/pii/S0304397515006489。
+
+为了写checker，看起来需要使用lyndon array那一套。
+
+Liczby Przesmyków
+
+数位dp。
+
+Czekolada
+
+也就是如果选一个x的时候，前面有$$k$$个y被选了，那么它带一个$$k+1$$的系数。dp即可。
+
+Przemytnicy
+
+dij。
+
+Płytki drukowane
+
+大力dp，直接存两端的状态。
+
+R2
+
+D0
+
+Mastermind II
+
+模拟。
+
+D1
+
+Autostrady
+
+2-sat。hnoi搬poi/jy
+
+Trójmian
+
+读错了三遍题。
+
+弱于 zjoi2017 多项式。
+
+D2
+
+Kafelki
+
+根据周期引理，如果$$k+l-\gcd(k,l)\leq n$$，那么$$\gcd(k,l)$$也是周期，并且显然不需要存在比它更小的周期，所以答案是$$\gcd(k,l)$$。如果$$k+l-\gcd(k,l)>n$$，那么$$\max(k,l)>\frac{n}{2}$$，不妨设$$k>l$$，那么我们知道如果没有$$k$$，$$l$$导致了$$l$$个等价类，而$$k$$的作用是合并了其中$$n-k$$对，所以答案是$$l-(n-k)$$。
+
+Połączenia
+
+考虑k短路说了啥，我们跑一个floyd，从每个点出发建最短路树，然后真的跑k短路。这里我们可以$$O(nk)$$跑一次，方法是不合并堆而直接爆力向上找。
+
+R3
+
+D0
+
+Gra w dzielniki
+
+如果这个数是一个素数，那么我们就需要遍历所有的素数。所以按任意顺序问所有的素数，问中了就除一下再问剩下的就好了。
+
+D1
+
+Skarb
+
+主要问题是两个人能不能相遇。我们分别找到环，进入环之前模拟一下，进入环之后只需要算个$$\gcd$$。
+
+Sumy
+
+
+
+D2
+
+Kryształ
+
+
+
+Małpki
+
+
+
+Tasowanie
+
+
