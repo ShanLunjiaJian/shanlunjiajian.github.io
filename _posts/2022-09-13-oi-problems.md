@@ -129,17 +129,11 @@ noip2012 借教室。noip出poi原题/jy
 
 线段树模拟一下。
 
------
-
 R2
-
-D0
 
 Izolator
 
 这是一个匹配问题。考虑每个数可能贡献正的它，负的它或者不贡献，不贡献显然没劲，然后我们希望让最大的若干个数贡献正的，最小的贡献负的，所以构造一下发现可以最大的$$\lfloor\frac{n}{2}\rfloor$$个数贡献正的，最小的$$\lfloor\frac{n}{2}\rfloor$$个数贡献负的。
-
-D1
 
 Działka
 
@@ -149,8 +143,6 @@ Wyliczanka
 
 excrt。
 
-D2
-
 Kurort narciarski
 
 还是直接dp。
@@ -159,17 +151,11 @@ Protokoły
 
 不是很能看懂题意。不过肯定可以直接dp吧。
 
------
-
 R3
-
-D0
 
 Minusy
 
 这个问题好像很经典，似乎在arc出现过。对于每一段连续的加号，我们在两边放一对括号。arc搬poi/jy
-
-D1
 
 Narciarze
 
@@ -178,8 +164,6 @@ Narciarze
 Waga
 
 背包。
-
-D2
 
 Liczby B-gładkie
 
@@ -227,13 +211,9 @@ Płytki drukowane
 
 R2
 
-D0
-
 Mastermind II
 
 模拟。
-
-D1
 
 Autostrady
 
@@ -245,8 +225,6 @@ Trójmian
 
 弱于 zjoi2017 多项式。
 
-D2
-
 Kafelki
 
 根据周期引理，如果$$k+l-\gcd(k,l)\leq n$$，那么$$\gcd(k,l)$$也是周期，并且显然不需要存在比它更小的周期，所以答案是$$\gcd(k,l)$$。如果$$k+l-\gcd(k,l)>n$$，那么$$\max(k,l)>\frac{n}{2}$$，不妨设$$k>l$$，那么我们知道如果没有$$k$$，$$l$$导致了$$l$$个等价类，而$$k$$的作用是合并了其中$$n-k$$对，所以答案是$$l-(n-k)$$。
@@ -257,13 +235,9 @@ Połączenia
 
 R3
 
-D0
-
 Gra w dzielniki
 
 如果这个数是一个素数，那么我们就需要遍历所有的素数。所以按任意顺序问所有的素数，问中了就除一下再问剩下的就好了。
-
-D1
 
 Skarb
 
@@ -271,18 +245,88 @@ Skarb
 
 Sumy
 
-
-
-D2
+考虑同余最短路，我们从$$0$$出发bfs，但是直接做是$$O(na)$$的，所以bitset维护一下就$$O(\frac{a^2}{w})$$了。
 
 Kryształ
 
-
+完全没懂它在说啥。
 
 Małpki
 
-
+终于有2e5题了。直接拓扑排序。
 
 Tasowanie
+
+把环求出来，然后直接算这个置换就好了。
+
+#### XI(2003~2004)
+
+R1
+
+PIN-kod
+
+
+
+Zawody
+
+
+
+Gra
+
+
+
+Szpiedzy
+
+
+
+Sznurki
+
+
+
+R2
+
+Most
+
+
+
+Bramki
+
+
+
+Jaskinia
+
+
+
+Przeprawa
+
+
+
+Turniej
+
+
+
+R3
+
+Zgadywanka
+
+
+
+Wschód-Zachód
+
+
+
+Wyspy
+
+
+
+Kaglony
+
+
+
+Maksymalne rzędy permutacji
+
+
+
+Misie-Patysie
 
 
