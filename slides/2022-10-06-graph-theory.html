@@ -293,13 +293,28 @@
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
-                        <p class="fragment">tutte定理 : 不在最大匹配中的点数，等于所有点集的导出子图中，大小为奇数的连通块的数量减去点集外的点数的最大值。</p>
+                        <p class="fragment">tutte定理 : 不在最大匹配中的点数，等于选择若干个点删掉之后，大小为奇数的连通块的数量减去删掉的点数的最大值。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">注意到如果一个连通块大小是偶数，则必然存在完美匹配，因为</p>
-                        <p class="fragment">考虑不连通怎么做，不是单点的连通块之间排一排，单点则可以插在任意位置。</p>
+                        <p class="fragment">注意到如果一个连通块大小是偶数，则必然存在完美匹配，因为我们删掉任何一个点最多使连通块数增加$1$，删掉$k$个点就得到$k+1$个连通块，所以最大匹配外的点数最多是$1$，所以它必然是$0$。</p>
+                        <p class="fragment">问题变成求删掉每个点之后大小为奇数的连通块数量。为了获取正确的连通性，只需要给每个点连到上下左右第一个点，然后看起来就跟割点很有关系，发现非割点必然有完美匹配，而割点直接在割点树也就是圆方树上跑一遍就好了。</p>
                     </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>忘了来源题</h2>
+                        <p>dag，边有边权，有恰好一个源一个汇，你的目标是走到汇。一开始你在源，每一步你可以选择随机沿当前点一条边走过去，花费的时间是边权，或者选择瞬间回到源。求最优策略下你到达汇的时间期望，输出实数。$n,m\leq 10^5$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>hint</h2>
+                        <p class="fragment">直接dp。转移有环。</p>
+                        <p class="fragment">考虑迭代。</p>
+                        <p class="fragment">考虑用什么代替迭代。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>solution</h2>
+                        <p class="fragment">暴力dp显然。二分答案，然后我们就按照这个答案转移即可。本质上来说，我们考虑迭代，它当然收敛于真正的答案，所以我们二分寻找一个不动点。</p>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
@@ -309,6 +324,7 @@
                         <p>Powered by reveal.js</p>
                     </section>
                 </section>
+
             </div>
         </div>
 
