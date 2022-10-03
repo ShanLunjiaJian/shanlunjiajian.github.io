@@ -1732,7 +1732,7 @@ Stymphalian Tetramorphs Concerto
 
 ## 海鲜堂
 
-其实他们的曲子不是很东方风啊，可能更偏脸圆一些?
+其实他们的曲子不是很东方风啊，可能更偏海鲜堂风一些?
 
 ### 邪星章
 
@@ -1751,8 +1751,6 @@ Stymphalian Tetramorphs Concerto
 **人类救济计划 ~ The Greatest Salvation**
 
 还是很有感觉的。
-
-
 
 ### 导命树
 
@@ -1793,8 +1791,6 @@ Stymphalian Tetramorphs Concerto
 ### 魔宝城
 
 **言语的大魔法 ~ Starry Wisdom**
-
-**春花不怨风吹去 ~ Eternal Wind**
 
 找个清脆一点的版本你可能就会很喜欢了。原版其实也很好听/oh
 
