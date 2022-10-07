@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>扫描线方向</title>
+        <title>图论</title>
 
         <link rel="stylesheet" href="dist/reset.css">
         <link rel="stylesheet" href="dist/reveal.css">
@@ -24,7 +24,7 @@
                     <section data-transition="slide">
                         <h2>今天切什么</h2>
                         <p class="fragment">不知道。继续看就知道了!那么这一页为什么存在呢?</p>
-                        <p class="fragment">放了15个比较简洁的题，希望可以让大家有事干。技术水平要求不是很高，应该可以随时断线重连吧（</p>
+                        <p class="fragment">放了20个比较简洁的题，希望可以让大家有事干。技术水平要求不是很高，应该可以随时断线重连吧（</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -110,13 +110,13 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">考虑把$A,B$分别排序，那么$B$中一个点可以插入到$A$中的恰好一个位置，否则会形成一个环。此时可以知道一个方案合法，当且仅当插进去的$B$中的点位置正确，并且它们是有序的。简单dp即可。</p>
+                        <p class="fragment">考虑把$A,B$分别排序，那么$B$中一个点可以插入到$A$中的最多一个间隔，否则会形成一个环。此时可以知道一个方案合法，当且仅当插进去的$B$中的点位置正确，并且它们是有序的。简单dp即可。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>ptzsc16 D6 B. Colourings</h2>
-                        <p>无向图，给定两个独立集划分$A,B$，$A$中所有独立集是非平凡的，而$B$中的独立集个数设为$k$。找到一个独立集划分，使得其中所有独立集是非平凡的，并且独立集个数不超过$k$。$n,m\leq 2\times 10^5$。</p>
+                        <p>无向图，给定两个独立集划分$A,B$，$A$中所有独立集是非平凡的(大小$>1$)，而$B$中的独立集个数设为$k$。找到一个独立集划分，使得其中所有独立集是非平凡的，并且独立集个数不超过$k$。$n,m\leq 2\times 10^5$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
@@ -130,7 +130,7 @@
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>xix open cup gp of Zhejiang H. Hamilton Path</h2>
-                        <p>有向图，求所有哈密顿链，设链上点的序列是$p$，满足对于任意$i< j$，存在边$p_i\rightarrow p_j$当<b>且仅当</b>$i+1=j$。你只需要输出它们字符串哈希的值。$n\leq 5\times 10^5,m\leq 10^6$。</p>
+                        <p>有向图，求所有哈密顿链，设链上点的序列是$p$，满足对于任意$i< j$，存在边$p_i\rightarrow p_j$当<b>且仅当</b>$i+1=j$。这样的链可能很多，你只需要对每一条输出它的某种字符串哈希的值。$n\leq 5\times 10^5,m\leq 10^6$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
@@ -141,7 +141,7 @@
                         <p class="fragment">注意到如果一个点有两条连向还未走到的点的出边，那么其中一条必然成为前向边($i+1< j$的边)，所以必然无解。模拟即可，复杂度$O(nm)$。</p>
                         <p class="fragment">为了优化，考虑从每个点出发维护一条链，如果一条链可以唯一地接到另一条链后面，那么就接起来，这样如果存在答案，每条链必然都是答案上的一段。</p>
                         <p class="fragment">如果某次尝试接到另一条链的中间，那么设是$u,v$同时尝试连向$w$，可以知道终点要么是$u$要么是$v$(考虑从终点出发倒着扩展)，分别模拟即可。</p>
-                        <p class="fragment">否则最后只剩下一条链，我们就得到了一个解。考虑如果它还能接成一个环，那么可能还有一些解，注意到环外每条边会ban掉一个区间，剩下的部分复制一倍字符串哈希维护即可。复杂度$O(n+m)$。</p>
+                        <p class="fragment">否则最后只剩下一条链，我们就得到了一个解。考虑如果它还能接成一个环，那么可能还有一些解，注意到环外每条边会ban掉一个区间，剩下的部分复制一倍直接算哈希值即可。复杂度$O(n+m)$。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -162,7 +162,7 @@
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>xix open cup gp of Peterhof D. Machines on the Moon</h2>
-                        <p>通信题。有一张公开的图，Alice有一个团，Bob有一个独立集，用$(\lceil\lg n\rceil+1)^2$个bit判断它们是否有交。</p>
+                        <p>通信题。有一张公开的图，Alice有一个团，Bob有一个独立集，双方一共可以发送$(\lceil\lg n\rceil+1)^2$个bit，判断团和独立集是否有交。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
@@ -206,6 +206,19 @@
                         <p class="fragment">注意到路径必然可以不互相跨过。</p>
                         <p class="fragment">贪心地，每次选择最左的还未选择的边，走出一条路径。</p>
                     </section>
+                    <section data-transition="slide">
+                        <h2>ptzwc22 D3 G. Maximal Subsequence</h2>
+                        <p>上个题的trick。序列，求最少删掉多少数才能使得lis长度减少。$n\leq 10^5$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>hint</h2>
+                        <p class="fragment">网络流。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>solution</h2>
+                        <p class="fragment">容易想到最小割。具体地，设$f(i)$是$i$结尾的lis长度，那么如果$i< j,a_i< a_j,f(i)+1=f(j)$，则连边$i\rightarrow j$，容量是$\infty$，每个点拆入点和出点，连一条容量是$1$的边，表示删掉这个数。源连到所有$f=1$的点，所有$f=\max f$的点连到汇。</p>
+                        <p class="fragment">对偶成最大流，问题是选择最多的不交的lis。类似上个题，注意到这些lis不会相互跨过，所以不停贪心选择字典序最小的即可。注意到这一轮不能选的数，之后就都不能选了，所以复杂度$O(n)$。</p>
+                    </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
@@ -226,7 +239,7 @@
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>sdoi2019 R2D2A 热闹的聚会与尴尬的聚会</h2>
-                        <p>无向图，你要选$p,q$，构造一个每个点度数至少是$p$的点集，一个大小是$q$的独立集，要求$(p+1)(q+1)\geq n$。$n,m\leq 10^6$。</p>
+                        <p>无向图，你要选$p,q$，构造一个每个点度数至少是$p$的点集，一个大小是$q$的独立集，要求$(p+1)(q+1)>n$。$n,m\leq 10^6$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
@@ -235,7 +248,7 @@
                     <section data-transition="slide">
                         <h2>solution</h2>
                         <p class="fragment">不停删掉度数最小的点，我们可以得到一个最大的度数至少是某个数的点集。</p>
-                        <p class="fragment">考虑怎么得到一个独立集。我们找到最大的$p$，然后按照删掉的顺序贪心选独立集，那么每个点最多和后面$p$个点有边，也就是说得到的独立集大小至少是$\lceil\frac{n}{p+1}\rceil$，那么就有$(p+1)q\geq n$。</p>
+                        <p class="fragment">考虑怎么得到一个独立集。我们找到最大的$p$，然后按照删掉的顺序贪心选独立集，那么每个点最多和后面$p$个点有边，也就是说得到的独立集大小至少是$\lceil\frac{n}{p+1}\rceil$，那么就有$(p+1)(q+1)>n$。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -309,12 +322,28 @@
                     <section data-transition="slide">
                         <h2>hint</h2>
                         <p class="fragment">直接dp。转移有环。</p>
-                        <p class="fragment">考虑迭代。</p>
-                        <p class="fragment">考虑用什么代替迭代。</p>
+                        <p class="fragment">考虑迭代。考虑迭代的替代品。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
                         <p class="fragment">暴力dp显然。二分答案，然后我们就按照这个答案转移即可。本质上来说，我们考虑迭代，它当然收敛于真正的答案，所以我们二分寻找一个不动点。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>ioi2022 千岛</h2>
+                        <p>有向图，你走过一条边之后，边的方向会反转。求一个从$1$出发回到$1$，并且最后图和开始相同的方案。$n\leq 10^5,m\leq 2\times 10^5$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>hint</h2>
+                        <p class="fragment">考虑我们想要什么样的形状。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>solution</h2>
+                        <p class="fragment">猜测如果可以从起点出发走到两个不交的环，或者有两条路径走到同一个环，就赢了。</p>
+                        <p class="fragment">不停删掉所有没有出度的点，显然它们不会和答案有关系。然后从$1$出发搜两个环。如果它们有交，那么我们就找到了两条走到其中一个环的路径。</p>
+                        <p class="fragment">为了证明必要性，注意到每个点都有出度，所以一直走必然可以找到环，而如果$1$可以走到一个出度$\geq 2$的点，就找到了答案，否则显然无解。</p>
+                    </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
