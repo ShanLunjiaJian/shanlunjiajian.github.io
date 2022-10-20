@@ -305,6 +305,8 @@
         var $searchInput = $('#search-input');
         var $body = $('body');
 
+        document.getElementById('search-results').innerHTML="Press enter to search...";
+
         $searchOpen.on('click', function (e) {
             e.preventDefault();
             $searchPage.toggleClass('search-active');

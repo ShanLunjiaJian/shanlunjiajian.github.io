@@ -224,13 +224,13 @@
                 })
             }
             function u() {
-                h.resultsContainer.innerHTML = ""
+                h.resultsContainer.innerHTML = "Press Enter to Search..."
             }
             function o(t) {
                 h.resultsContainer.innerHTML += t
             }
             function a() {
-                h.searchInput.addEventListener("keyup", function(t) {
+                h.searchInput.addEventListener("change", function(t) {
                     l(t.which) && (u(),
                     c(t.target.value))
                 })
