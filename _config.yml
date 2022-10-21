@@ -95,7 +95,7 @@ page-mathjax: true
 friends: [
     {
         title: "fireinice",
-        href: "https://www.jianshu.com/u/91bc345f7c84"
+        href: "https://fireinicecode.github.io/"
     },{
         title: "Pbri",
         href: "https://www.luogu.com.cn/blog/rubik-aoyi715103/"
@@ -192,6 +192,9 @@ friends: [
     },{
         title: "Wild_Donkey",
         href: "https://wild-donkey.github.io/"
+    },{
+        title: "RyexAwl",
+        href: "https://www.luogu.com.cn/blog/maxsama/"
     }
 ]
 
