@@ -73,7 +73,7 @@ lattice basic reduce, the lll algorithm
 
 记$i\cdot j=\mathrm{popcnt}(i\operatorname{xor}j)$，那么法哇塔即为$[z^i]\hat{F}=\sum\limits_{j\in A}(-1)^{i\cdot j}$。如果存在$j\in A$使得$i\cdot j=1$，则对于任意$k$，$i\cdot k,i\cdot j\operatorname{xor}k$分别是$0,1$，于是$[z^i]\hat{F}=0$。否则$[z^i]\hat{F}=2^r$。这就是正交补的定义。
 
-考虑如何求出$\mathbf{F}_2$上线性空间的正交补，我们跑一个线性基，消成这样的$\begin{bmatrix}I_r & X\end{bmatrix}$，那么它的正交补是$\begin{bmatrix}X^\mathrm{T} & I_{m-r}\end{bmatrix}$。证明考虑$\begin{bmatrix}I_r & X\end{bmatrix}\begin{bmatrix}X^\mathrm{T} & I_{m-r}\end{bmatrix}^\mathrm{T}=X+X=\mathbb{0}$，而$(a+b)\cdot c=a\cdot c+b\cdot c$，所以所有$A$和所有$A^\perp$张出的向量都是正交的。所以我们也知道$m$维空间中秩为$r$的线性空间，其正交补秩为$2^{m-r}$。
+考虑如何求出$\mathbf{F}_2$上线性空间的正交补，我们跑一个线性基，消成这样的$\left[\begin{array}{}I_r & X\end{array}\right]$，那么它的正交补是$\left[\begin{array}{}X^\mathrm{T} & I_{m-r}\end{array}\right]$。证明考虑$\left[\begin{array}{}I_r & X\end{array}\right]\left[\begin{array}{}X^\mathrm{T} & I_{m-r}\end{array}\right]^\mathrm{T}=X+X=\mathbb{0}$，而$(a+b)\cdot c=a\cdot c+b\cdot c$，所以所有$A$和所有$A^\perp$张出的向量都是正交的。所以我们也知道$m$维空间中秩为$r$的线性空间，其正交补秩为$2^{m-r}$。
 
 cf1336e Chiori and Doll Picking
 
@@ -99,7 +99,12 @@ cf1336e Chiori and Doll Picking
 
 dzy loves chinese
 
-图，每次删不超过$15$条边，求图是否连通。
+无向图，每次删不超过$15$条边，求是否连通。
 
 也就是判断有没有一个子集在割空间中。考虑转化到其正交补，环空间上，那么根据正交补的定义和点积的分配律，一个向量在割空间中当且仅当它和所有基础环点积为$0$，而它和所有基础环的点积又可以拆成它的每条边和所有基础环的点积之和。给一条边分配它和所有基础环的点积组成的向量作为权值，那么如果出现两条边的权值线性相关，它们就构成了一个和所有基础环点积为$0$的集合，于是这是一个割。但是基础环很多，注意到删边很少，所以我们给每个基础环随机赋一个$64$位向量，它有很大概率是保持秩的。
 
+dzy loves chinese 改
+
+无向图，每次删不超过$15$个点，求是否连通。
+
+考虑把点变成若干条边，对于
