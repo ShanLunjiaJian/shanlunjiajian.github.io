@@ -249,7 +249,7 @@ cf1340 F. Nastya and CBS
 
 cf1336 E. Chiori and Doll Picking
 
-离奇题。
+离奇题。收录于 线性代数。
 
 -----
 
