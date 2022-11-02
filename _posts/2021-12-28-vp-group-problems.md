@@ -5,9 +5,11 @@ subtitle: just some vegetables
 tags: 杂项
 ---
 
-有个群叫cf vp group，是一些sd的选手，这个选手组织对外的名字大概是Little Vegetable Chickens in ShanDong，你可以查到我们的cf group和vj group(不过vj上叫sdvc)。群里常常有奇怪的问题。
+有个群叫cf vp group，是一些sd的选手和一些新疆的选手，这个选手组织对外的名字大概是Little Vegetable Chickens in ShanDong(所以其实我是省外势力)，你可以查到我们的cf group和vj group(不过vj上叫sdvc)。群里常常有奇怪的问题。
 
-进行了大概的分类。
+和sd的缘分大概开始于加了一个群叫山东noip。当年也是非常的水/jy
+
+进行了大概的分类。但是实际情况是只有一个题。
 
 -----
 
