@@ -146,7 +146,7 @@ window.addEventListener('load', () => {
     if(ev.button==0){
       clickCount++;
       if(clickCount>clickCountMax) clickCountMax=clickCount;
-      if(clickCount>=30){
+      if(clickCount>=10){
         var texts=[];
         for(var i=0;i<numberOfTexts;i++)
             texts.push(createText((clickCount/10).toString(),e,t));
