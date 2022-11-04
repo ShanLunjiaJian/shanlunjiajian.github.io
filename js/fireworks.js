@@ -116,7 +116,6 @@ window.addEventListener('load', () => {
     for (var a = createCircle(e, t), n = [], i = 0; i < numberOfParticules; i++) {
       n.push(createParticule(e, t));
     }
-    
     anime.timeline().add({
       targets: n,
       x: function(e) {
@@ -143,14 +142,17 @@ window.addEventListener('load', () => {
       update: a.draw
     }, 0);
 
+    //cps test
+    const len=10;
+    const minClickCount=10;
     if(ev.button==0){
       clickCount++;
       if(clickCount>clickCountMax) clickCountMax=clickCount;
-      if(clickCount>=10){
+      if(clickCount>=minClickCount){
         var texts=[];
         for(var i=0;i<numberOfTexts;i++)
-            texts.push(createText((clickCount/10).toString(),e,t));
-        texts.push(createText((clickCountMax/10).toString(),e,t))
+            texts.push(createText((clickCount/len).toString(),e,t));
+        texts.push(createText((clickCountMax/len).toString(),e,t))
         anime.timeline().add({
           targets: texts,
           x: function(e) {
@@ -171,7 +173,7 @@ window.addEventListener('load', () => {
         });
       }
       console.log(clickCount,clickCountMax);
-      setTimeout(function(){ clickCount--; },10000);
+      setTimeout(function(){ clickCount--; },1000*len);
     }
   }
 

@@ -45,7 +45,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+  input: GFM                           # use Github Flavored Markdown !important
   syntax_highlighter_opts:
     span:
       line_numbers: false
