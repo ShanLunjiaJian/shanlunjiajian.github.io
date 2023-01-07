@@ -5,6 +5,8 @@ subtitle: 全世界无产者，联合起来!
 tags: 杂项
 ---
 
+好像一个月没发新文了。
+
 同步发表于[洛谷](https://www.luogu.com.cn/blog/uakioi/the-taxation-plan)。那里毕竟还是绘板主战场。
 
 [新归零计划](https://www.luogu.com.cn/blog/uakioi/the-new-zeroer-plan)因为世界不可能平等而毁灭世界。但是我又发现了**世界可能平等**，所以新归零在它提出之后立刻被推翻了。
