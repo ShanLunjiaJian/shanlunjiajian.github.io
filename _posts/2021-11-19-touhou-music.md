@@ -8,7 +8,7 @@ show: true
 
 收录车万及其相关作品。
 
-按作者分类，每个作者争取按时间排序，作者之间按我写下他的第一张砖/第一首曲子的时间排序。
+按作者分类，每个作者争取按什么有意义的东西排序，作者之间大致按我写下他的第一张砖/第一首曲子的时间排序。
 
 加粗的是特别牛逼的。我尽可能少加粗?(然而完全失败了)
 
@@ -1328,6 +1328,10 @@ Crazy Back Dancers
 
 也许输在了旋律不够简单（
 
+## 西方project
+
+### 幡紫龙
+
 ## JynX
 
 脸圆。
@@ -1548,19 +1552,49 @@ Minuses老师和我交换歌单，然后他随机了这首，声称很牛逼。
 
 南西的风格，可以说是很空灵吧。
 
-### Performance of Rain
+南西的名字翻译比较奇特。
 
-感觉这一作有点......
+### 议森寺
 
 其中可以明确地听出Bad Apple!!和Extra Love。我认为主旋律来自 女仆与血之怀表。
 
 封面很好看。
 
-### Toxic Difficulty
+-----
+
+Travel Wonder Valleys
+
+混的还是不错的啊。
+
+-----
+
+Towards a Gatekeeper to Apples
+
+-----
+
+Port Painter
+
+感觉lenk64早期曲子普遍适合串烧。比如这个可以考虑串Oriental Magician。
+
+### 妙毒空
+
+-----
+
+A Bad Way to Rejoice
+
+可以的。
+
+-----
 
 Curse of the New Gatekeeper
 
 很带劲。
+
+-----
+
+Toxic to the Sword
+
+钦点为这一作的主旋律。后面还会出现一些。
 
 -----
 
@@ -1570,15 +1604,25 @@ a Dark Blue Towards the Cave Prison
 
 最后居然想起来了，来自 厄神降临之路 ~ Dark Road。这首也是传世经典啊。
 
-### On Thousand Joy
+### 千喜悦
 
 没有找到啊。
 
-### God Hills
+### 丘之神
 
-这一作也没什么感觉呢。
+Stormy Bitterness ~ God of the Sea
 
-### Apocalypse
+-----
+
+Prison Strangler Cave ~ Good Girl
+
+南西曲有很多不错的旋律。但是很少有整首曲子都不错的。建议猛串烧。
+
+-----
+
+Toxic Difficulty ~ Breakneck Smoke
+
+### 默示录
 
 I'll be Back Here in Winter
 
@@ -1590,7 +1634,7 @@ Walking in the Snow is Beautiful
 
 鼓很重，把我吓醒了。开头似乎和 古老的冥界寺 是一样的。
 
-### Night Creatures in a Mansion
+### 夜邸手
 
 前面的都是车万同人，这一作才是南西project。
 
@@ -1628,7 +1672,7 @@ Immortal Blood Soldier Merchant
 
 但是继续往后听，你发现主旋律越来越少了!
 
-### Performance of Meadow Rain
+### 畑雨木
 
 **Former Frog God ~ Panties Thief**
 
@@ -1646,7 +1690,7 @@ Black Winged Curse Spell ~ Black Wings
 
 Millions of Arrows ~ Marksman
 
-### Unknown Traveling East
+### 旅海场
 
 Welcome to Unknown Easter Road
 
@@ -1658,7 +1702,7 @@ Shy Darkness Holder ~ Black Haze
 
 这一面的boss，是什么老巫婆吗/xia
 
-### Autumnal Mythology
+### 妖秋晚
 
 Hot and Windy Autumn Road ~ Fire Road
 
@@ -1676,7 +1720,7 @@ Cold Mist and Howling~ Surprise Guest
 
 感觉lenk受 厄神降临之路 影响很大啊（
 
-### Border of Heaven
+### 天空国
 
 
 
@@ -1694,13 +1738,11 @@ Fatastic Kokunai Shrine ~ Great Shrine
 
 **A Light Year of Emptiness ~ Northern Lights Cloak**
 
-### Mystical Lost Village
-
-二面zombie的内八好标准，我也想要（
+### 妙日村
 
 是不是芬兰人可能对内八没有什么情结啊。
 
-### Demons in Wonderland
+### 不猫陷
 
 Safety Rules Must be Followed ~ Conductor
 
@@ -1708,7 +1750,7 @@ Safety Rules Must be Followed ~ Conductor
 
 Repeated Strange Dream ~ Alice Has Lost
 
-### Destructive Force Monster
+### 怪兽寒
 
 **Mystical Monstrosity Power ~ Borderlands**
 
@@ -1720,7 +1762,7 @@ Champion Racer Cat ~ Speedy Night
 
 我声称这是引诱曲。
 
-### Experienced Resident
+### 无名殿
 
 Director of The Values Over ~ Police Commissioner
 
@@ -1728,9 +1770,9 @@ Director of The Values Over ~ Police Commissioner
 
 **Destroyed The Church and The Cemetery ~ Futuristic Night**
 
-### Chimera Generation
+### 世砂蛇
 
-### Expressive Illumination
+### 美术图
 
 封面好好看。
 
@@ -1742,15 +1784,67 @@ Stymphalian Tetramorphs Concerto
 
 **Sinful Promethean Flare ~ Turn of Echoes**
 
-### Unconquered Album
+### 命目岛
+
+### 飞湖岛
+
+-----
+
+Rising Moon During Rainfall
+
+-----
+
+Optimistic Line Maker ~ Ink Tail
+
+-----
+
+Terror at Sea
+
+classic。
+
+-----
+
+Flowing Black Water
+
+Rain Devil's Performance ~ Noxious Emotion
+
+Black Rain ~ Pouring Down
+
+这三首都还行啊。
+
+-----
+
+Unintelligent Are Thinking ~ Undefined Object
 
 
 
-### Kokunai Shrine
+-----
+
+**Emotional Lonely Light in the Darkness**
+
+立绘好好看。
+
+感觉lenk64的道中水平明显高于boss。
+
+-----
+
+
+
+### 国内神社
 
 **Am Endless Paranoid Night**
 
 钢琴很痛快。
+
+### Nansei Ultimate
+
+好像水平一般。
+
+### 连缘结果记忆
+
+**理想郷の世界は完璧 ~ Utopian Society**
+
+神了。我钦点为无现里国际歌。
 
 ## 海鲜堂
 
@@ -1956,9 +2050,33 @@ Far-East El Dorado
 
 ### 人哀篇
 
+质量非常高，可以说是堪比连缘。
+
+-----
+
+静寂的幻想乡 ~ Silent Incident
+
 -----
 
 境内里幻想夜间飞行
+
+服从的Melusine ~ Dragonmaid
+
+-----
+
+水底枪战
+
+不知道为什么很洗脑。
+
+-----
+
+少女所歌颂的幻想哲学 ~ Fantastic Neoplatonism
+
+-----
+
+**投射于现世的真理之影**
+
+很宏大的曲子。
 
 -----
 
@@ -1967,6 +2085,12 @@ Far-East El Dorado
 很漂亮的曲子。
 
 日出就是人类之梦。
+
+爱输给了灵梦不能说明她不完美，也许不会打架才是完美的。
+
+感觉这个曲子有一种面对命运时的无力。看 神无月的巫女 的时候脑子里一直在放高潮的旋律(我看番一般不开声音)。
+
+我钦点为幻想乡国际歌。
 
 -----
 
@@ -1978,10 +2102,8 @@ Far-East El Dorado
 
 ### 实在相
 
-Just take out the spell cards already.
-
-I know what's going to happen here.
-
+> Just take out the spell cards already.\
+I know what's going to happen here.\
 This is the fourth time it's happened today.
 
 咍咍。
@@ -1996,7 +2118,7 @@ This is the fourth time it's happened today.
 
 识文解意的少女们
 
-感觉很牛逼啊。
+感觉很牛逼啊。虽然名字不知所云。
 
 -----
 
@@ -2011,3 +2133,67 @@ This is the fourth time it's happened today.
 **多彩的爱之画布 ~ Romantic Apricity**
 
 某三个音非常戳我。
+
+## Rian
+
+戴冠project。
+
+水平还是不低的。
+
+### 创世史、或是恸哭的默示录
+
+感觉还是挺神的啊。
+
+-----
+
+Society Slave
+
+-----
+
+**序列零位的再临神话 ~ Godgiven Wisdom**
+
+神的。非常漂亮。
+
+-----
+
+歪曲思想的一箭 ~ Distorted Affection
+
+-----
+
+既无过去亦无未来的阿克夏记忆
+
+-----
+
+全知全能的悖论 ~ Wailing Apocalypsis
+
+前一半还是很神。建议串烧。
+
+-----
+
+**在这个世界的尽头 ~ The Worlds of Luster Guardian**
+
+很带劲。
+
+-----
+
+**我名黑暗 ~ Darkness My Name Is**
+
+有点牛逼了。
+
+### 神国的徒花
+
+## 路鸟
+
+我的泛灵论。
+
+### 地狱篇
+
+### 天国篇
+
+
+
+### 黄泉返篇
+
+Remember the Thunderer
+
+还是差了一点劲。
