@@ -17,4 +17,6 @@ talking head anime是不错的。
 
 ![img](/img/2023-02-03-how-to-be-a-vtuber/img.png)
 
+你也看到我的fps只有4。这样是出不了道的。等我有钱了买个tesla玩玩。
+
 需要注意的一个问题是，ifacialmocap的pc端disconnect写挂了，也就是说每次启动只能connect一次，reconnect不可靠，需要重启。meowface不能后台运行也比较难受。

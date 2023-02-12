@@ -429,7 +429,7 @@ $$
 右边现在是经典式子 : 
 
 $$
-f(z)=(1+z)^a(1-z)^b\rightarrow f^\prime(z)=\frac{af(z)}{1+z}+\frac{bf(z)}{1-z}
+f(z)=(1+z)^a(1-z)^b\Rightarrow f^\prime(z)=\frac{af(z)}{1+z}+\frac{bf(z)}{1-z}
 $$
 
 所以我们可以递推出$dG-zG^\prime$了，而这个东西又给出了一个递推式，所以我们又可以搞定$G$了，所以就做完了。
