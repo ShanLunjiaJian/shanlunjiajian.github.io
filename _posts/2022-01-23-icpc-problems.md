@@ -2,7 +2,7 @@
 layout: post
 title: icpc及相关赛事题选做
 subtitle: /kk
-tags: 题选做
+tags: 问题集
 show: true
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: AGC选㗅
 subtitle: fuck
-tags: 题选做 atc
+tags: 问题集
 show: true
 ---
 

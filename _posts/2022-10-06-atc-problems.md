@@ -2,7 +2,7 @@
 layout: post
 title: atc选做
 subtitle: /jy
-tags: 题选做
+tags: 问题集
 ---
 
 突然又想起来做atc了。之前阅读了arc058~103和agc001~022D，但是今天我不关心比赛，我只想钦点难度，这就不得不说 https://kenkoooo.com/atcoder/ 。

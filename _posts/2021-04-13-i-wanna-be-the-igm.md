@@ -2,7 +2,7 @@
 layout: post
 title: CF再选做
 subtitle: 定个小目标，今年上Newbie
-tags: 题选做 cf
+tags: 问题集
 ---
 
 打算今年上个Newbie（

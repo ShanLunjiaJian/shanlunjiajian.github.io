@@ -2,7 +2,7 @@
 layout: post
 title: joi题选做
 subtitle: qaq
-tags: 题选做
+tags: 问题集
 ---
 
 写的还是比较拉，会在新开的 oi题选做 里面把这些再补一遍。
