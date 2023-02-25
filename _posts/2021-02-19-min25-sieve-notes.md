@@ -5,6 +5,8 @@ subtitle: 毒瘤
 tags: 数学 数论
 ---
 
+可以阅读更新的 重写筛子，本文仅作存档。
+
 本文参考[wqy神犇的blog](https://www.luogu.com.cn/blog/wucstdio/solution-p5325)。
 
 好像快要学完数论板子了呢!
