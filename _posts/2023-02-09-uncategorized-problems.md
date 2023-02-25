@@ -61,7 +61,7 @@ agc061a
 
 可以注意到只可能是每对$2i-1,2i$交换，这是因为$\mathrm{shuffle}(1,n)=\mathrm{shuffle}(1,n-2),\mathrm{shuffle}(2,n-1),\mathrm{shuffle}(2,n-1),\mathrm{shuffle}(3,n)$，中间抵消了，然后归纳即可。括号标记的是除$n=16$之外，左半边非两头的交换了的位置。
 
-$\mathrm{shuffle}(1,n-2),\mathrm{shuffle}(3,n)$，实际上就是把自己和自己平移一位之后每两个内部是否交换的状态$\operatorname{xor}$一下。于是我们看看$x\leftarrow x\operatorname{xor}(x\operatoaname{shift}1)$是什么，把$\operatorname{xor}$看成加法膜$2$我们知道它是$F\leftarrow (1+z)F$，于是当我们想要一个位置的时候，提取出来是一个二项式系数膜$2$，可以用lucas定理算出它那里换没换。如果$n$是偶数那么做完了，如果$n$是奇数那么递归一层即可。
+$\mathrm{shuffle}(1,n-2),\mathrm{shuffle}(3,n)$，实际上就是把自己和自己平移一位之后每两个内部是否交换的状态$\operatorname{xor}$一下。于是我们看看$x\leftarrow x\operatorname{xor}(x\operatorname{shift}1)$是什么，把$\operatorname{xor}$看成加法膜$2$我们知道它是$F\leftarrow (1+z)F$，于是当我们想要一个位置的时候，提取出来是一个二项式系数膜$2$，可以用lucas定理算出它那里换没换。如果$n$是偶数那么做完了，如果$n$是奇数那么递归一层即可。
 
 -----
 
@@ -75,7 +75,7 @@ cf717a
 
 $f$是$a,b$-fib数，也就是$f_i=af_{i-1}+bf_{i-2}$。
 
-那么问题就是怎么求通项了。$F=azF+bz^2F+f_0+z(f_1-f_0)$，设后面是$p+zq$，那么$F=\frac{p+zq}{1-az-bz^2}$。那么我们知道上面的$a,b$这里就是$1-az-bz^2$的两个根，剩下的东西不妨交给伟大的程序来算这个待定的系数。
+那么问题就是怎么求通项了。$F=azF+bz^2F+f_0+z(f_1-f_0)$，设后面是$p+zq$，那么$F=\frac{p+zq}{1-az-bz^2}$。那么我们知道上面的$a,b$这里就是$1-az-bz^2$的两个根，剩下的东西就乱算一通!
 
 -----
 

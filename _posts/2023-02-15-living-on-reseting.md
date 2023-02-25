@@ -27,13 +27,7 @@ qq
 
 git
 
-之前只会用github desktop，但是它没有一个官方的portable方式。于是我们换一个。
-
-看起来git有一个portable版。直接使用git-gui。
-
-如果出现中文乱码，执行 git config --global gui.encoding utf-8。如果不想让它提示你要不要压缩，执行git config --global gui.gcwarning false。
-
-并且github desktop push的实现和git不太一样，github desktop在国内几乎总是不能使用，git则是有时可以有时不行。
+github desktop每周一般只有周末用一次，装的也很快，就不搞了吧!
 
 -----
 
