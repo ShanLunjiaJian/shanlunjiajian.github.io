@@ -59,7 +59,9 @@ $$
 \sum_iz^i\sum_ja_ji^\underline{j}=\sum_ii!z^i\sum_j\frac{a_j}{(i-j)!}
 $$
 
-后面是$i!$和$a_i$的差卷积。
+后面是$\frac{1}{i!}$和$a_i$的普通卷积。
+
+或者你可以说，$a$的ogf卷$e^z$就得到点值的egf。
 
 -----
 
