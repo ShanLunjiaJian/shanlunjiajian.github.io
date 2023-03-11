@@ -2176,11 +2176,17 @@ Wakacje Bajtazara
 
 Drzewo czwórkowe
 
-
+每个点的边界分成若干段，我们需要大力维护它分成哪些段以及这些段的连通性。超级模拟/cf
 
 Wielki Upadek
 
+考虑往右的情况，往左就倒过来做。由于新的骨牌都是矮的，我们必然希望用它们去塞一些间隔。问题就是应该怎么塞。
+
+设第$i$个间隔需要$a_i$个短的，长的是短的的$k$倍。那么如果一个长的能代替$k$个短的，显然是不劣的。考虑让长的优先去代替短的最多的地方，那么我们用什么东西支持插入删除求前$k$大和，平衡树即可。
+
 Marudny Bajtazar
+
+
 
 Trudny dylemat przedszkolanina
 
@@ -2209,3 +2215,8 @@ Bieg na orientację
 Miasta partnerskie
 
 Przekaźniki telekomunikacyjne 2
+
+
+#### XXVIII(2020~2021)
+
+我做了大部分poi，但我保留了一部分。我觉得保留一部分，才知道你马上要联合省选了。

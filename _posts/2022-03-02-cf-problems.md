@@ -1505,14 +1505,6 @@ $$
 
 -----
 
-The 2020 ICPC Asia Shenyang Regional Programming Contest L. Forged in the Barrens(gym103202L)
-
-我在vp群提到了484D，然后dwt就指出了这个题。
-
-考虑上个题的东西看起来是个
-
------
-
 487C
 
 好像听过，但是我忘了（
