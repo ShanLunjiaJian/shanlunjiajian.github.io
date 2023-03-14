@@ -4,7 +4,6 @@ title: "[冬日绘板]税收计划"
 subtitle: 全世界无产者，联合起来!
 tags: 杂项
 show: true
-is_top: true
 ---
 
 好像一个月没发新文了。

@@ -3,6 +3,7 @@ layout: post
 title: 树分治的remake
 subtitle: /tuu
 tags: 数据结构
+show: true
 ---
 
 大家都会wctt!好的这篇结束了（

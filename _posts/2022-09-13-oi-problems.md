@@ -3,6 +3,7 @@ layout: post
 title: oi题选做
 subtitle: 麻麻麻
 tags: 问题集
+show: true
 ---
 
 从这一篇开始我要使用两个\$作为latex的标识符。

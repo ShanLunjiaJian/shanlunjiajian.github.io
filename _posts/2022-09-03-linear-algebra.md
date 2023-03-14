@@ -3,6 +3,7 @@ layout: post
 title: 线性代数
 subtitle: 用啥学啥。
 tags: 数学
+show: true
 ---
 
 觉得应该开一个，所以就开了。

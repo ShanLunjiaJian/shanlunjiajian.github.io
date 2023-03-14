@@ -3,7 +3,6 @@ layout: post
 title: 子集反演
 subtitle: 奇怪
 tags: 数学
-show: true
 ---
 
 已经是中年选手了，却没有一个中年选手应有的科技树，这是为什么呢?

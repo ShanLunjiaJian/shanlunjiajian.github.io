@@ -3,6 +3,7 @@ layout: post
 title: 关于dfa的多串化，可能算是dfa杂谈
 subtitle: /jw
 tags: 字符串
+show: true
 ---
 
 今天看了一个多串pam题，然后就来看看。
