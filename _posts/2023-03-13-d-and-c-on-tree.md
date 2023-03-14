@@ -20,7 +20,7 @@ show: true
 
 让我们先看看如何构造一个树分块。https://missingroom.github.io/_posts/2021-03-13-%E6%A0%91%E5%88%86%E5%9D%97%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 
-设块长是$K$，我们希望每个cluster大小$\leq K$，考虑直接自底向上做，把每条边分进一个cluster。选择一个点作为一个cluster的界点，当且仅当目前剩下的边数$>K$，或子树中有超过一个点是一个未确定的cluster的界点，或这个点是根。如果目前剩下的边数$>K$，我们贪心地把子树们分进若干$\leq K$的cluster，那么相邻两个cluster的大小和$>K$，把所有这些都加起来，我们知道所有cluster大小总和的两倍$\geq$ 这样生成的cluster的数量$\times K$，也就是这样的cluster不超过$\frac{2n}{K}$个。case 2的效果是让继续参与这个过程的界点个数减少了至少$1$。所以cluster总数不超过$\frac{4n}{K}+O(1)$。不知道为啥gxy001老师给的是$6$啊。
+设块长是$K$，我们希望每个cluster大小$\leq K$，考虑直接自底向上做，把每条边分进一个cluster。选择一个点作为一个cluster的界点，当且仅当目前剩下的边数$>K$，或子树中有超过一个点是一个未确定的cluster的界点，或这个点是根。如果目前剩下的边数$>K$，我们贪心地把子树们分进若干$\leq K$的cluster，那么相邻两个cluster的大小和$>K$，把所有这些都加起来，我们知道所有cluster大小总和的两倍$\geq$ 这样生成的cluster的数量$\times K$，也就是这样的cluster不超过$\frac{2n}{K}$个。case 2的效果是让继续参与这个过程的界点个数减少了至少$1$，但它也可能拿那些不包含界点的子树生成一些leaf cluster，这些leaf cluster也不超过$\frac{2n}{K}$个。所以cluster总数不超过$\frac{6n}{K}+O(1)$。
 
 那么接下来，考虑如何维护信息。显然每个邻域涉及到$O(\sqrt{n})$个cluster的整个/前/后缀，以及$O(1)$个cluster内的不一定是啥的邻域，这里前/后缀是是只保留cluster中的点，某个界点的某个邻域。
 
