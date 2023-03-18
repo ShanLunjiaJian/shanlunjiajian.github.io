@@ -2,8 +2,10 @@
 layout: post
 title: 莫比乌斯反演、子集反演以及min-max容斥的瞎扯
 subtitle: 绝了
-tags: 数论
+tags: 数论 archived
 ---
+
+感觉一点都不绝捏。把多重集写成多元gf来考虑就会简单了吧。
 
 公式如果出现问题，可以右键任意一个公式，选择Math Settings->Math Renderer->Common HTML，可以解决一部分问题。
 

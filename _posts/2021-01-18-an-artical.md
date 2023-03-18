@@ -2,7 +2,7 @@
 layout: post
 title: 一篇blog
 subtitle: 在机房写的奇怪文章
-tags: 杂项
+tags: 杂项 archived
 ---
 
 感觉这个写的好奇怪，看起来还是很有征文色彩（

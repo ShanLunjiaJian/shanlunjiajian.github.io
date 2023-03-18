@@ -2,7 +2,7 @@
 layout: post
 title: 雅礼集训2019 Day2 题解
 subtitle: 神仙T3
-tags: 题解
+tags: 题解 archived
 ---
 
 ## T1. two

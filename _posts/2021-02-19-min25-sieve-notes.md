@@ -2,7 +2,7 @@
 layout: post
 title: Min_25筛学习笔记
 subtitle: 毒瘤
-tags: 数学 数论
+tags: 数学 数论 archived
 ---
 
 可以阅读更新的 重写筛子，本文仅作存档。

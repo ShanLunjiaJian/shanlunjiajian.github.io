@@ -2,7 +2,7 @@
 layout: post
 title: Higman引理
 subtitle: ¿
-tags: 数学
+tags: 数学 archived
 ---
 
 警告 : 这篇文章的主体部分未完成，并且可能将来也不会完成了。

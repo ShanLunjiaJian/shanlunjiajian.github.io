@@ -2,7 +2,7 @@
 layout: post
 title: Powerful Number学习笔记
 subtitle: 求积性函数前缀和的奇妙方法
-tags: 数学 数论
+tags: 数学 数论 archived
 ---
 
 本文参考[zzq神犇的blog](https://www.cnblogs.com/zzqsblog/p/9904271.html)。
@@ -142,6 +142,8 @@ int main()
 发现$$f(p)=2$$，于是需要找一个$$g$$，使得$$g(1)=1, g(p)=2$$。
 
 发现除数函数$$d$$具有这样的性质，并且易于求前缀和，所以我们取$$g=d$$。复杂度$$O(\sqrt{n})$$。
+
+很久以后回来看，发现我并不会$O(\sqrt{n})$地求$d$的基本和组。
 
 -----
 
