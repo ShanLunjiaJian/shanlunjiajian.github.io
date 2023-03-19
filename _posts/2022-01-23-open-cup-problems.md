@@ -1703,7 +1703,7 @@ L. Liquid Cats
 
 vp了一下。
 
-官方题解的link挂了，可以看看[这里](/file/2022-01-23-icpc-problems/gp-of-kazan-solution.pdf)。
+官方题解的link挂了，可以看看[这里](/file/2022-01-23-open-cup-problems/gp-of-kazan-solution.pdf)。
 
 A. Apollonian Network
 
