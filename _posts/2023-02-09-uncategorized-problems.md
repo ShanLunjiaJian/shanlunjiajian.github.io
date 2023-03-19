@@ -314,4 +314,11 @@ slyzoj485 未知来源题
 
 区间一维最近点对，随机数据
 
-还是考虑按$d$大小把数轴分成若干长$d$的区间，那么如果一个区间中有两个点，
+我并不会降低这玩意的复杂度。
+
+-----
+
+usaco23 feb Pt C. Watching Cowflix
+
+https://codeforces.com/blog/entry/113088?#comment-1008590
+
