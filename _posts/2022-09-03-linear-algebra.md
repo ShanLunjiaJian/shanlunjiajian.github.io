@@ -78,7 +78,7 @@ lattice basic reduce, the lll algorithm
 
 **引理** $\mathbf{F}_2$上秩为$r$的线性空间$A$的集合幂级数$F$，其法哇塔$\hat{F}$等于正交补的集合幂级数的$2^r$倍。
 
-记$i\cdot j=\mathrm{popcnt}(i\operatorname{and}j)$，那么法哇塔即为$[z^i]\hat{F}=\sum\limits_{j\in A}(-1)^{i\cdot j}$。如果存在$j\in A$使得$i\cdot j=1$，则对于任意$k$，$i\cdot k,i\cdot j\operatorname{xor}k$分别是$0,1$，于是$[z^i]\hat{F}=0$。否则$[z^i]\hat{F}=2^r$。这就是正交补的定义。
+记$i\cdot j=\mathrm{parity}(i\operatorname{and}j)$，当然这里$\mathrm{parity}=\mathrm{popcnt}\bmod{2}$，那么法哇塔即为$[z^i]\hat{F}=\sum\limits_{j\in A}(-1)^{i\cdot j}$。如果存在$j\in A$使得$i\cdot j=1$，则对于任意$k$，$i\cdot k,i\cdot j\operatorname{xor}k$分别是$0,1$，于是$[z^i]\hat{F}=0$。否则$[z^i]\hat{F}=2^r$。这就是正交补的定义。
 
 考虑如何求出$\mathbf{F}_2$上线性空间的正交补，我们跑一个线性基，消成这样的
 
