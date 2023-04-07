@@ -2,8 +2,10 @@
 layout: post
 title: 模拟费用流
 subtitle: 感性理解
-tags: 图论 贪心 网络流
+tags: 图论 贪心 网络流 archived
 ---
+
+本文仅作存档，请阅读 讲稿索引/网络流相关问题选讲。
 
 照抄command_block《模拟费用流小记》。
 
@@ -160,6 +162,8 @@ PA2013 Raper/CF802O April Fools' Problem (hard)
 -----
 
 UER8 雪灾与外卖
+
+这个题做法是有问题的。
 
 数轴上有$$n$$个送餐员和$$m$$个餐馆，坐标序列分别是$$x,y$$，每个餐馆$$i$$有$$c_i$$道菜，价格都是$$w_i$$元，送餐员$$i$$到餐馆$$j$$取餐需要花费$$\vert x_i-y_j\vert$$元，求让每个送餐员都取到一道菜的最小花费。$$n,m\leq 10^5,v\leq 10^9$$。
 
