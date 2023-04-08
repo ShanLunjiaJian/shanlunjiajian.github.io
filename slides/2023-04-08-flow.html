@@ -27,6 +27,7 @@
                         <p class="fragment">放了一些比较educational的题，希望可以让大家有事干。技术水平要求不是很高，应该可以随时断线重连吧（</p>
                         <p class="fragment">$\infty$表示一个非常大的数。</p>
                         <p class="fragment">请提醒我对电子白板截图并塞进这里面。</p>
+                        <p class="fragment">但是还是忘了这件事!</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -59,17 +60,18 @@
                     </section>
                     <section data-transition="slide">
                         <h2>联合省选2022 学术社区</h2>
-                        <p>图，边分为A类，B类和自环，保证每个点有至少一个自环。选出尽可能多的边，并寻找一种给边排序的方式，使得序列可以分成若干段，每一段可能是 : 中间有一个自环，上下分别是从这个自环的端点出发的A类和B类路径，或者两条分别是A类和B类的路径，在中间形成一个二元环。需要构造方案。$m\leq 8\times 10^4$。</p>
+                        <p>不会写形式化题意。大家可以，自己看一下!</p>
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
-                        <p class="fragment">如果不考虑AB二元环，它是最小边不交路径覆盖。但是这里不是dag!</p>
+                        <p class="fragment">类似最小边不交路径覆盖来做。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">不是dag的问题在于，如果有一个环，有一条边就需要出现两次。注意到一个点上的所有环可以合为一个，而每个点都有至少一个自环，把自环挂上就行了。</p>
-                        <p class="fragment">对于AB二元环，直接匹配它俩是不劣的。</p>
-                        <p class="fragment">为了构造方案，不停dfs即可。如果找到了环则挂给任何一个点，如果找到了链则加入答案。</p>
+                        <p class="fragment">考虑性质C。如果$i$后面接$j$可以让其中一条合法，就给$i$的出点连到$j$的入点，然后跑二分图匹配。</p>
+                        <p class="fragment">但是有问题，如果跑出了一个环，有一条边就需要出现两次。注意到一个点上的所有环可以合为一个，而每个点都有至少一个学术消息，把环挂到学术消息上就行了，此时它还是可以相当于一个学术消息来用。</p>
+                        <p class="fragment">对于楼上楼下的二元环，直接把它俩放在一起是不劣的，因为如果有一个最优解中它俩不在一起，改为连着后面挂着的东西接到一起就是不劣的。</p>
+                        <p class="fragment">为了构造方案，不停从一条还没用的消息出发往两边dfs即可。如果找到了环则挂给环上任何一个点的学术消息，如果找到了链则加入答案。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>cf1404 E. Bricks</h2>
@@ -78,11 +80,11 @@
                     <section data-transition="slide">
                         <h2>hint</h2>
                         <p class="fragment">匹配。匹配。</p>
-                        <p class="fragment">考虑每条边是不是在内部。</p>
+                        <p class="fragment">考虑每条格子边是不是在一个条的内部。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">也就是，一个格子的相邻的边不能同时在内部，至少一侧是白格子的边不能在内部。二分图最大独立集即可。</p>
+                        <p class="fragment">也就是，一个格子的两条相邻的边不能同时在内部，至少一侧是白格子的边不能在内部。二分图最大独立集即可。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -171,7 +173,7 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">每个人建一个点，每个对建一个点，不割哪边表示选哪边，讨论一下边权即可。</p>
+                        <p class="fragment">每个人建一个点，每个对建一个点，不割哪边表示选哪边，边权比较显然。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -228,7 +230,7 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">状压两侧的情况。wqs二分先，你发现现在好合并了，线段树每个点闵和一个凸函数即可，复杂度$O(n\log^3 n)$，可以分散层叠砍一个$\log$。</p>
+                        <p class="fragment">状压两侧的情况，线段树每个点闵和一个凸函数。查询的时候我们要合并$\log$个凸函数并求一点的值，可以wqs二分。复杂度$O(n\log^3 n)$，分散层叠一下就砍一个$\log$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>pre-knowledge</h2>
@@ -258,7 +260,7 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">可以发现这里压根不会反悔，因为扔掉源汇边之后是树。</p>
+                        <p class="fragment">可以发现这里压根不会反悔，因为你只能沿着树往下走。</p>
                         <p class="fragment">按价值从大到小扫，树剖线段树维护能增广多少。</p>
                     </section>
                     <section data-transition="slide">
@@ -285,9 +287,8 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">可能的增广路有，直接走，或者反悔一段。反悔一段要求这一段都有向右的流量。</p>
-                        <p class="fragment">大力线段树。对于直接走，和上个题一样维护。对于反悔，再维护区间流量的$\min$，对左右可以增广的部分和上个题一样维护，就可以合并啦。</p>
-                        <p class="fragment">具体地，维护 : $a,b$的最小值，从左往右的最短增广路，从右往左的最短路，从左往右的流量(也就是从右往左的容量)及其加法标记，可以接收右边流过来流量的最小$b$，可以往左流的最小$a_i$，从右往左的最短增广路。</p>
+                        <p class="fragment">可能的增广路有，从左往右或者从右往左。从右往左要求这一段都有向右的流量。</p>
+                        <p class="fragment">大力线段树。对于从左往右，也就是左边选一个$a$，右边选一个$b$的$\min$，和上个题是差不多的。对于从右往左，直接维护两边有流量的部分。主要问题是打加减法标记的时候怎么做，发现只要$\min>0$那从右往左也是几乎自由的了，而$\min$不可能$<0$，所以维护自由选的最优策略，维护区间减到$\min=0$之后的最优策略即可。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>洛谷1484 种树</h2>
@@ -315,7 +316,7 @@
                         <h2>solution</h2>
                         <p class="fragment">转而考虑不在lis中的数，我们把它们都扔掉，剩下的数会形成若干段，这个段数$-1$几乎就是需要的步数，$-1$是因为有一段可以是前一半0后一半1，几乎是因为还需要考虑整个序列前面全1后面全0的情况，不过我们先不考虑它。</p>
                         <p class="fragment">考虑先把相同的一段缩成一个，显然相同的一段要么都扔要么都留。我们在中间扔一个数，会合并两边，于是减少了两段，而扔两边则只减少一段。如果直接贪心选可能会扔相邻的两个，此时减少的段数是错误的，但是显然相邻的两段不会同时被扔，因为只扔一段就可以把另一段并入别的一段。</p>
-                        <p class="fragment">看起来 不能选相邻的两个，求最大和 这个问题我们刚做过。枚举两边扔不扔，我们就知道要选多少个中间的，然后按刚才做法做即可。</p>
+                        <p class="fragment">看起来 不能选相邻的两个，求最大和 这个问题就是 种树。枚举两边扔不扔，我们就知道要选多少个中间的，然后 种树 即可。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -349,8 +350,16 @@
                         <h2>solution</h2>
                         <p class="fragment">先在左边加一个$c,w=\infty$的餐馆保证每个送餐员都能匹配。</p>
                         <p class="fragment">加入一个送餐员的时候，可能会进行大量的反悔。</p>
-                        <p class="fragment">但是可以注意到前面其实进行过这些反悔。加入一个送餐员的时候，如果他第一个反悔了餐馆$j$的匹配，那么对前面的影响恰好相当于撤销餐馆$j$的插入(直接匹配一个餐馆的话，相当于撤销它的插入时什么也没有发生)，于是我们把这个作为代价扔进堆里即可。加入一个餐馆的时候是类似的。</p>
-                        <p class="fragment">问题是$c$可能很大。这体现在餐馆会增广很多次，注意到每次增广出来的东西都是一样的，于是在堆里额外记一个数量即可，每次只会增加$O(1)$个不同元素，所以合并就有均摊了。复杂度$O(n\log n)$。</p>
+                        <p class="fragment">但是可以注意到前面其实进行过这些反悔。加入一个送餐员的时候，如果他第一个反悔了餐馆$j$的匹配，那么对前面的影响恰好相当于撤销餐馆$j$的插入(直接匹配一个餐馆的话，相当于撤销它的插入时什么也没有发生)，于是我们把这个作为代价扔进堆里即可。</p>
+                        <p class="fragment">加入一个餐馆的时候，可以类似地匹配送餐员，或者替换掉之前的一个餐馆。</p>
+                        <p class="fragment">问题是$c$可能很大。这体现在餐馆会增广很多次。注意到匹配送餐员的时候，由于送餐员只有$n$个而有均摊，替换之前的餐馆时，每次增广出来的东西都是$-(y+w)$，于是在堆里额外记一个数量即可。复杂度$O(n\log n)$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h2>proof</h2>
+                        <p class="fragment">我们要证明 加入一个送餐员$i$的时候，如果他第一个反悔了餐馆$j$的匹配(设为送餐员$k$)，那么对前面的影响恰好相当于撤销餐馆$j$的插入 这件事。</p>
+                        <p class="fragment">首先对于送餐员$i,k$和同时在他们两个左边的餐馆$t$，他们匹配$t$的代价中，$t$的贡献都是$-y_t+w_t$，那么我们知道$i$和$k$眼中左边最优的餐馆必然是同一个。</p>
+                        <p class="fragment">设加入送餐员$k$时他匹配的是他左边的某个餐馆$l$。$l$既然在$k$的左边，$i$就也可以匹配它，而由于$k$反悔了去匹配$j$，$l$一定是有容量的(不可能有右边的一个匹配过来，因为匹配不交)，由于$k$到$i$之间的送餐员都没有反悔(否则第一个反悔掉的对不是$j$匹配$k$)，不会有别的餐馆更优，所以$l$一定是最优的，$i$一定会走增广路走到$l$。</p>
+                        <p class="fragment">也就是说$i$走的增广路必然就是$k$走的增广路加上$i$到$k$这一段。这就证明了这个结论。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
