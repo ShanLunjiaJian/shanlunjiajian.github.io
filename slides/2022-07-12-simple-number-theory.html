@@ -405,9 +405,10 @@ inline int BSGS(int a,int b)
                     <section data-transition="slide">
                         <h2>loj6222 幂数！ 加强版 加强版</h2>
                         <p>定义powerful number是它的每个素因数都$\geq 2$次的数。求$n$以内powerful number的$k$次方和。$n\leq 10^{30},k=O(1)$，2s。</p>
-                        <p class="fragment">hint : 我们需要第一步转化得到一个阳间一点的式子。一个数$n$是powerful number，当且仅当它可以唯一地表示成$n=a^2b^3$，其中$\mu^2(b)=1$。</p>
+                        <p class="fragment">hint : 我们需要第一步转化得到一个阳间一点的式子。一个数$n$是powerful number，当且仅当它可以表示成$n=a^2b^3$，其中$\mu^2(b)=1$。</p>
                         <p class="fragment">答案即为$\displaystyle\sum_{i=1}^{\lfloor\sqrt[3]{n}\rfloor}\mu^2(i)i^{3k}\sum_{j=1}^{\left\lfloor\sqrt{\frac{n}{i^3}}\right\rfloor}j^{2k}$。化一化。</p>
-                        <p class="fragment">$d$不超过$O(n^{\frac{1}{6}})$，可以爆力预处理，然后对$j$整除分块，它的取值只有$O(n^{\frac{1}{5}})$种，总复杂度$O(n^{\frac{1}{5}})$。</p>
+                        <p class="fragment">也就是$\displaystyle\sum_{i^3j^2d^6\leq n}(i^3j^2d^6)^k\mu(d)$。</p>
+                        <p class="fragment">外层枚举$i$，对$j$整除分块，$d$不超过$O(n^{\frac{1}{6}})$，可以爆力预处理。$j$的整除分块，取值只有$O(n^{\frac{1}{5}})$种，总复杂度$O(n^{\frac{1}{5}})$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>luogu4466 集训队互测2012 和与积</h2>
