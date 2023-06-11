@@ -122,6 +122,8 @@ J. Jump Jump Jump
 
 所以它是整式递推的，我们可以爆力高消出它的递推式，然后递推即可。
 
+证明可以看 https://www.luogu.com.cn/blog/your-alpha1022/chu-li-bgf-diagonal-di-jing-dian-fang-fa ，感觉我比较智障。这里面也给出了推导的方法。
+
 K. Knight
 
 考虑如果$r+c$是奇数，那么这个就是二分图。如果$r+c$是偶数，那么直接染色之后黑格子和白格子是独立的，我们先只考虑黑格子，于是把这个东西转一转，那么$r+c$就可以缩成$\frac{1}{2}$，最后必然可以缩成奇数，于是它还是一个二分图。
@@ -1449,15 +1451,15 @@ M. Mikhail Tikhomirov
 
 A. Cakes
 
-感觉非常厉害。
+显然最后三个人用时相同。但是没锤子用。
 
-显然最后三个人用时相同。
+注意到这玩意是线性的，设第$i$个蛋糕分成了$x_{0,i},x_{1,i},x_{2,i}$，那么答案是$\min\limits_x\max\limits_i a_ix_i$，其中向量$a_i$表示第$i$个人的用时。尝试套用博弈论基本定理，这需要我们把$i$放缩成$i_0+i_1+i_2=1,i\geq 0$的实向量，因为线性组合总是不比$\max$大的。然后我们知道它就是$\max\limits_i\min\limits_x iax$。两次三分$i$的前两维，贪心即可。
 
-如果是让总和最小，我们肯定把每个给更小的一边。
+但是，这个题也可以拉格朗日对偶。就先扔在这里吧，我们要求解$\max\limits_x f(x),g(x)\leq 0$，这里$x$是个向量，$f$是个线性函数，$g$是个输出向量的线性函数，那么它等于$\min\limits_\lambda\max\limits_x f(x)-\lambda g(x)$。这里$x$就是$i$，$\lambda$就是$x$，$f=0,g(x)=ax$，对偶回去我们
 
-注意到这玩意是线性的，设第$i$个蛋糕分成了$x_{0,i},x_{1,i},x_{2,i}$，那么答案是$\min\limits_x\max\limits_i a_ix_i$，其中向量$a_i$表示第$i$个人的用时。尝试套用博弈论基本定理，这需要我们把$i$变成$i_0+i_1+i_2=1$上的一个向量，然后我们知道它就是$\max\limits_i\min\limits_x iax$。两次三分$i$的前两维，贪心即可。
 
-见到最小化最大值/最大化最小值，并且比较连续的问题，可以考虑博弈论基本定理。
+
+$\min\max\sum$的常见做法是对偶。
 
 B. Interesting Permutations
 
