@@ -230,7 +230,7 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">状压两侧的情况，线段树每个点闵和一个凸函数。查询的时候我们要合并$\log$个凸函数并求一点的值，可以wqs二分。复杂度$O(n\log^3 n)$，分散层叠一下就砍一个$\log$。</p>
+                        <p class="fragment">状压两侧的情况，线段树每个点闵和一个凸函数。查询的时候我们要合并$\log$个凸函数并求一点的值，可以wqs二分。复杂度$O(n\log^3 n)$，分散层叠一下可以砍一个$\log$。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>pre-knowledge</h2>
@@ -288,7 +288,7 @@
                     <section data-transition="slide">
                         <h2>solution</h2>
                         <p class="fragment">可能的增广路有，从左往右或者从右往左。从右往左要求这一段都有向右的流量。</p>
-                        <p class="fragment">大力线段树。对于从左往右，也就是左边选一个$a$，右边选一个$b$的$\min$，和上个题是差不多的。对于从右往左，直接维护两边有流量的部分。主要问题是打加减法标记的时候怎么做，发现只要$\min>0$那从右往左也是几乎自由的了，而$\min$不可能$<0$，所以维护自由选的最优策略，维护区间减到$\min=0$之后的最优策略即可。</p>
+                        <p class="fragment">大力线段树。对于从左往右，也就是左边选一个$a$，右边选一个$b$的$\min$，和上个题是差不多的。对于从右往左，直接维护两边有流量的部分。主要问题是打加减法标记的时候怎么做，发现只要$\min>0$那从右往左也是几乎自由的了，而$\min$不可能$<0$，所以维护自由选的最优策略，以及(通过整体减)减到$\min=0$之后的最优策略即可。</p>
                     </section>
                     <section data-transition="slide">
                         <h2>洛谷1484 种树</h2>
@@ -296,6 +296,7 @@
                     </section>
                     <section data-transition="slide">
                         <h2>hint</h2>
+                        <p class="fragment">最大权独立集。链当然是二分图!</p>
                         <p class="fragment">需要一点性质。</p>
                     </section>
                     <section data-transition="slide">
@@ -348,7 +349,7 @@
                     </section>
                     <section data-transition="slide">
                         <h2>solution</h2>
-                        <p class="fragment">原来的版本写挂了。请在这个blog上搜索 雪灾与外卖。</p>
+                        <p class="fragment">原来的版本写挂了。请见 [感性理解 uer8 雪灾与外卖](https://shanlunjiajian.blog.uoj.ac/blog/8238) 。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
