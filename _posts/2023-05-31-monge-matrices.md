@@ -9,8 +9,6 @@ tags: 数学
 
 [Semi-local string comparison: Algorithmic techniques and applications](https://arxiv.org/pdf/0707.3619.pdf) 的导读。
 
-file:///D:/working_dir/documents/Periodic_string_comparison.pdf 这是一个可视化的概要。
-
 -----
 
 蒙日阵
