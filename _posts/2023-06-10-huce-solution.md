@@ -34,7 +34,7 @@ C. matrix
 
 秩为 $k$ 的矩阵的个数是 $\frac{\prod\limits_{i=0}^{k-1}(1-q^{n-i})(q^n-q^i)}{\prod\limits_{i=0}^{k-1}(1-q^i)}$，可以 $O(n)$ 递推。这可以通过一个简单的 dp 归纳证明，设 $i$ 个向量秩为 $j$ 的方案数是 $c(i,j)$，转移考虑选一个新的向量，那么有 $q^n-q^i$ 种方案让秩增加 $1$，有 $q^i$ 种方案让秩不变。
 
-设 $f_{n-k}$ 表示秩为 $k$ 的矩阵的价值，有 $f_{n-k}=\sum\limits_r\frac{c(n,k)\binom{n}{r}_q}{\binom{k}{r}_q}$，因为每个秩为 $k$ 的线性空间包含 $\binom{k}{r}_q$ 个秩为 $r$ 的子空间。
+设 $f_{n-k}$ 表示秩为 $k$ 的矩阵的价值，有 $f_{n-k}=\sum\limits_r\frac{c(n,k)\binom{n}{r}_q}{\binom{k}{r}_q}$，因为每个秩为 $k$ 的线性空间包含 $\binom{k}{r}_q$ 个秩为 $r$ 的子空间。但是这里好像写错了，不过我不知道!
 
 设 $g_k=\frac{f_k}{\prod\limits_{i=0}^{k-1}(1-q^i)}$，观察或嗯推可知 $g_0=\prod\limits_{i=0}^{n-1}(q^n-q^i),g_1=\frac{q^n+(q^n-q^{n-1})}{1-q}\prod\limits_{i=0}^{n-2}(q^n-q^i),g_i=\frac{(1+q-3q^i)g_{i-1}+(q+q^i)g_{i-2}}{(1-q^i)^2}$，可以 $O(n)$ 递推。
 
