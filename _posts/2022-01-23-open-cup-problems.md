@@ -1943,6 +1943,41 @@ K. Two Slicers
 
 不妨设$a>b$，那么最大的块必然是$\frac{1}{a}$，我们只需要最大化最小的。从$a$的一刀和$b$的一刀重合开始转，直到再次发生重合，得到一堆一次函数，其中转的长度的系数一些是$1$一些是$-1$，显然两种分别取个$\min$然后求交点即可。
 
+### Eurasia
+
+A. Ants
+
+模拟。
+
+B. Blend
+
+直接dp。
+
+C. Backup
+
+也就是让你模拟一个单调栈。
+
+D. bit gisect
+
+那么我们就是要在dag上二分了!
+
+传递闭包先，这里边数$O(n)$所以是$O(n^2)$的，然后我们查询一个点的时候，可以知道能到达它的点中有没有目标，那么我们希望找到一个能到达它的点数尽可能占一半的点。
+
+E. Slots
+
+F. Tea Sort
+
+G. Shooting
+
+H. Accelerometers calibration
+
+I. Trees
+
+J. Team order
+
+K. Ostap's dream
+
+
 ### Tokyo
 
 打的比较拉了。
