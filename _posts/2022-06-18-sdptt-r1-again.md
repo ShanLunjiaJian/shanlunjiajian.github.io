@@ -152,52 +152,6 @@ ode
 
 之前写过了，不过好像不是很深刻。现在也不打算写，摸了。
 
------
-
-拉格朗EI反演
-
-如果$$F,G$$互为复合逆
-
-$$
-[z^n]H(F)=\frac{1}{n}[z^{n-1}]H^\prime\left(\frac{z}{G}\right)^n
-$$
-
-或者
-
-$$
-[z^n]H(F)=[z^n]HG^\prime\left(\frac{z}{G}\right)^{n+1}
-$$
-
-用来在原幂级数和它的复合逆之间相互转化，或者把复合的内层函数提取出来变成乘法。后者你可能会在处理一些多元gf的时候用到，也就是把复合中的一个元提取出来变得独立。
-
-这两个式子选择哪一个的话，如果需要求常数项则只能选第二个，否则就看$$H,G$$哪个比较容易求导。
-
-删除了之前写的拉反blog。
-
------
-
-几个简单例子
-
-有标号有根树
-
-$$F=z\exp F+1$$，于是我们知道$$\left(\frac{z}{\exp z}\right)(F)=z$$，于是我们知道
-
-$$
-[z^n]F=[z^n]\left(\frac{z}{\exp z}\right)\exp^{n+1} z=[z^n]z\exp^n z=[z^{n-1}]\exp^n z
-$$
-
-考虑后面相当于$$n$$种颜色的球，每种选一些然后插成一个长$$n-1$$的序列，那么显然这个方案数就是$$n^{n-1}$$。组合意义天地灭，但是实在懒得写代数了（
-
-广义二项级数
-
-$$\mathcal B_t=1+z\mathcal B_t^t$$，求$$[z^n]\mathcal B_t^r$$。
-
-注意到这相当于$$\frac{\mathcal B_t-1}{\mathcal B_t^t}=z$$，也就是$$\left(\frac{z-1}{z^t}\right)(\mathcal B_t)=z$$。使用拉格朗日反演
-
-$$
-[z^n]\mathcal B_t^r=[z^n]z^t\left(\frac{z-1}{z-t}\right)^\prime\left(\frac{z^{t+1}}{z-1}\right)^{n+1}
-$$
-
 ## D3
 
 A. garlic
