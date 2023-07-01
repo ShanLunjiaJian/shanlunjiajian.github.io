@@ -3778,7 +3778,7 @@ A. Delegation
 
 先看看Au的A，那么直接自底向上做，记录长度即可。
 
-
+现在我们要最大化最小值，
 
 B. Equilateral Triangles
 
