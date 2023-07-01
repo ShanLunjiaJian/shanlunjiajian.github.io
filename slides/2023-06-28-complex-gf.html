@@ -41,6 +41,10 @@
                         <h2>一个小问题</h2>
                         <p class="fragment">课件的很多地方只留了一个空白。</p>
                     </section>
+                    <section data-transition="slide">
+                        <h2>约定</h2>
+                        <p class="fragment">如无特殊说明就是呐塔塔膜数。</p>
+                    </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
@@ -48,7 +52,7 @@
                     </section>
                     <section data-transition="slide">
                         <h3>经典题</h3>
-                        <p class="fragment">有$m$种硬币，面值和$\leq 10^3$，每种硬币有一个个数，求凑出面值$n$的方案数。$n\leq 10^{18}$。</p>
+                        <p class="fragment">有$m$种硬币，面值和$\leq 10^5$，每种硬币有一个个数，求凑出面值$n$的方案数。$n\leq 10^{18}$。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>那么应该怎么算线性递推呢?</h3>
@@ -56,23 +60,50 @@
                     <section data-transition="slide">
                         <h3>部分分式</h3>
                     </section>
+                    <section data-transition="slide">
+                        <h3>特征多项式</h3>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>王的象棋世界</h3>
+                        <p class="fragment">给$r,c$，多次给$a,b$，求一个王从$(1,a)$出发，每次可以往上/左上/右上走一步，到达$(r,b)$，并且横坐标不能$<1$或$>c$的方案数。$r\leq 10^9,c,q\leq 10^5$。</p>
+                        <!-- LOJ6738 -->
+                        <p class="fragment">这是一个经典的反射容斥问题。先让我们谈谈反射容斥。</p>
+                        <p class="fragment">这里反射次数可能非常多，考虑避开它。</p>
+                        <p class="fragment">也可以直接考虑反射。</p>
+                        <p class="fragment">习题 : icpc22 xi'an I. Square Grid</p>
+                    </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>d-finite，整式递推</h2>
                     </section>
                     <section data-transition="slide">
-                        <h3>顺子</h3>
-                        <p class="fragment">求有多少个长$n$的排列不包含长$m$的连续上升/下降段，也就是形如$x,x+1,...,x+k$或$x,x-1,...,x-k$的段。$n,m\leq 10^7$。</p>
-                        <p class="fragment">2021年山东省队胡策 qwaszx round。</p>
+                        <h3>斐波那契数</h3>
+                        <p class="fragment">给$n$，求$\displaystyle\sum_i\binom{n}{i}f_i$。$n\leq 10^{18}$。</p>
+                        <!-- sdfzoj剪彩赛 -->
+                    </section>
+                    <section data-transition="slide">
+                        <h3>d-finite复合</h3>
+                        <p class="fragment">对一般多项式$F,G$求$F(G)\bmod{z^n}$是复杂的，目前实际效率最高的算法是$O(n^2)$的。但是当$F$ d-finite时，可以用半在线卷积解决。</p>
+                        <p class="fragment">直接往$F$的微分方程中代入$G$，按$k$从高到低把$F^{(k)}(G)$凑成$(F(G))^{(k)}$的形式。</p>
+                        <p class="fragment">习题 : loj3397 Simple Permutations</p>
                     </section>
                     <section data-transition="slide">
                         <h3>ode自动机</h3>
                     </section>
                     <section data-transition="slide">
                         <h3>错排</h3>
-                        <p class="fragment">多次给出$n,m$，求有多少个长$n$的排列满足对于$i>m$有$p_i\neq i$。$n,m\leq 10^5$。</p>
-                        <p class="fragment">gdkoi 2023。</p>
+                        <p class="fragment">多次给出$n,m$，求有多少个长$n$的排列满足对于$i>m$有$p_i\neq i$。$n,m,q\leq 10^5$。</p>
+                        <!-- gdkoi 2023 -->
+                        <p class="fragment">如果我们找到了两个分别只移动一维的整式递推，那么就可以莫队做到$O(n\sqrt{q})$。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>顺子</h3>
+                        <p class="fragment">求有多少个长$n$的排列不包含长$m$的连续上升/下降段，也就是形如$x,x+1,...,x+k$或$x,x-1,...,x-k$的段。$n,m\leq 10^7$。</p>
+                        <!-- 2021年山东省队胡策 qwaszx round -->
+                        <p class="fragment">考虑容斥，我们钦点若干个间隔属于连续的上升/下降段，这会形成若干个连续段，我们希望给每个长度分配一个容斥系数，使得长度$\geq m$的段所有钦点方案的贡献和是$0$，而$< m$的是$1$。</p>
+                        <p class="fragment">接下来把数分配给各段。</p>
+                        <p class="fragment">$1-z^m$次数很大但只有$O(1)$项，$\left(\frac{1}{1-z^m}\right)^\prime$也是这样，所以我们可以$O(n)$地递推。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
@@ -83,11 +114,12 @@
                         <p class="fragment">或者</p>
                         <p class="fragment">$\displaystyle[z^n]H(F)=[z^n]HG^\prime\left(\frac{z}{G}\right)^{n+1}$</p>
                         <p class="fragment">用来在原幂级数(或它的复合方程)和它的复合逆之间相互转化。可以注意到如果$F$没有常数项且有一次项，那么$G$也必然没有常数项且有一次项，而且$G$必然是个幂级数(没有负次项)。感觉这个挺对的啊。</p>
-                        <p class="fragment">这两个式子选择哪一个的话，如果需要求常数项则只能选第二个，否则就看$H,G$哪个比较容易求导。</p>
+                        <p class="fragment">这两个式子选择哪一个的话，如果需要求常数项则只能选第二个，否则看$H,G$哪个比较容易求导。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>大朋友和多叉树</h3>
                         <p class="fragment">如果一个点有$c$个儿子，那么它的权值是$a_c$，保证$a_0=1,a_1=0$。求所有$n$个叶子的树的权值和，认为儿子之间有序，但树无标号。$n\leq 10^5$。</p>
+                        <!-- bzoj3684 -->
                         <p class="fragment">认为$a_0=0$，这给出复合方程$F=A(F)+z$，也就是说$F$的复合逆是$z-A$，拉格朗日反演，多项式快速幂即可。</p>
                     </section>
                     <section data-transition="slide">
@@ -101,29 +133,24 @@
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>牛顿迭代</h2>
-                        <p class="fragment">一般来说用于求解多项式方程，但是也有一些奇妙用法。</p>
+                        <p class="fragment">一般来说用于求解多项式方程$P(F(z),z)=0$，但是也有一些奇妙用法。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>另一个欧拉数问题</h3>
                         <p class="fragment">求$\frac{1}{(1-z)^a}$的复合逆。$n\leq 10^5$。</p>
+                        <!-- cts2023 -->
                         <p class="fragment">泰勒展开之。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>烷基计数</h3>
                         <p class="fragment">求解$F(z)=1+\frac{1}{6}z(F(z)^3+3F(z^2)F(z)+2F(z^3))$的前$n$项。$n\leq 10^5$。</p>
+                        <!-- loj6538 -->
                         <p class="fragment">我们要求$F\bmod{z^{2n}}$时，$F(z^2)\bmod{z^{2n}}$是完全已知的，可以当作常多项式。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
                     <section data-transition="slide">
-                        <h2>一些技巧</h2>
-                    </section>
-                    <section data-transition="slide">
-                        <h3>Binomial sum</h3>
-                        <p class="fragment">求$\displaystyle\sum_i\binom{n}{i}i^k$。$n\leq 10^9,k\leq 10^6$。</p>
-                        <p class="fragment">记$F=(1+z)^n,G=e^z$，那么答案就是$[z^k]F(G)$。对$F$在$1$处泰勒展开，这是因为$G=e^z$的常数项是$1$，这样展开可以让无限和变为有限和。</p>
-                        <p class="fragment">这里我们说明了找到一个多项式$\mathcal F$满足$\mathcal F$和$F$在$1$处的$0,...,k$阶导数都相同，那么就可以把$F$换成$\mathcal F$计算，两者的不同在于$F$的次数很大而$\mathcal F$的次数$\leq k$。</p>
-                        <p class="fragment">问题是如何求出$\mathcal F$，可以利用其整式递推。</p>
+                        <h2>生成函数递推</h2>
                     </section>
                     <section data-transition="slide">
                         <h3>另一个欧拉数问题</h3>
@@ -135,9 +162,35 @@
                         <p class="fragment">现在要计算$F_n$的一项，先快速幂算出$T_{n_0}(G)$，直接算出$T_n(G)$，然后要复合$C$，拉格朗日反演提取$\frac{T_n}{AB^n}$，$A,B$都可以用$G(C)=z$表示。复杂度$O(n\log n)$。</p>
                     </section>
                     <section data-transition="slide">
-                        <h3>转置原理</h3>
+                        <h3>count</h3>
+                        <p class="fragment">定义两个序列本质相同，当且仅当其大根笛卡尔树同构，这里如果$\max$有多个，我们选择最左的一个。求有多少种本质不同的序列，满足长度为$n$，每个值在$1,...,m$中，且$1,...,m$中每个值都出现至少一次。$n,m\leq 10^5$。</p>
+                        <!-- uoj424 -->
+                        <p class="fragment">考虑对笛卡尔树计数。每个值出现至少一次的限制是容易满足的(除非$n< m$)，一个点左子树根必然比它小而右子树根可以和它相等，所以这等价于求左偏深度$\leq m$的二叉树个数。</p>
+                        <p class="fragment">写其gf也就是$F_m=1+zF_{m-1}F_m$，即$F_m=\frac{1}{1-zF_{m-1}}$，初值为$F_0=1$。</p>
+                        <p class="fragment">这是一个分式线性变换，于是分子分母都是线性递推的。</p>
+                        <p class="fragment">已经可以做到$O(n\log^2 n)$，但是还不够好。jordan标准化之</p>
+                        <p class="fragment">拉格朗日反演。</p>
+                        <p class="fragment">但是这个题可以直接反射容斥。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>Binomial sum</h2>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>Team Work</h3>
+                        <p class="fragment">求$\displaystyle\sum_i\binom{n}{i}i^k$。$n\leq 10^9,k\leq 10^6$。</p>
+                        <!-- cf932E -->
+                        <p class="fragment">记$F=(1+z)^n,G=e^z$，那么答案就是$[z^k]F(G)$。对$F$在$1$处泰勒展开，这是因为$G=e^z$的常数项是$1$，这样展开可以让无限和变为有限和。</p>
+                        <p class="fragment">这里我们说明了找到一个多项式$\mathcal F$满足$\mathcal F$和$F$在$1$处的$0,...,k$阶导数都相同，那么就可以把$F$换成$\mathcal F$计算，两者的不同在于$F$的次数很大而$\mathcal F$的次数$\leq k$。</p>
+                        <p class="fragment">问题是如何求出$\mathcal F$，可以利用其整式递推。</p>
+                    </section>
+                </section>
+                <section data-transition="slide">
+                    <section data-transition="slide">
+                        <h2>转置原理</h3>
                         <p class="fragment">多项式多点求值。</p>
-                        <p class="fragment">线性算法是可以表示成矩阵乘向量的算法。如果我们可以对任意$v$快速计算$Av$，那么对这一算法进行转置就可以快速计算$v^TA^T$了。</p>
+                        <p class="fragment">线性算法是可以表示成矩阵乘向量的算法。如果我们可以对任意$v$快速计算$Av$，那么对这一算法进行转置就可以快速计算$A^Tv$了。</p>
                         <p class="fragment">考虑多点求值的转置。</p>
                     </section>
                 </section>
