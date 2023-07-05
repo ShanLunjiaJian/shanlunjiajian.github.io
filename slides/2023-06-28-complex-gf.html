@@ -133,7 +133,7 @@
                 <section data-transition="slide">
                     <section data-transition="slide">
                         <h2>牛顿迭代</h2>
-                        <p class="fragment">一般来说用于求解多项式方程$P(F(z),z)=0$，但是也有一些奇妙用法。</p>
+                        <p class="fragment">一般来说用于求解多项式方程$P(F(z),z)=0$，但是也有一些劲爆用法。</p>
                     </section>
                     <section data-transition="slide">
                         <h3>另一个欧拉数问题</h3>
@@ -146,6 +146,14 @@
                         <p class="fragment">求解$F(z)=1+\frac{1}{6}z(F(z)^3+3F(z^2)F(z)+2F(z^3))$的前$n$项。$n\leq 10^5$。</p>
                         <!-- loj6538 -->
                         <p class="fragment">我们要求$F\bmod{z^{2n}}$时，$F(z^2)\bmod{z^{2n}}$是完全已知的，可以当作常多项式。</p>
+                    </section>
+                    <section data-transition="slide">
+                        <h3>链式反应</h3>
+                        <p class="fragment">求解$F^\prime=\frac{1}{2}AF^2+1$的前$n$项。$n\leq 10^5$。</p>
+                        <!-- uoj50 -->
+                        <p class="fragment">我们要求$F\bmod{z^{2n}}$时，对$AF^2+1$在$F_0$处泰勒展开，得到$F^\prime=AF_0F+AF_0(1-\frac{1}{2}F_0)\pmod{z^{2n}}$。</p>
+                        <p class="fragment">这是一阶线性全微分方程了，解法是乘一个$G$把和$F$相关的项都凑成$(GF)^\prime$的形式，然后两边积分。</p>
+                        <p class="fragment">那么我们就要求$G^\prime=AF_0G$，所以$G=e^{AF_0}$。</p>
                     </section>
                 </section>
                 <section data-transition="slide">
