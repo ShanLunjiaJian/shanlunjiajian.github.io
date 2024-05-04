@@ -212,7 +212,7 @@ $$
 
 要做到线性，大概要搞一个整式递推出来。先考虑$\frac{1}{E}$，毕竟比较好看嘛!
 
-这个东西称为 [子空间反演](https://www.luogu.com.cn/blog/EntropyIncreaser/subspace-inversion)，好比$e^z$的逆是$e^{-z}$称为 二项式反演。$q$-analog的主要想法就是扰动，考虑$[z^k]zE(z)=\frac{1}{(q;q)_{k-1}}=(1-q^k)\frac{1}{(q;q)_k}$，所以我们知道$zE(z)=E(z)-E(qz)$。也就是说$E(z)=\frac{E(qz)}{1-z}$，那么又有$E(qz)=\frac{E(q^2z)}{1-qz}$，不停地展开下去，就有$E(z)=\lim\limits_{k\rightarrow\infty}\frac{E(q^kz)}{(1-z)(1-qz)...(1-q^{k-1}z)}$。劲爆的事情是这玩意提取$z$不收敛但是提取$q$是收敛的，所以我们就提取$q$以说明$E(q^\infty z)$是没有贡献的，这给出$E(z)=\frac{1}{(z;q)_\infty}$。所以$\frac{1}{E(z)}=(z;q)_\infty$。
+这个东西称为 [子空间反演](https://www.luogu.com.cn/blog/EntropyIncreaser/subspace-inversion)，好比$e^z$的逆是$e^{-z}$称为 二项式反演。$q$-analog的主要想法就是扰动，考虑$[z^k]zE(z)=\frac{1}{(q;q)_ {k-1}}=(1-q^k)\frac{1}{(q;q)_ k}$，所以我们知道$zE(z)=E(z)-E(qz)$。也就是说$E(z)=\frac{E(qz)}{1-z}$，那么又有$E(qz)=\frac{E(q^2z)}{1-qz}$，不停地展开下去，就有$E(z)=\lim\limits_{k\rightarrow\infty}\frac{E(q^kz)}{(1-z)(1-qz)...(1-q^{k-1}z)}$。劲爆的事情是这玩意提取$z$不收敛但是提取$q$是收敛的，所以我们就提取$q$以说明$E(q^\infty z)$是没有贡献的，这给出$E(z)=\frac{1}{(z;q)_\infty}$。所以$\frac{1}{E(z)}=(z;q)_\infty$。
 
 取$[z^k]$不收敛其实没有关系，因为我们知道它肯定其实是存在的啊，根据形式幂级数那套基本理论，如果关于$q$的操作都在形式上正确，那么所有收敛的东西算出来的必然是同一个正确结果，比如说提取$z^1$项得到$q^0+q^1+...$，它不收敛，但是它等于$\frac{1}{1-q}$，这玩意收敛。
 
