@@ -126,8 +126,7 @@ $$
 这样的。那么两条分界线就交于$(\hat i,\hat j)$这个点。代入$\delta$的定义，四个位置的$C$是
 
 $$
-\begin{array}{cc}M_{lo}(\hat i^-,\hat j^-)&M_{lo}(\hat i^-,\hat j^+)\\M_{lo}(\hat i^+,\hat j^-),M_{lo}(\hat i^+,\hat j^+)-1\end{array}
-
+\begin{array}{cc}M_{lo}(\hat i^-,\hat j^-)&M_{lo}(\hat i^-,\hat j^+)\\M_{lo}(\hat i^+,\hat j^-)&M_{lo}(\hat i^+,\hat j^+)-1\end{array}
 $$
 
 所以$P_C(\hat i,\hat j)=M_{lo}^\square(\hat i,\hat j)+1=P_{C,lo}(\hat i,\hat j)+1$。由于$P_{C,lo}$是排列矩阵，$P_C$也是排列矩阵，所以$P_C(\hat i,\hat j)$必须是$1$。
