@@ -2295,6 +2295,104 @@ Przekaźniki telekomunikacyjne 2
 
 我做了大部分poi，但我保留了一部分。我觉得保留一部分，才知道你马上要联合省选了。
 
+## ONTAK
+
+做懒了。换一个先。
+
+#### 2013
+
+Juror
+
+什么b题？？
+
+Kapitał
+
+就是计算二项式系数膜$10^k$。使用扩展lucas定理。
+
+Kebab
+
+如果点分治的话，排序的时候是没法归并的，所以要静态top tree，这样就一个$\log$了。
+
+Kopalnia
+
+
+
+Ktulu
+
+
+
+Meble
+
+
+
+Miny
+
+
+
+Misja kosmiczna
+
+
+
+Obwód elektryczny
+
+
+
+Pierwiastek ze słowa
+
+
+
+Rozbicie dzielnicowe
+
+
+
+Różne słowa
+
+
+
+Sześciokąty
+
+
+
+Szyfry
+
+
+
+Uczta
+
+
+
+Układanie patyków
+
+
+
+Zamieć
+
+
+
+Zimne piwnice
+
+
+
+Żółwie
+
+
+
+## PA
+
+#### 2020
+
+Round 4
+
+Tekstówka
+
+见 monge matrices。
+
+Malowanie płotu
+
+Wycieczka górska
+
+
+
 ## cnoi各省
 
 ### ahoi
@@ -2626,9 +2724,9 @@ C. 连续子序列
 
 一个经典结论是，以下几种方法都定义了这个序列 : 
 
- - $a_{2n}=a_n,a_{2n+1}=1-a_n$$
+ - $a_{2n}=a_n,a_{2n+1}=1-a_n$
 
- - 从$0$开始，每次把$0$变成$01$，$1$变成$10$$
+ - 从$0$开始，每次把$0$变成$01$，$1$变成$10$
 
  - $a_n$是$n$的popcnt的奇偶性
 

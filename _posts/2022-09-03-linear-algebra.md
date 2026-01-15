@@ -182,7 +182,7 @@ code festival 2016 grand final H. AB=C Problem
 
 或者直接计算，枚举$k=\mathrm{rank}(A)$，设$n$个向量秩为$k$的方案数是$f(n,k)$，每个秩为$k$的线性空间包含$\binom{k}{r}_2$个秩为$r$的子空间，所以答案是$\frac{f(n,k)\binom{n}{r}_2}{\binom{k}{r}_2}$。复杂度$O(\frac{n^3}{w})$，瓶颈在求rank。
 
-不如说群是均匀的。
+不如说线性群是均匀的。
 
 -----
 
@@ -251,7 +251,3 @@ $$
 对于秩为$n$的矩阵，可以通过求逆求伴随矩阵。
 
 对于秩为$n-1$的矩阵，其伴随矩阵秩必然为$1$，因为$I$的秩为$n$。设它是$uv^T$，那么$Auv^T=0$，劲爆的是还有$uv^T\neq 0$，解出任何一个合法的$u,v$，然后算两次行列式就可以得到$u,v$。
-
-然后既然我们要算积的方程，为了简单一点设$T(z)=F(z)(z;q)_\infty$，就把两个方程乘起来对吧，有$F(z)(z;q)_\infty=\frac{1-z}{q^nz}((1-q^{n+1}z)F(qz)(qz;q)_\infty-F(q^2z)(qz;q)_\infty)$。继续代换掉后面那个$(qz;q)_\infty$，得到$F(z)(z;q)_\infty=\frac{1-z}{q^nz}((1-q^{n+1}z)F(qz)(qz;q)_\infty-(1-qz)F(q^2z)(q^2z;q)_\infty)$，那么也就是说$T(z)=\frac{1-z}{q^nz}((1-q^{n+1}z)T(qz)-(1-qz)T(q^2z))$。这就结束了。
-
-题解好像和我这个不太一样。不过没有关系，推完了就不管了!
